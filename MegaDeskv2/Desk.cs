@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MegaDesk_Wicker
 {
@@ -25,10 +21,10 @@ namespace MegaDesk_Wicker
         public const int MAXDEPTH = 48;
         public const int MINDRAWERS = 0;
         public const int MAXDRAWERS = 7;
-
     }
 
-    public enum DesktopMaterial {
+    public enum DesktopMaterial
+    {
         Oak,
         Laminate,
         Pine,

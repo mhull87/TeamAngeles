@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MegaDesk_Wicker
@@ -17,7 +14,7 @@ namespace MegaDesk_Wicker
             InitializeComponent();
         }
 
-        public Desk _desk = new Desk(); 
+        public Desk _desk = new Desk();
 
         /// <summary>
         /// Close AddQuote and return to Main Menu
@@ -44,15 +41,15 @@ namespace MegaDesk_Wicker
                 errorProvider1.SetError(TextBoxWidth, "Please provide a number");
                 errorProvider2.SetError(TextBoxWidth, "");
                 errorProvider3.SetError(TextBoxWidth, "");
-            }                     
-            
+            }
+
             if (widthInput < Desk.MINWIDTH || widthInput > Desk.MAXWIDTH)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(TextBoxWidth, "");
                 errorProvider2.SetError(TextBoxWidth, "Number out of range");
                 errorProvider3.SetError(TextBoxWidth, "");
-            } 
+            }
             else
             {
                 errorProvider1.SetError(TextBoxWidth, "");
@@ -61,40 +58,34 @@ namespace MegaDesk_Wicker
 
                 //set input into _desk
                 _desk.Width = widthInput;
-            }            
+            }
         }
 
         //since this is a KeyPress event and not a Validating event, the errorProviders did not work correctly. Used color state change instead.
         private void TextBoxDepth_KeyPress(object sender, KeyPressEventArgs e)
         {
             //determine if the keypress is a digit and no control characters
-            if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
             {
-                e.Handled = false;  
-
+                e.Handled = false;
             }
             else
             {
                 e.Handled = true;  //cancels the Keypress event
             }
-            //TextBoxDepth.Focus();
-            
-            
         }
 
         private void TextBoxDepth_Validating(object sender, CancelEventArgs e)
         {
-            int depthInput = 0;
+            int depthInput;
             try
             {
                 depthInput = int.Parse(TextBoxDepth.Text);
             }
             catch (Exception)
             {
-
                 throw;
             }
-            
             if (depthInput < Desk.MINDEPTH || depthInput > Desk.MAXDEPTH)
             {
                 //not in range
@@ -112,23 +103,17 @@ namespace MegaDesk_Wicker
                 errorProvider2.SetError(TextBoxDepth, "");
                 errorProvider3.SetError(TextBoxDepth, ""); //Correct
 
-
                 // set input into _desk
                 _desk.Depth = depthInput;
             }
         }
-
 
         private void AddQuote_Load(object sender, EventArgs e)
         {
             //get the date
             LabelDate.Text = DateTime.Now.ToShortDateString();
             _desk.QuoteDate = DateTime.Now;
-
-            //populate materials combobox with enum values
-            ComboBoxMaterial.DataSource = Enum.GetValues(typeof(DesktopMaterial));
         }
-
 
         private void TextBoxCustomerName_Validating(object sender, CancelEventArgs e)
         {
@@ -149,7 +134,6 @@ namespace MegaDesk_Wicker
                 // set input into _desk
                 _desk.CustomerName = nameInput;
             }
-
         }
 
         private void ComboBoxDrawers_Validating(object sender, CancelEventArgs e)
@@ -175,8 +159,8 @@ namespace MegaDesk_Wicker
 
         private void ComboBoxMaterial_Validating(object sender, CancelEventArgs e)
         {
-            DesktopMaterial materialInput = (DesktopMaterial) ComboBoxMaterial.SelectedItem;
-            if (materialInput == null)
+            DesktopMaterial materialInput = (DesktopMaterial)ComboBoxMaterial.SelectedItem;
+            if (materialInput == 0)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(ComboBoxMaterial, "Please select a material");
@@ -197,7 +181,7 @@ namespace MegaDesk_Wicker
         private void ComboBoxRush_Validating(object sender, CancelEventArgs e)
         {
             int rushInput = int.Parse(ComboBoxRush.Text);
-            if (rushInput == null)
+            if (rushInput == 0)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(ComboBoxRush, "Please select a number");
@@ -215,7 +199,6 @@ namespace MegaDesk_Wicker
             }
         }
 
-
         private void CalculateQuote()
         {
             //base desk price
@@ -223,9 +206,9 @@ namespace MegaDesk_Wicker
 
             //get area
             _desk.Area = _desk.Width * _desk.Depth;
-                     
+
             //add surface area charge, $1 per in^2 above 1000in^2
-            if (_desk.Area > 1000) 
+            if (_desk.Area > 1000)
             {
                 _desk.Price += (_desk.Area - 1000);
             }
@@ -259,7 +242,7 @@ namespace MegaDesk_Wicker
             }
 
             //calculate rush order charge, if any
-            int rush = 0;
+            int rush;
             switch (_desk.ProductionDays)
             {
                 case 3:
@@ -295,17 +278,13 @@ namespace MegaDesk_Wicker
                     MessageBox.Show("Rush Order charge defaulted to $0");
                     break;
             }
-
             //add rush charge to price
             _desk.Price += rush;
-
         }
-
 
         private void ButtonGetQuote_Click(object sender, EventArgs e)
         {
             CalculateQuote();
-
             var displayQuote = new DisplayQuote(_desk)
             {
                 Tag = this
@@ -314,6 +293,10 @@ namespace MegaDesk_Wicker
             Hide(); //hide AddQuote form
         }
 
-
+        private void ComboBoxMaterial_Click(object sender, EventArgs e)
+        {
+            List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
+            ComboBoxMaterial.DataSource = desktopMaterial;
+        }
     }
 }
