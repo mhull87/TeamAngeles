@@ -38,7 +38,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonAddNewQuote
             // 
-            this.ButtonAddNewQuote.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ButtonAddNewQuote.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ButtonAddNewQuote.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ButtonAddNewQuote.FlatAppearance.BorderSize = 3;
             this.ButtonAddNewQuote.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -47,7 +47,7 @@ namespace MegaDeskAngeles
             this.ButtonAddNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonAddNewQuote.Location = new System.Drawing.Point(25, 54);
             this.ButtonAddNewQuote.Name = "ButtonAddNewQuote";
-            this.ButtonAddNewQuote.Size = new System.Drawing.Size(104, 52);
+            this.ButtonAddNewQuote.Size = new System.Drawing.Size(122, 30);
             this.ButtonAddNewQuote.TabIndex = 0;
             this.ButtonAddNewQuote.Text = "&Add New Quote";
             this.ButtonAddNewQuote.UseVisualStyleBackColor = false;
@@ -56,9 +56,9 @@ namespace MegaDeskAngeles
             // ButtonViewQuotes
             // 
             this.ButtonViewQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonViewQuotes.Location = new System.Drawing.Point(25, 116);
+            this.ButtonViewQuotes.Location = new System.Drawing.Point(25, 101);
             this.ButtonViewQuotes.Name = "ButtonViewQuotes";
-            this.ButtonViewQuotes.Size = new System.Drawing.Size(104, 30);
+            this.ButtonViewQuotes.Size = new System.Drawing.Size(122, 30);
             this.ButtonViewQuotes.TabIndex = 1;
             this.ButtonViewQuotes.Text = "&View Quotes";
             this.ButtonViewQuotes.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@ namespace MegaDeskAngeles
             // ButtonSearch
             // 
             this.ButtonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSearch.Location = new System.Drawing.Point(25, 155);
+            this.ButtonSearch.Location = new System.Drawing.Point(25, 148);
             this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(104, 30);
+            this.ButtonSearch.Size = new System.Drawing.Size(122, 30);
             this.ButtonSearch.TabIndex = 2;
             this.ButtonSearch.Text = "&Search";
             this.ButtonSearch.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@ namespace MegaDeskAngeles
             // ButtonExit
             // 
             this.ButtonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonExit.Location = new System.Drawing.Point(25, 194);
+            this.ButtonExit.Location = new System.Drawing.Point(25, 357);
             this.ButtonExit.Name = "ButtonExit";
-            this.ButtonExit.Size = new System.Drawing.Size(104, 30);
+            this.ButtonExit.Size = new System.Drawing.Size(122, 30);
             this.ButtonExit.TabIndex = 3;
             this.ButtonExit.Text = "E&xit";
             this.ButtonExit.UseVisualStyleBackColor = true;
@@ -97,6 +97,7 @@ namespace MegaDeskAngeles
             this.Controls.Add(this.ButtonViewQuotes);
             this.Controls.Add(this.ButtonAddNewQuote);
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.ResumeLayout(false);
 
