@@ -1,5 +1,5 @@
 ﻿
-namespace MegaDesk_Wicker
+namespace MegaDeskAngeles
 {
     partial class AddQuote
     {

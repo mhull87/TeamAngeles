@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace MegaDesk_Wicker
+namespace MegaDeskAngeles
 {
     public partial class MainMenu : Form
     {

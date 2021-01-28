@@ -1,5 +1,5 @@
 ﻿
-namespace MegaDesk_Angeles
+namespace MegaDeskAngeles
 {
     partial class ViewAllQuotes
     {

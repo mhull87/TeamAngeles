@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MegaDesk_Wicker
+namespace MegaDeskAngeles
 {
     public class Desk
     {

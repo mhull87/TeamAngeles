@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace MegaDesk_Wicker
+namespace MegaDeskAngeles
 {
     public partial class AddQuote : Form
     {
