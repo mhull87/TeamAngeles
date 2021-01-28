@@ -1,5 +1,5 @@
 ﻿
-namespace MegaDesk_Wicker
+namespace MegaDesk_Angeles
 {
     partial class SearchQuotes
     {

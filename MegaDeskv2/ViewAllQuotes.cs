@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MegaDesk_Wicker
+namespace MegaDesk_Angeles
 {
     public partial class ViewAllQuotes : Form
     {

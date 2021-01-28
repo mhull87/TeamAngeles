@@ -2,14 +2,15 @@
 using System.Windows.Forms;
 
 namespace MegaDesk_Wicker
+
 {
     public partial class DisplayQuote : Form
     {
-        readonly Desk _desk = new Desk();
+        readonly Desk desk = new Desk();
 
         public DisplayQuote(Desk desk)
         {
-            _desk = desk;
+            this.desk = desk;
             InitializeComponent();
         }
 
@@ -22,14 +23,14 @@ namespace MegaDesk_Wicker
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
-            TextBoxDate.Text = _desk.QuoteDate.ToShortDateString();
-            TextBoxName.Text = _desk.CustomerName;
-            TextBoxWidth.Text = _desk.Width.ToString();
-            TextBoxDepth.Text = _desk.Depth.ToString();
-            TextBoxDrawers.Text = _desk.Drawers.ToString();
-            TextBoxMaterial.Text = _desk.Material.ToString();
-            TextBoxRush.Text = _desk.ProductionDays.ToString();
-            TextBoxPrice.Text = $@"$ {_desk.Price}.00";
+            TextBoxDate.Text = desk.QuoteDate.ToShortDateString();
+            TextBoxName.Text = desk.CustomerName;
+            TextBoxWidth.Text = desk.Width.ToString();
+            TextBoxDepth.Text = desk.Depth.ToString();
+            TextBoxDrawers.Text = desk.Drawers.ToString();
+            TextBoxMaterial.Text = desk.Material.ToString();
+            TextBoxRush.Text = desk.ProductionDays.ToString();
+            TextBoxPrice.Text = $@"${desk.Price}.00";
         }
     }
 }

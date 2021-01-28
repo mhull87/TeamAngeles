@@ -14,7 +14,7 @@ namespace MegaDesk_Wicker
             InitializeComponent();
         }
 
-        public Desk _desk = new Desk();
+        public Desk desk = new Desk();
 
         /// <summary>
         /// Close AddQuote and return to Main Menu
@@ -57,7 +57,7 @@ namespace MegaDesk_Wicker
                 errorProvider3.SetError(TextBoxWidth, ""); //Correct
 
                 //set input into _desk
-                _desk.Width = widthInput;
+                desk.Width = widthInput;
             }
         }
 
@@ -104,7 +104,7 @@ namespace MegaDesk_Wicker
                 errorProvider3.SetError(TextBoxDepth, ""); //Correct
 
                 // set input into _desk
-                _desk.Depth = depthInput;
+                desk.Depth = depthInput;
             }
         }
 
@@ -112,7 +112,7 @@ namespace MegaDesk_Wicker
         {
             //get the date
             LabelDate.Text = DateTime.Now.ToShortDateString();
-            _desk.QuoteDate = DateTime.Now;
+            desk.QuoteDate = DateTime.Now;
         }
 
         private void TextBoxCustomerName_Validating(object sender, CancelEventArgs e)
@@ -132,7 +132,7 @@ namespace MegaDesk_Wicker
                 errorProvider3.SetError(TextBoxCustomerName, ""); //Correct
 
                 // set input into _desk
-                _desk.CustomerName = nameInput;
+                desk.CustomerName = nameInput;
             }
         }
 
@@ -153,7 +153,7 @@ namespace MegaDesk_Wicker
                 errorProvider3.SetError(ComboBoxDrawers, ""); //Correct
 
                 // set input into _desk
-                _desk.Drawers = drawerInput;
+                desk.Drawers = drawerInput;
             }
         }
 
@@ -174,7 +174,7 @@ namespace MegaDesk_Wicker
                 errorProvider3.SetError(ComboBoxMaterial, ""); //Correct
 
                 // set input into _desk
-                _desk.Material = materialInput;
+                desk.Material = materialInput;
             }
         }
 
@@ -195,47 +195,47 @@ namespace MegaDesk_Wicker
                 errorProvider3.SetError(ComboBoxRush, ""); //Correct
 
                 // set input into _desk
-                _desk.ProductionDays = rushInput;
+                desk.ProductionDays = rushInput;
             }
         }
 
         private void CalculateQuote()
         {
             //base desk price
-            _desk.Price = 200;
+            desk.Price = 200;
 
             //get area
-            _desk.Area = _desk.Width * _desk.Depth;
+            desk.Area = desk.Width * desk.Depth;
 
             //add surface area charge, $1 per in^2 above 1000in^2
-            if (_desk.Area > 1000)
+            if (desk.Area > 1000)
             {
-                _desk.Price += (_desk.Area - 1000);
+                desk.Price += (desk.Area - 1000);
             }
 
             //add drawers charge
-            _desk.Price += (_desk.Drawers * 50);
+            desk.Price += (desk.Drawers * 50);
 
             //add materials charge
-            switch (_desk.Material)
+            switch (desk.Material)
             {
                 case DesktopMaterial.Oak:
-                    _desk.Price += 200;
+                    desk.Price += 200;
                     break;
                 case DesktopMaterial.Laminate:
-                    _desk.Price += 100;
+                    desk.Price += 100;
                     break;
                 case DesktopMaterial.Pine:
-                    _desk.Price += 50;
+                    desk.Price += 50;
                     break;
                 case DesktopMaterial.Rosewood:
-                    _desk.Price += 300;
+                    desk.Price += 300;
                     break;
                 case DesktopMaterial.Veneer:
-                    _desk.Price += 125;
+                    desk.Price += 125;
                     break;
                 default:
-                    _desk.Price += 0;
+                    desk.Price += 0;
                     //send an alert to warn the user about default use
                     MessageBox.Show("Desktop Material charge defaulted to $0");
                     break;
@@ -243,28 +243,28 @@ namespace MegaDesk_Wicker
 
             //calculate rush order charge, if any
             int rush;
-            switch (_desk.ProductionDays)
+            switch (desk.ProductionDays)
             {
                 case 3:
-                    if (_desk.Area < 1000)
+                    if (desk.Area < 1000)
                         rush = 60;
-                    else if (_desk.Area < 2000)
+                    else if (desk.Area < 2000)
                         rush = 70;
                     else
                         rush = 80;
                     break;
                 case 5:
-                    if (_desk.Area < 1000)
+                    if (desk.Area < 1000)
                         rush = 40;
-                    else if (_desk.Area < 2000)
+                    else if (desk.Area < 2000)
                         rush = 50;
                     else
                         rush = 60;
                     break;
                 case 7:
-                    if (_desk.Area < 1000)
+                    if (desk.Area < 1000)
                         rush = 30;
-                    else if (_desk.Area < 2000)
+                    else if (desk.Area < 2000)
                         rush = 35;
                     else
                         rush = 40;
@@ -279,13 +279,13 @@ namespace MegaDesk_Wicker
                     break;
             }
             //add rush charge to price
-            _desk.Price += rush;
+            desk.Price += rush;
         }
 
         private void ButtonGetQuote_Click(object sender, EventArgs e)
         {
             CalculateQuote();
-            var displayQuote = new DisplayQuote(_desk)
+            var displayQuote = new DisplayQuote(desk)
             {
                 Tag = this
             };
