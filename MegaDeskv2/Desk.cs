@@ -21,6 +21,12 @@ namespace MegaDeskAngeles
         public const int MAXDEPTH = 48;
         public const int MINDRAWERS = 0;
         public const int MAXDRAWERS = 7;
+
+        public int GetArea()
+        {
+            return Depth * Width;
+        }
+
     }
 
     public enum DesktopMaterial
