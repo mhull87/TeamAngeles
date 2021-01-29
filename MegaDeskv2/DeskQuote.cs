@@ -24,7 +24,7 @@ namespace MegaDeskAngeles
             InchPrice = 1;
             DrawerPrice = 50;
         }
-        public double areaPrice()
+        public double AreaPrice()
         {
             return Desk.GetArea() * InchPrice;
         }
@@ -89,15 +89,15 @@ namespace MegaDeskAngeles
             // select price by the surface desktop material
             switch (Desk.Material)
             {
-                case "Oak":
+                case DesktopMaterial.Oak:
                     return 200;
-                case "Laminate":
+                case DesktopMaterial.Laminate:
                     return 100;
-                case "Pine":
+                case DesktopMaterial.Pine:
                     return 50;
-                case "Rosewood":
+                case DesktopMaterial.Rosewood:
                     return 300;
-                case "Veneer":
+                case DesktopMaterial.Veneer:
                     return 125;
                 default:
                     return 0;
@@ -112,5 +112,4 @@ namespace MegaDeskAngeles
         }
     }
 
-    }
 }
