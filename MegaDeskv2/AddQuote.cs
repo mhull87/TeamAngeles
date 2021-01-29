@@ -60,8 +60,7 @@ namespace MegaDeskAngeles
                 desk.Width = widthInput;
             }
         }
-
-        //since this is a KeyPress event and not a Validating event, the errorProviders did not work correctly. Used color state change instead.
+                
         private void TextBoxDepth_KeyPress(object sender, KeyPressEventArgs e)
         {
             //determine if the keypress is a digit and no control characters
@@ -113,6 +112,10 @@ namespace MegaDeskAngeles
             //get the date
             LabelDate.Text = DateTime.Now.ToShortDateString();
             desk.QuoteDate = DateTime.Now;
+
+            //populate materials combobox with enum List<DesktopMaterial> values
+            List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
+            ComboBoxMaterial.DataSource = desktopMaterial;
         }
 
         private void TextBoxCustomerName_Validating(object sender, CancelEventArgs e)
@@ -139,7 +142,8 @@ namespace MegaDeskAngeles
         private void ComboBoxDrawers_Validating(object sender, CancelEventArgs e)
         {
             int drawerInput = int.Parse(ComboBoxDrawers.Text);
-            if (drawerInput == 0)
+            //'drawerInput == 0' causes a validation error if 0 drawers is selected
+            if (drawerInput == null)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(ComboBoxDrawers, "Please select a number");
@@ -160,7 +164,8 @@ namespace MegaDeskAngeles
         private void ComboBoxMaterial_Validating(object sender, CancelEventArgs e)
         {
             DesktopMaterial materialInput = (DesktopMaterial)ComboBoxMaterial.SelectedItem;
-            if (materialInput == 0)
+            //'materialInput == 0' causes a validation error if Oak (the first material) is selected
+            if (materialInput == null)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(ComboBoxMaterial, "Please select a material");
@@ -292,11 +297,6 @@ namespace MegaDeskAngeles
             displayQuote.Show(this);
             Hide(); //hide AddQuote form
         }
-
-        private void ComboBoxMaterial_Click(object sender, EventArgs e)
-        {
-            List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
-            ComboBoxMaterial.DataSource = desktopMaterial;
-        }
+               
     }
 }
