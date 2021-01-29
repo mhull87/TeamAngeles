@@ -38,16 +38,14 @@ namespace MegaDeskAngeles
             // 
             // ButtonAddNewQuote
             // 
-            this.ButtonAddNewQuote.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ButtonAddNewQuote.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ButtonAddNewQuote.FlatAppearance.BorderSize = 3;
-            this.ButtonAddNewQuote.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ButtonAddNewQuote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.ButtonAddNewQuote.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonAddNewQuote.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.ButtonAddNewQuote.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ButtonAddNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonAddNewQuote.Location = new System.Drawing.Point(25, 54);
+            this.ButtonAddNewQuote.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAddNewQuote.Location = new System.Drawing.Point(12, 17);
+            this.ButtonAddNewQuote.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonAddNewQuote.Name = "ButtonAddNewQuote";
-            this.ButtonAddNewQuote.Size = new System.Drawing.Size(122, 30);
+            this.ButtonAddNewQuote.Size = new System.Drawing.Size(153, 60);
             this.ButtonAddNewQuote.TabIndex = 0;
             this.ButtonAddNewQuote.Text = "&Add New Quote";
             this.ButtonAddNewQuote.UseVisualStyleBackColor = false;
@@ -55,50 +53,67 @@ namespace MegaDeskAngeles
             // 
             // ButtonViewQuotes
             // 
-            this.ButtonViewQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonViewQuotes.Location = new System.Drawing.Point(25, 101);
+            this.ButtonViewQuotes.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonViewQuotes.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
+            this.ButtonViewQuotes.FlatAppearance.BorderSize = 3;
+            this.ButtonViewQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ButtonViewQuotes.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonViewQuotes.Location = new System.Drawing.Point(12, 93);
+            this.ButtonViewQuotes.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonViewQuotes.Name = "ButtonViewQuotes";
-            this.ButtonViewQuotes.Size = new System.Drawing.Size(122, 30);
+            this.ButtonViewQuotes.Size = new System.Drawing.Size(153, 60);
             this.ButtonViewQuotes.TabIndex = 1;
             this.ButtonViewQuotes.Text = "&View Quotes";
-            this.ButtonViewQuotes.UseVisualStyleBackColor = true;
+            this.ButtonViewQuotes.UseVisualStyleBackColor = false;
             this.ButtonViewQuotes.Click += new System.EventHandler(this.ButtonViewQuotes_Click);
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSearch.Location = new System.Drawing.Point(25, 148);
+            this.ButtonSearch.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonSearch.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
+            this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ButtonSearch.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSearch.Location = new System.Drawing.Point(12, 169);
+            this.ButtonSearch.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(122, 30);
+            this.ButtonSearch.Size = new System.Drawing.Size(153, 62);
             this.ButtonSearch.TabIndex = 2;
             this.ButtonSearch.Text = "&Search";
-            this.ButtonSearch.UseVisualStyleBackColor = true;
+            this.ButtonSearch.UseVisualStyleBackColor = false;
             this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // ButtonExit
             // 
-            this.ButtonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonExit.Location = new System.Drawing.Point(25, 357);
+            this.ButtonExit.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.ButtonExit.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
+            this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ButtonExit.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonExit.Location = new System.Drawing.Point(12, 350);
+            this.ButtonExit.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonExit.Name = "ButtonExit";
-            this.ButtonExit.Size = new System.Drawing.Size(122, 30);
+            this.ButtonExit.Size = new System.Drawing.Size(153, 60);
             this.ButtonExit.TabIndex = 3;
             this.ButtonExit.Text = "E&xit";
-            this.ButtonExit.UseVisualStyleBackColor = true;
+            this.ButtonExit.UseVisualStyleBackColor = false;
             this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(475, 425);
+            this.CancelButton = this.ButtonExit;
+            this.ClientSize = new System.Drawing.Size(471, 427);
             this.Controls.Add(this.ButtonExit);
             this.Controls.Add(this.ButtonSearch);
             this.Controls.Add(this.ButtonViewQuotes);
             this.Controls.Add(this.ButtonAddNewQuote);
+            this.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainMenu";
+            this.Text = "Main Menu";
             this.ResumeLayout(false);
 
         }
