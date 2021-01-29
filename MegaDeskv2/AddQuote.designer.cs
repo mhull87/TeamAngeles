@@ -185,7 +185,6 @@ namespace MegaDeskAngeles
             this.ComboBoxMaterial.Name = "ComboBoxMaterial";
             this.ComboBoxMaterial.Size = new System.Drawing.Size(121, 24);
             this.ComboBoxMaterial.TabIndex = 5;
-            this.ComboBoxMaterial.Click += new System.EventHandler(this.ComboBoxMaterial_Click);
             this.ComboBoxMaterial.Validating += new System.ComponentModel.CancelEventHandler(this.ComboBoxMaterial_Validating);
             // 
             // ButtonGetQuote
