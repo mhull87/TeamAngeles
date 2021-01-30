@@ -32,5 +32,36 @@ namespace MegaDeskAngeles
             TextBoxRush.Text = desk.Shipping.ToString();
             TextBoxPrice.Text = $@"${desk.Price}.00";
         }
+
+        private void ButtonSave_Click(object sender, EventArgs e)
+        {
+                       
+            //send desk obj to json file
+
+
+
+            //serializing to json string
+            //sending/returning desk but it should be quote
+            var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(desk);
+
+            //deserializing to object
+            var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<Desk>(jsonString);
+        }
+
+        //example code for a method to add a new object to an existing JSON file
+        /*public string AddObjectsToJson<T>(string json, List<T> objects)
+        {
+            List<T> list = JsonConvert.DeserializeObject<List<T>>(json);
+            list.AddRange(objects);
+            return JsonConvert.SerializeObject(list);
+        }*/
+
+        //example code using method above
+        /*public string AddObjectsToJson<T>(string json, List<T> objects)
+        {
+            List<T> list = JsonConvert.DeserializeObject<List<T>>(json);
+            list.AddRange(objects);
+            return JsonConvert.SerializeObject(list);
+        }*/
     }
 }

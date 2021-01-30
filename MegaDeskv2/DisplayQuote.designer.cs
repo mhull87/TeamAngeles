@@ -125,7 +125,7 @@ namespace MegaDeskAngeles
             this.ButtonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonBack.Location = new System.Drawing.Point(12, 355);
             this.ButtonBack.Name = "ButtonBack";
-            this.ButtonBack.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ButtonBack.Padding = new System.Windows.Forms.Padding(5);
             this.ButtonBack.Size = new System.Drawing.Size(95, 35);
             this.ButtonBack.TabIndex = 15;
             this.ButtonBack.Text = "Back";
@@ -219,11 +219,12 @@ namespace MegaDeskAngeles
             this.ButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSave.Location = new System.Drawing.Point(306, 355);
             this.ButtonSave.Name = "ButtonSave";
-            this.ButtonSave.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ButtonSave.Padding = new System.Windows.Forms.Padding(5);
             this.ButtonSave.Size = new System.Drawing.Size(96, 35);
             this.ButtonSave.TabIndex = 25;
             this.ButtonSave.Text = "Save";
             this.ButtonSave.UseVisualStyleBackColor = true;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // DisplayQuote
             // 
