@@ -112,13 +112,6 @@ namespace MegaDeskAngeles
             }
         }
 
-        private void AddQuote_Load(object sender, EventArgs e)
-        {
-            //populate materials combobox with enum List<DesktopMaterial> values
-            List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
-            ComboBoxMaterial.DataSource = desktopMaterial;
-        }
-
         private void TextBoxCustomerName_Validating(object sender, CancelEventArgs e)
         {
             string nameInput = TextBoxCustomerName.Text;
@@ -209,13 +202,19 @@ namespace MegaDeskAngeles
         {
             ValidateDesk();
             ValidateDeskQuote();
-            //           CalculateQuote();
             var displayQuote = new DisplayQuote(Desk, DeskQuote)
             {
                 Tag = this
             };
             displayQuote.Show(this);
             Hide(); //hide AddQuote form
+        }
+
+        private void ComboBoxMaterial_Click(object sender, EventArgs e)
+        {
+            //populate materials combobox with enum List<DesktopMaterial> values
+            List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
+            ComboBoxMaterial.DataSource = desktopMaterial;
         }
     }
 }

@@ -25,9 +25,9 @@ namespace MegaDeskAngeles
             rushOption = string.Empty;
         }
 
-        
         public double AreaPrice()
         {
+            desk.CalculateArea();
             if (desk.area > 1000)
             {
                 return BASEPRICE + (desk.area - 1000) * INCHPRICE;

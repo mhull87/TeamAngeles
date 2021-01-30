@@ -24,7 +24,7 @@ namespace MegaDeskAngeles
             Material = 0;
         }
 
-        public int calculateArea()
+        public int CalculateArea()
         {
             area = width * depth;
             return area;
