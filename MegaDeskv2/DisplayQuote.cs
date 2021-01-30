@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace MegaDeskAngeles
 
 {
     public partial class DisplayQuote : Form
     {
-        readonly Desk Desk = new Desk();
+        readonly Desk Desk;
+        readonly DeskQuote DeskQuote;
 
-        public DisplayQuote(Desk desk)
+        public DisplayQuote(Desk desk, DeskQuote deskQuote)
         {
+            DeskQuote = deskQuote;
             Desk = desk;
             InitializeComponent();
         }
@@ -24,29 +25,29 @@ namespace MegaDeskAngeles
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
-            TextBoxDate.Text = Desk.QuoteDate.ToShortDateString();
-            TextBoxName.Text = Desk.CustomerName;
-            TextBoxWidth.Text = Desk.Width.ToString();
-            TextBoxDepth.Text = Desk.Depth.ToString();
-            TextBoxDrawers.Text = Desk.Drawers.ToString();
+            TextBoxDate.Text = DeskQuote.quoteDate;
+            TextBoxName.Text = DeskQuote.customerName;
+            TextBoxWidth.Text = Desk.width.ToString();
+            TextBoxDepth.Text = Desk.depth.ToString();
+            TextBoxDrawers.Text = Desk.drawers.ToString();
             TextBoxMaterial.Text = Desk.Material.ToString();
-            TextBoxRush.Text = Desk.ShippingBox.ToString();
-            TextBoxPrice.Text = $@"${Desk.Price}.00";
+            TextBoxRush.Text = DeskQuote.rushOption.ToString();
+            TextBoxPrice.Text = $@"${DeskQuote.TotalQuote()}.00";
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-                       
+
             //send desk obj to json file
 
 
 
             //serializing to json string
             //sending/returning desk but it should be quote
-            var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(Desk);
+            /*var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(desk);
 
             //deserializing to object
-            var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<Desk>(jsonString);
+            var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<Desk>(jsonString);*/
         }
 
         //example code for a method to add a new object to an existing JSON file
