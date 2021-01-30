@@ -4,23 +4,31 @@ namespace MegaDeskAngeles
 {
     public class Desk
     {
-        public int Width { get; set; }
-        public int Depth { get; set; }
-        public string CustomerName { get; set; }
-        public DateTime QuoteDate { get; set; }
-        public int Drawers { get; set; }
-        public DesktopMaterial Material { get; set; }
-        public int Area { get; set; }
-        public int Price { get; set; }
-        public object ShippingBox { get; internal set; }
+        public int width;
+        public int depth;
+        public int drawers;
+        public DesktopMaterial Material;
+        public int area;
 
         //Desk Constraints
         public const int MINWIDTH = 24;
         public const int MAXWIDTH = 96;
         public const int MINDEPTH = 12;
         public const int MAXDEPTH = 48;
-        public const int MINDRAWERS = 0;
-        public const int MAXDRAWERS = 7;
+
+        public Desk()
+        {
+            width = 0;
+            depth = 0;
+            drawers = 0;
+            Material = 0;
+        }
+
+        public int calculateArea()
+        {
+            area = width * depth;
+            return area;
+        }
     }
 
     public enum DesktopMaterial

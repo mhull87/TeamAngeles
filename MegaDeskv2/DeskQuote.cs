@@ -8,95 +8,103 @@ namespace MegaDeskAngeles
 {
     public class DeskQuote
     {
-        public string CustomerName { get; set; }
-        public DateTime QuoteDate { get; set; }
-        public double BasePrice {get; set;}
-        public double InchPrice {get; set;}
-        public double DrawerPrice { get; set; }
-        public static Desk Desk { get; set; }
-        public object ShippingBox { get; set; }
-        public object Rush3 { get; private set; }
-        public object Rush5 { get; private set; }
-        public object Rush7 { get; private set; }
+        public string customerName;
+        public string quoteDate;
+        public Desk desk;
+        public string rushOption;
+        public double totalCost;
 
-        static int  Area = Desk.Depth * Desk.Width;
+        public const int BASEPRICE = 200;
+        public const int INCHPRICE = 1;
+        public const int DRAWERPRICE = 50;
 
         public DeskQuote()
         {
-            // init default prices
-            BasePrice = 200;
-            InchPrice = 1;
-            DrawerPrice = 50;
+            customerName = string.Empty;
+            quoteDate = string.Empty;
+            rushOption = string.Empty;
         }
-        public int GetArea()
-        {
-            return Desk.Depth * Desk.Width;
-        }
+
+        
         public double AreaPrice()
         {
-            return GetArea() * InchPrice;
+            if (desk.area > 1000)
+            {
+                return BASEPRICE + (desk.area - 1000) * INCHPRICE;
+            } else
+            {
+                return BASEPRICE;
+            }            
         }
+
         public double DrawersPrice()
         {
-            return Desk.Drawers * DrawerPrice;
+            return desk.drawers * DRAWERPRICE;
         }
-        public int ShippingSelection(int Area)
+
+        public double RushSelection()
         {
-            if (ShippingBox == Rush3)
+            double rushCost = 0;
+            try
             {
-                if (Area < 1000)
+                switch (rushOption)
                 {
-                    return 60;
-                }
-                else if (Area > 999 && Area < 2001)
-                {
-                    return 70;
-                }
-                else
-                {
-                    return 80;
+                    case "3 Days":
+                        if (desk.area < 1000)
+                        {
+                            rushCost = 60;
+                        }
+                        else if (desk.area > 2000)
+                        {
+                            rushCost = 80;
+                        }
+                        else
+                        {
+                            rushCost = 70;
+                        }
+                        break;
+                    case "5 Days":
+                        if (desk.area < 1000)
+                        {
+                            rushCost = 40;
+                        }
+                        else if (desk.area > 2000)
+                        {
+                            rushCost = 60;
+                        }
+                        else
+                        {
+                            rushCost = 50;
+                        }
+                        break;
+                    case "7 Days":
+                        if (desk.area < 1000)
+                        {
+                            rushCost = 30;
+                        }
+                        else if (desk.area > 2000)
+                        {
+                            rushCost = 40;
+                        }
+                        else
+                        {
+                            rushCost = 35;
+                        }
+                        break;
                 }
             }
-            else if (ShippingBox == Rush5)
+            catch (Exception)
             {
-                if (Area < 1000)
-                {
-                    return 40;
-                }
-                else if (Area > 999 && Area < 2001)
-                {
-                    return 50;
-                }
-                else
-                {
-                    return 60;
-                }
+
+                throw;
             }
-            else if (ShippingBox == Rush7)
-            {
-                if (Area < 1000)
-                {
-                    return 30;
-                }
-                else if (Area > 999 && Area < 2001)
-                {
-                    return 35;
-                }
-                else
-                {
-                    return 40;
-                }
-            }
-            else
-            {
-                return 0;
-            }
+            return rushCost;
         }
 
         public double MaterialPrice()
         {
             // select price by the surface desktop material
-            switch (Desk.Material)
+            switch (desk.Material)
             {
                 case DesktopMaterial.Oak:
                     return 200;
@@ -115,9 +123,8 @@ namespace MegaDeskAngeles
 
         public double TotalQuote()
         {
-            double total = BasePrice + AreaPrice() + DrawersPrice() + 
-                ShippingSelection(Area) + MaterialPrice();
-            return total;
+            totalCost = AreaPrice() + DrawersPrice() + RushSelection() + MaterialPrice();
+            return totalCost;
         }
     }
 }

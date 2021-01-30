@@ -9,12 +9,17 @@ namespace MegaDeskAngeles
 {
     public partial class AddQuote : Form
     {
+
+        DateTime todayDate = DateTime.Today;
+
         public AddQuote()
         {
             InitializeComponent();
+            LabelDate.Text = todayDate.ToString("MMM dd, yyyy");
         }
 
         public Desk Desk = new Desk();
+        public DeskQuote DeskQuote = new DeskQuote();
 
         /// <summary>
         /// Close AddQuote and return to Main Menu
@@ -57,7 +62,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(TextBoxWidth, ""); //Correct
 
                 //set input into _desk
-                Desk.Width = widthInput;
+                Desk.width = widthInput;
             }
         }
 
@@ -103,16 +108,12 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(TextBoxDepth, ""); //Correct
 
                 // set input into _desk
-                Desk.Depth = depthInput;
+                Desk.depth = depthInput;
             }
         }
 
         private void AddQuote_Load(object sender, EventArgs e)
         {
-            //get the date
-            LabelDate.Text = DateTime.Now.ToShortDateString();
-            Desk.QuoteDate = DateTime.Now;
-
             //populate materials combobox with enum List<DesktopMaterial> values
             List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
             ComboBoxMaterial.DataSource = desktopMaterial;
@@ -135,7 +136,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(TextBoxCustomerName, ""); //Correct
 
                 // set input into _desk
-                Desk.CustomerName = nameInput;
+                DeskQuote.customerName = nameInput;
             }
         }
 
@@ -157,13 +158,59 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(UpDownDrawers, ""); //Correct
 
                 // set input into _desk
-                Desk.Drawers = drawerInput;
+                Desk.drawers = drawerInput;
             }
-        }        
+        }
+
+        private void ValidateDesk()
+        {
+            var deskWidth = TextBoxWidth.Text;
+            var deskDepth = TextBoxDepth.Text;
+            var drawerNum = UpDownDrawers.Text;
+            var materialType = ComboBoxMaterial.SelectedItem;
+
+            if (deskWidth != String.Empty)
+            {
+                Desk.width = Convert.ToInt32(deskWidth);
+            }
+            if (deskDepth != String.Empty)
+            {
+                Desk.depth = Convert.ToInt32(deskDepth);
+            }
+                Desk.Material = (DesktopMaterial)materialType;
+            if (drawerNum != String.Empty)
+            {
+                Desk.drawers = Convert.ToInt32(drawerNum);
+            }
+        }
+
+        private void ValidateDeskQuote()
+        {
+            var customerName = TextBoxCustomerName.Text;
+            var todayDate = LabelDate.Text;
+            var rushTime = RushBox.Text;
+
+            if (customerName != String.Empty)
+            {
+                DeskQuote.customerName = customerName;
+            }
+            if (todayDate != String.Empty)
+            {
+                DeskQuote.quoteDate = todayDate;
+            }
+            if (rushTime != String.Empty)
+            {
+                DeskQuote.rushOption = rushTime;
+            }
+            DeskQuote.desk = Desk;
+        }
+
         private void ButtonGetQuote_Click(object sender, EventArgs e)
         {
- //           CalculateQuote();
-            var displayQuote = new DisplayQuote(Desk)
+            ValidateDesk();
+            ValidateDeskQuote();
+            //           CalculateQuote();
+            var displayQuote = new DisplayQuote(Desk, DeskQuote)
             {
                 Tag = this
             };
