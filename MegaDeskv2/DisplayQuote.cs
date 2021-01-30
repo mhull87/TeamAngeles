@@ -6,11 +6,11 @@ namespace MegaDeskAngeles
 {
     public partial class DisplayQuote : Form
     {
-        readonly Desk desk = new Desk();
+        readonly Desk Desk = new Desk();
 
         public DisplayQuote(Desk desk)
         {
-            this.desk = desk;
+            Desk = desk;
             InitializeComponent();
         }
 
@@ -23,14 +23,14 @@ namespace MegaDeskAngeles
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
-            TextBoxDate.Text = desk.QuoteDate.ToShortDateString();
-            TextBoxName.Text = desk.CustomerName;
-            TextBoxWidth.Text = desk.Width.ToString();
-            TextBoxDepth.Text = desk.Depth.ToString();
-            TextBoxDrawers.Text = desk.Drawers.ToString();
-            TextBoxMaterial.Text = desk.Material.ToString();
-            TextBoxRush.Text = desk.Shipping.ToString();
-            TextBoxPrice.Text = $@"${desk.Price}.00";
+            TextBoxDate.Text = Desk.QuoteDate.ToShortDateString();
+            TextBoxName.Text = Desk.CustomerName;
+            TextBoxWidth.Text = Desk.Width.ToString();
+            TextBoxDepth.Text = Desk.Depth.ToString();
+            TextBoxDrawers.Text = Desk.Drawers.ToString();
+            TextBoxMaterial.Text = Desk.Material.ToString();
+            TextBoxRush.Text = Desk.ShippingBox.ToString();
+            TextBoxPrice.Text = $@"${Desk.Price}.00";
         }
     }
 }
