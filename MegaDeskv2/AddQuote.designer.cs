@@ -47,16 +47,17 @@ namespace MegaDeskAngeles
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ComboBoxDrawers = new System.Windows.Forms.ComboBox();
             this.ShippingBox = new System.Windows.Forms.GroupBox();
             this.NoRush14 = new System.Windows.Forms.RadioButton();
             this.Rush7 = new System.Windows.Forms.RadioButton();
             this.Rush5 = new System.Windows.Forms.RadioButton();
             this.Rush3 = new System.Windows.Forms.RadioButton();
+            this.UpDownDrawers = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             this.ShippingBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDownDrawers)).BeginInit();
             this.SuspendLayout();
             // 
             // ButtonMainMenu
@@ -190,7 +191,7 @@ namespace MegaDeskAngeles
             this.ComboBoxMaterial.Name = "ComboBoxMaterial";
             this.ComboBoxMaterial.Size = new System.Drawing.Size(274, 44);
             this.ComboBoxMaterial.TabIndex = 5;
-            this.ComboBoxMaterial.Click += new System.EventHandler(this.ComboBoxMaterial_Click);
+            this.ComboBoxMaterial.Text = "Choose a Material";
             // 
             // ButtonGetQuote
             // 
@@ -224,26 +225,6 @@ namespace MegaDeskAngeles
             // 
             this.errorProvider3.ContainerControl = this;
             this.errorProvider3.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider3.Icon")));
-            // 
-            // ComboBoxDrawers
-            // 
-            this.ComboBoxDrawers.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBoxDrawers.FormattingEnabled = true;
-            this.ComboBoxDrawers.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.ComboBoxDrawers.Location = new System.Drawing.Point(187, 336);
-            this.ComboBoxDrawers.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
-            this.ComboBoxDrawers.Name = "ComboBoxDrawers";
-            this.ComboBoxDrawers.Size = new System.Drawing.Size(274, 44);
-            this.ComboBoxDrawers.TabIndex = 4;
-            this.ComboBoxDrawers.Validating += new System.ComponentModel.CancelEventHandler(this.ComboBoxDrawers_Validating);
             // 
             // ShippingBox
             // 
@@ -302,6 +283,18 @@ namespace MegaDeskAngeles
             this.Rush3.Text = "Rush: 3 days";
             this.Rush3.UseVisualStyleBackColor = true;
             // 
+            // UpDownDrawers
+            // 
+            this.UpDownDrawers.Location = new System.Drawing.Point(187, 333);
+            this.UpDownDrawers.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.UpDownDrawers.Name = "UpDownDrawers";
+            this.UpDownDrawers.Size = new System.Drawing.Size(274, 45);
+            this.UpDownDrawers.TabIndex = 16;
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 36F);
@@ -309,8 +302,8 @@ namespace MegaDeskAngeles
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.CancelButton = this.ButtonMainMenu;
             this.ClientSize = new System.Drawing.Size(816, 558);
+            this.Controls.Add(this.UpDownDrawers);
             this.Controls.Add(this.ShippingBox);
-            this.Controls.Add(this.ComboBoxDrawers);
             this.Controls.Add(this.ButtonGetQuote);
             this.Controls.Add(this.ComboBoxMaterial);
             this.Controls.Add(this.LabelMaterial);
@@ -335,6 +328,7 @@ namespace MegaDeskAngeles
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             this.ShippingBox.ResumeLayout(false);
             this.ShippingBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpDownDrawers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,11 +352,11 @@ namespace MegaDeskAngeles
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
-        private System.Windows.Forms.ComboBox ComboBoxDrawers;
         private System.Windows.Forms.GroupBox ShippingBox;
         private System.Windows.Forms.RadioButton NoRush14;
         private System.Windows.Forms.RadioButton Rush7;
         private System.Windows.Forms.RadioButton Rush5;
         private System.Windows.Forms.RadioButton Rush3;
+        private System.Windows.Forms.NumericUpDown UpDownDrawers;
     }
 }

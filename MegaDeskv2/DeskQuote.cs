@@ -10,12 +10,16 @@ namespace MegaDeskAngeles
     {
         public string CustomerName { get; set; }
         public DateTime QuoteDate { get; set; }
-        public string Rush { get; set; }
         public double BasePrice {get; set;}
         public double InchPrice {get; set;}
         public double DrawerPrice { get; set; }
+        public static Desk Desk { get; set; }
+        public object ShippingBox { get; set; }
+        public object Rush3 { get; private set; }
+        public object Rush5 { get; private set; }
+        public object Rush7 { get; private set; }
 
-        public Desk Desk { get; set; }
+        static int  Area = Desk.Depth * Desk.Width;
 
         public DeskQuote()
         {
@@ -24,63 +28,68 @@ namespace MegaDeskAngeles
             InchPrice = 1;
             DrawerPrice = 50;
         }
+        public int GetArea()
+        {
+            return Desk.Depth * Desk.Width;
+        }
         public double AreaPrice()
         {
-            return Desk.GetArea() * InchPrice;
+            return GetArea() * InchPrice;
         }
-
         public double DrawersPrice()
         {
             return Desk.Drawers * DrawerPrice;
         }
-
-        public double RushPrice(int size)
+        public int ShippingSelection(int Area)
         {
-            // Select price by rush time and size.
-            switch (Rush)
+            if (ShippingBox == Rush3)
             {
-                case "7 days":
-                    if (size<1000)
-                    {
-                        return 30;
-                    }
-                    else if (size <=2000)
-                    {
-                        return 35;
-                    }
-                    else
-                    {
-                        return 40;
-                    }
-                    break;
-                case "5 days":
-                    if (size < 1000)
-                    {
-                        return 40;
-                    }
-                    else if (size <= 2000)
-                    {
-                        return 50;
-                    }
-                    else
-                    {
-                        return 60;
-                    }
-                case "3 days":
-                    if (size < 1000)
-                    {
-                        return 60;
-                    }
-                    else if (size <= 2000)
-                    {
-                        return 70;
-                    }
-                    else
-                    {
-                        return 80;
-                    }
-                default:
-                    return 0;
+                if (Area < 1000)
+                {
+                    return 60;
+                }
+                else if (Area > 999 && Area < 2001)
+                {
+                    return 70;
+                }
+                else
+                {
+                    return 80;
+                }
+            }
+            else if (ShippingBox == Rush5)
+            {
+                if (Area < 1000)
+                {
+                    return 40;
+                }
+                else if (Area > 999 && Area < 2001)
+                {
+                    return 50;
+                }
+                else
+                {
+                    return 60;
+                }
+            }
+            else if (ShippingBox == Rush7)
+            {
+                if (Area < 1000)
+                {
+                    return 30;
+                }
+                else if (Area > 999 && Area < 2001)
+                {
+                    return 35;
+                }
+                else
+                {
+                    return 40;
+                }
+            }
+            else
+            {
+                return 0;
             }
         }
 
@@ -107,9 +116,8 @@ namespace MegaDeskAngeles
         public double TotalQuote()
         {
             double total = BasePrice + AreaPrice() + DrawersPrice() + 
-                RushPrice(Desk.GetArea()) + MaterialPrice();
+                ShippingSelection(Area) + MaterialPrice();
             return total;
         }
     }
-
 }
