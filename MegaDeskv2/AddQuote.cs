@@ -60,8 +60,7 @@ namespace MegaDeskAngeles
                 desk.Width = widthInput;
             }
         }
-
-        //since this is a KeyPress event and not a Validating event, the errorProviders did not work correctly. Used color state change instead.
+        
         private void TextBoxDepth_KeyPress(object sender, KeyPressEventArgs e)
         {
             //determine if the keypress is a digit and no control characters
@@ -139,7 +138,8 @@ namespace MegaDeskAngeles
         private void ComboBoxDrawers_Validating(object sender, CancelEventArgs e)
         {
             int drawerInput = int.Parse(ComboBoxDrawers.Text);
-            if (drawerInput == 0)
+            //when 'drawerInput == 0', selecting zero drawers causes an error
+            if (drawerInput == null)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(ComboBoxDrawers, "Please select a number");
