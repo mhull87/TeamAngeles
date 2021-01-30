@@ -43,6 +43,7 @@ namespace MegaDeskAngeles
             this.LabelMaterial = new System.Windows.Forms.Label();
             this.LabelDrawers = new System.Windows.Forms.Label();
             this.ComboBoxMaterial = new System.Windows.Forms.ComboBox();
+            this.deskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ButtonGetQuote = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -50,12 +51,11 @@ namespace MegaDeskAngeles
             this.UpDownDrawers = new System.Windows.Forms.NumericUpDown();
             this.RushBox = new System.Windows.Forms.ComboBox();
             this.RushLabel = new System.Windows.Forms.Label();
-            this.deskBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownDrawers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ButtonMainMenu
@@ -78,7 +78,7 @@ namespace MegaDeskAngeles
             this.TextBoxWidth.Location = new System.Drawing.Point(187, 175);
             this.TextBoxWidth.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.TextBoxWidth.Name = "TextBoxWidth";
-            this.TextBoxWidth.Size = new System.Drawing.Size(274, 37);
+            this.TextBoxWidth.Size = new System.Drawing.Size(274, 45);
             this.TextBoxWidth.TabIndex = 2;
             this.TextBoxWidth.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxWidth_Validating);
             // 
@@ -89,7 +89,7 @@ namespace MegaDeskAngeles
             this.LabelCustomerName.Location = new System.Drawing.Point(15, 116);
             this.LabelCustomerName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelCustomerName.Name = "LabelCustomerName";
-            this.LabelCustomerName.Size = new System.Drawing.Size(130, 29);
+            this.LabelCustomerName.Size = new System.Drawing.Size(160, 36);
             this.LabelCustomerName.TabIndex = 9;
             this.LabelCustomerName.Text = "Customer Name:";
             // 
@@ -99,7 +99,7 @@ namespace MegaDeskAngeles
             this.TextBoxCustomerName.Location = new System.Drawing.Point(187, 113);
             this.TextBoxCustomerName.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.TextBoxCustomerName.Name = "TextBoxCustomerName";
-            this.TextBoxCustomerName.Size = new System.Drawing.Size(274, 37);
+            this.TextBoxCustomerName.Size = new System.Drawing.Size(274, 45);
             this.TextBoxCustomerName.TabIndex = 1;
             this.TextBoxCustomerName.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxCustomerName_Validating);
             // 
@@ -110,7 +110,7 @@ namespace MegaDeskAngeles
             this.LabelWidth.Location = new System.Drawing.Point(15, 178);
             this.LabelWidth.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelWidth.Name = "LabelWidth";
-            this.LabelWidth.Size = new System.Drawing.Size(114, 29);
+            this.LabelWidth.Size = new System.Drawing.Size(142, 36);
             this.LabelWidth.TabIndex = 10;
             this.LabelWidth.Text = "Width (24-96):";
             // 
@@ -121,7 +121,7 @@ namespace MegaDeskAngeles
             this.LabelDeskSpecifications.Location = new System.Drawing.Point(205, 9);
             this.LabelDeskSpecifications.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelDeskSpecifications.Name = "LabelDeskSpecifications";
-            this.LabelDeskSpecifications.Size = new System.Drawing.Size(312, 56);
+            this.LabelDeskSpecifications.Size = new System.Drawing.Size(392, 71);
             this.LabelDeskSpecifications.TabIndex = 5;
             this.LabelDeskSpecifications.Text = "Desk Specifications";
             // 
@@ -132,7 +132,7 @@ namespace MegaDeskAngeles
             this.LabelDepth.Location = new System.Drawing.Point(15, 241);
             this.LabelDepth.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelDepth.Name = "LabelDepth";
-            this.LabelDepth.Size = new System.Drawing.Size(114, 29);
+            this.LabelDepth.Size = new System.Drawing.Size(142, 36);
             this.LabelDepth.TabIndex = 11;
             this.LabelDepth.Text = "Depth (12-48):";
             // 
@@ -142,7 +142,7 @@ namespace MegaDeskAngeles
             this.TextBoxDepth.Location = new System.Drawing.Point(187, 238);
             this.TextBoxDepth.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.TextBoxDepth.Name = "TextBoxDepth";
-            this.TextBoxDepth.Size = new System.Drawing.Size(274, 37);
+            this.TextBoxDepth.Size = new System.Drawing.Size(274, 45);
             this.TextBoxDepth.TabIndex = 3;
             this.TextBoxDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDepth_KeyPress);
             this.TextBoxDepth.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxDepth_Validating);
@@ -154,7 +154,7 @@ namespace MegaDeskAngeles
             this.LabelDate.Location = new System.Drawing.Point(15, 64);
             this.LabelDate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelDate.Name = "LabelDate";
-            this.LabelDate.Size = new System.Drawing.Size(45, 29);
+            this.LabelDate.Size = new System.Drawing.Size(56, 36);
             this.LabelDate.TabIndex = 8;
             this.LabelDate.Text = "Date";
             // 
@@ -165,7 +165,7 @@ namespace MegaDeskAngeles
             this.LabelMaterial.Location = new System.Drawing.Point(15, 366);
             this.LabelMaterial.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelMaterial.Name = "LabelMaterial";
-            this.LabelMaterial.Size = new System.Drawing.Size(73, 29);
+            this.LabelMaterial.Size = new System.Drawing.Size(91, 36);
             this.LabelMaterial.TabIndex = 13;
             this.LabelMaterial.Text = "Material:";
             // 
@@ -176,7 +176,7 @@ namespace MegaDeskAngeles
             this.LabelDrawers.Location = new System.Drawing.Point(15, 304);
             this.LabelDrawers.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelDrawers.Name = "LabelDrawers";
-            this.LabelDrawers.Size = new System.Drawing.Size(112, 29);
+            this.LabelDrawers.Size = new System.Drawing.Size(136, 36);
             this.LabelDrawers.TabIndex = 12;
             this.LabelDrawers.Text = "Drawers (0-7):";
             // 
@@ -188,9 +188,14 @@ namespace MegaDeskAngeles
             this.ComboBoxMaterial.Location = new System.Drawing.Point(187, 363);
             this.ComboBoxMaterial.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.ComboBoxMaterial.Name = "ComboBoxMaterial";
-            this.ComboBoxMaterial.Size = new System.Drawing.Size(274, 37);
+            this.ComboBoxMaterial.Size = new System.Drawing.Size(274, 44);
             this.ComboBoxMaterial.TabIndex = 5;
             this.ComboBoxMaterial.Text = "Choose a Material";
+            this.ComboBoxMaterial.Click += new System.EventHandler(this.ComboBoxMaterial_Click);
+            // 
+            // deskBindingSource
+            // 
+            this.deskBindingSource.DataSource = typeof(MegaDeskAngeles.Desk);
             // 
             // ButtonGetQuote
             // 
@@ -234,7 +239,7 @@ namespace MegaDeskAngeles
             0,
             0});
             this.UpDownDrawers.Name = "UpDownDrawers";
-            this.UpDownDrawers.Size = new System.Drawing.Size(274, 37);
+            this.UpDownDrawers.Size = new System.Drawing.Size(274, 45);
             this.UpDownDrawers.TabIndex = 16;
             // 
             // RushBox
@@ -249,7 +254,7 @@ namespace MegaDeskAngeles
             this.RushBox.Location = new System.Drawing.Point(187, 424);
             this.RushBox.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.RushBox.Name = "RushBox";
-            this.RushBox.Size = new System.Drawing.Size(274, 37);
+            this.RushBox.Size = new System.Drawing.Size(274, 44);
             this.RushBox.TabIndex = 17;
             // 
             // RushLabel
@@ -259,17 +264,13 @@ namespace MegaDeskAngeles
             this.RushLabel.Location = new System.Drawing.Point(15, 427);
             this.RushLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RushLabel.Name = "RushLabel";
-            this.RushLabel.Size = new System.Drawing.Size(103, 29);
+            this.RushLabel.Size = new System.Drawing.Size(128, 36);
             this.RushLabel.TabIndex = 18;
             this.RushLabel.Text = "Rush Option:";
             // 
-            // deskBindingSource
-            // 
-            this.deskBindingSource.DataSource = typeof(MegaDeskAngeles.Desk);
-            // 
             // AddQuote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.CancelButton = this.ButtonMainMenu;
@@ -295,12 +296,11 @@ namespace MegaDeskAngeles
             this.Name = "AddQuote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddQuote";
-            this.Load += new System.EventHandler(this.AddQuote_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownDrawers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
