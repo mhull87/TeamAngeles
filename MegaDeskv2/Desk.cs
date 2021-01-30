@@ -10,7 +10,7 @@ namespace MegaDeskAngeles
         public DateTime QuoteDate { get; set; }
         public int Drawers { get; set; }
         public DesktopMaterial Material { get; set; }
-        public int ProductionDays { get; set; }
+        public int Shipping { get; set; }
         public int Area { get; set; }
         public int Price { get; set; }
 

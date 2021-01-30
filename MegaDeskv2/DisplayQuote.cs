@@ -29,7 +29,7 @@ namespace MegaDeskAngeles
             TextBoxDepth.Text = desk.Depth.ToString();
             TextBoxDrawers.Text = desk.Drawers.ToString();
             TextBoxMaterial.Text = desk.Material.ToString();
-            TextBoxRush.Text = desk.ProductionDays.ToString();
+            TextBoxRush.Text = desk.Shipping.ToString();
             TextBoxPrice.Text = $@"${desk.Price}.00";
         }
     }

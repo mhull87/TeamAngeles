@@ -60,7 +60,8 @@ namespace MegaDeskAngeles
                 desk.Width = widthInput;
             }
         }
-                
+
+        //since this is a KeyPress event and not a Validating event, the errorProviders did not work correctly. Used color state change instead.
         private void TextBoxDepth_KeyPress(object sender, KeyPressEventArgs e)
         {
             //determine if the keypress is a digit and no control characters
@@ -112,10 +113,6 @@ namespace MegaDeskAngeles
             //get the date
             LabelDate.Text = DateTime.Now.ToShortDateString();
             desk.QuoteDate = DateTime.Now;
-
-            //populate materials combobox with enum List<DesktopMaterial> values
-            List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
-            ComboBoxMaterial.DataSource = desktopMaterial;
         }
 
         private void TextBoxCustomerName_Validating(object sender, CancelEventArgs e)
@@ -142,8 +139,7 @@ namespace MegaDeskAngeles
         private void ComboBoxDrawers_Validating(object sender, CancelEventArgs e)
         {
             int drawerInput = int.Parse(ComboBoxDrawers.Text);
-            //'drawerInput == 0' causes a validation error if 0 drawers is selected
-            if (drawerInput == null)
+            if (drawerInput == 0)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(ComboBoxDrawers, "Please select a number");
@@ -161,11 +157,10 @@ namespace MegaDeskAngeles
             }
         }
 
-        private void ComboBoxMaterial_Validating(object sender, CancelEventArgs e)
+/*        private void ComboBoxMaterial_Validating(object sender, CancelEventArgs e)
         {
             DesktopMaterial materialInput = (DesktopMaterial)ComboBoxMaterial.SelectedItem;
-            //'materialInput == 0' causes a validation error if Oak (the first material) is selected
-            if (materialInput == null)
+            if (materialInput == 0)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(ComboBoxMaterial, "Please select a material");
@@ -203,7 +198,7 @@ namespace MegaDeskAngeles
                 desk.ProductionDays = rushInput;
             }
         }
-
+*/
         private void CalculateQuote()
         {
             //base desk price
@@ -245,47 +240,106 @@ namespace MegaDeskAngeles
                     MessageBox.Show("Desktop Material charge defaulted to $0");
                     break;
             }
+            /*
+                        //calculate rush order charge, if any
+                        int rush;
+                        switch (desk.ProductionDays)
+                        {
+                            case 3:
+                                if (desk.Area < 1000)
+                                    rush = 60;
+                                else if (desk.Area < 2000)
+                                    rush = 70;
+                                else
+                                    rush = 80;
+                                break;
+                            case 5:
+                                if (desk.Area < 1000)
+                                    rush = 40;
+                                else if (desk.Area < 2000)
+                                    rush = 50;
+                                else
+                                    rush = 60;
+                                break;
+                            case 7:
+                                if (desk.Area < 1000)
+                                    rush = 30;
+                                else if (desk.Area < 2000)
+                                    rush = 35;
+                                else
+                                    rush = 40;
+                                break;
+                            case 14:
+                                rush = 0;
+                                break;
+                            default:
+                                rush = 0;
+                                //send an alarm to warn the user about default use
+                                MessageBox.Show("Rush Order charge defaulted to $0");
+                                break;
+                        }
 
-            //calculate rush order charge, if any
-            int rush;
-            switch (desk.ProductionDays)
-            {
-                case 3:
-                    if (desk.Area < 1000)
-                        rush = 60;
-                    else if (desk.Area < 2000)
-                        rush = 70;
-                    else
-                        rush = 80;
-                    break;
-                case 5:
-                    if (desk.Area < 1000)
-                        rush = 40;
-                    else if (desk.Area < 2000)
-                        rush = 50;
-                    else
-                        rush = 60;
-                    break;
-                case 7:
-                    if (desk.Area < 1000)
-                        rush = 30;
-                    else if (desk.Area < 2000)
-                        rush = 35;
-                    else
-                        rush = 40;
-                    break;
-                case 14:
-                    rush = 0;
-                    break;
-                default:
-                    rush = 0;
-                    //send an alarm to warn the user about default use
-                    MessageBox.Show("Rush Order charge defaulted to $0");
-                    break;
-            }
-            //add rush charge to price
-            desk.Price += rush;
+
+                        //add rush charge to price
+
+            */
+            int Shipping = ShippingSelection(desk.Area);
+            desk.Price += Shipping;
         }
+
+        public int ShippingSelection(int Area)
+        {
+            if (Rush3.Checked)
+            {
+                if (Area < 1000)
+                {
+                    return 60;
+                }
+                else if (Area > 999 && Area < 2001)
+                {
+                    return 70;
+                }
+                else
+                {
+                    return 80;
+                }
+            }
+            else if (Rush5.Checked)
+            {
+                if (Area < 1000)
+                {
+                    return 40;
+                }
+                else if (Area > 999 && Area < 2001)
+                {
+                    return 50;
+                }
+                else
+                {
+                    return 60;
+                }
+            }
+            else if (Rush7.Checked)
+            {
+                if (Area < 1000)
+                {
+                    return 30;
+                }
+                else if (Area > 999 && Area < 2001)
+                {
+                    return 35;
+                }
+                else
+                {
+                    return 40;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
 
         private void ButtonGetQuote_Click(object sender, EventArgs e)
         {
@@ -297,6 +351,11 @@ namespace MegaDeskAngeles
             displayQuote.Show(this);
             Hide(); //hide AddQuote form
         }
-               
+
+        private void ComboBoxMaterial_Click(object sender, EventArgs e)
+        {
+            List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
+            ComboBoxMaterial.DataSource = desktopMaterial;
+        }
     }
 }
