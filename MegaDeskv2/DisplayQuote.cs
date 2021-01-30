@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace MegaDeskAngeles
 
@@ -42,7 +43,7 @@ namespace MegaDeskAngeles
 
             //serializing to json string
             //sending/returning desk but it should be quote
-            var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(desk);
+            var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(Desk);
 
             //deserializing to object
             var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<Desk>(jsonString);
