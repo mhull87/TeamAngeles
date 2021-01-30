@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace MegaDeskAngeles
 {
     public partial class MainMenu : Form
     {
+        public List<DeskQuote> AllTheQuotes;
         public MainMenu()
         {
             InitializeComponent();
+            AllTheQuotes = new List<DeskQuote>();
         }
 
         //exit application
@@ -23,12 +26,12 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonAddNewQuote_Click(object sender, EventArgs e)
         {
-            AddQuote viewAddQuote = new AddQuote
+            AddQuote viewAddQuote = new AddQuote(AllTheQuotes)
             {
                 Tag = this
             };
             viewAddQuote.Show(this);
-            Hide(); //hide MainMenu
+            Hide(); //hide MainMenu            
         }
 
         /// <summary>

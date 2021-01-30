@@ -12,10 +12,12 @@ namespace MegaDeskAngeles
 
         DateTime todayDate = DateTime.Today;
 
-        public AddQuote()
+        List<DeskQuote> AllTheQuotes;
+        public AddQuote(List<DeskQuote> AllTheQuotes)
         {
             InitializeComponent();
             LabelDate.Text = todayDate.ToString("MMM dd, yyyy");
+            this.AllTheQuotes = AllTheQuotes;
         }
 
         public Desk Desk = new Desk();
@@ -202,7 +204,7 @@ namespace MegaDeskAngeles
         {
             ValidateDesk();
             ValidateDeskQuote();
-            var displayQuote = new DisplayQuote(Desk, DeskQuote)
+            var displayQuote = new DisplayQuote(AllTheQuotes, DeskQuote)
             {
                 Tag = this
             };

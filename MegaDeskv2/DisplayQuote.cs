@@ -1,19 +1,26 @@
 ﻿using System;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
+
 
 namespace MegaDeskAngeles
 
 {
     public partial class DisplayQuote : Form
     {
-        readonly Desk Desk;
+        //readonly Desk Desk;
         readonly DeskQuote DeskQuote;
 
-        public DisplayQuote(Desk desk, DeskQuote deskQuote)
+        List<DeskQuote> AllTheQuotes;
+
+        public DisplayQuote(List<DeskQuote> AllTheQuotes, DeskQuote deskQuote)
         {
             DeskQuote = deskQuote;
-            Desk = desk;
+           // Desk = desk;
             InitializeComponent();
+            this.AllTheQuotes = AllTheQuotes;
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
@@ -27,27 +34,33 @@ namespace MegaDeskAngeles
         {
             TextBoxDate.Text = DeskQuote.quoteDate;
             TextBoxName.Text = DeskQuote.customerName;
-            TextBoxWidth.Text = Desk.width.ToString();
-            TextBoxDepth.Text = Desk.depth.ToString();
-            TextBoxDrawers.Text = Desk.drawers.ToString();
-            TextBoxMaterial.Text = Desk.Material.ToString();
+            TextBoxWidth.Text = DeskQuote.desk.width.ToString();
+            TextBoxDepth.Text = DeskQuote.desk.depth.ToString();
+            TextBoxDrawers.Text = DeskQuote.desk.drawers.ToString();
+            TextBoxMaterial.Text = DeskQuote.desk.Material.ToString();
             TextBoxRush.Text = DeskQuote.rushOption.ToString();
             TextBoxPrice.Text = $@"${DeskQuote.TotalQuote()}.00";
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-
-            //send desk obj to json file
-
-
+            //This block successfully saves the quotes to memory. Can be pulled out with Json or straight from memory. See quotes.json file.
+            //add current qoute to quote list
+            AllTheQuotes.Add(DeskQuote);
 
             //serializing to json string
-            //sending/returning desk but it should be quote
-            /*var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(desk);
+            var jsonString = JsonConvert.SerializeObject(AllTheQuotes);
 
-            //deserializing to object
-            var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<Desk>(jsonString);*/
+            // See https://docs.microsoft.com/en-us/dotnet/api/system.io.file.openwrite?view=net-5.0            
+            FileStream fs = File.OpenWrite("quotes.json");
+            Byte[] bytes = new System.Text.UTF8Encoding(true).GetBytes(jsonString);
+            fs.Write(bytes, 0, bytes.Length);
+            fs.Close();
+
+
+            // This code is totally useless here, but will be useful to write out the saved quotes. Use elsewhere!
+            ////deserializing to object
+            //var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<List<DeskQuote>>(jsonString);
         }
 
         //example code for a method to add a new object to an existing JSON file
