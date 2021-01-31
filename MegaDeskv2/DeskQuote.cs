@@ -23,6 +23,7 @@ namespace MegaDeskAngeles
             customerName = string.Empty;
             quoteDate = string.Empty;
             rushOption = string.Empty;
+            desk = new Desk();
         }
 
         public double AreaPrice()

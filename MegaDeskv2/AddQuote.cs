@@ -13,15 +13,21 @@ namespace MegaDeskAngeles
         DateTime todayDate = DateTime.Today;
 
         List<DeskQuote> AllTheQuotes;
-        public AddQuote(List<DeskQuote> AllTheQuotes)
+
+        //desk not required; it is inside deskquote
+        public DeskQuote DeskQuote;
+
+        private MainMenu mainMenu;
+
+        public AddQuote(List<DeskQuote> AllTheQuotes, MainMenu theMainMenu)
         {
             InitializeComponent();
             LabelDate.Text = todayDate.ToString("MMM dd, yyyy");
             this.AllTheQuotes = AllTheQuotes;
+            DeskQuote = new DeskQuote();
+            mainMenu = theMainMenu;
         }
 
-        public Desk Desk = new Desk();
-        public DeskQuote DeskQuote = new DeskQuote();
 
         /// <summary>
         /// Close AddQuote and return to Main Menu
@@ -32,7 +38,7 @@ namespace MegaDeskAngeles
         {
             MainMenu viewMainMenu = (MainMenu)Tag;
             viewMainMenu.Show();
-            Close(); //close AddQuote window
+            Close(); //close AddQuote form
         }
 
         private void TextBoxWidth_Validating(object sender, CancelEventArgs e)
@@ -64,7 +70,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(TextBoxWidth, ""); //Correct
 
                 //set input into _desk
-                Desk.width = widthInput;
+                DeskQuote.desk.width = widthInput;
             }
         }
 
@@ -110,7 +116,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(TextBoxDepth, ""); //Correct
 
                 // set input into _desk
-                Desk.depth = depthInput;
+                DeskQuote.desk.depth = depthInput;
             }
         }
 
@@ -153,7 +159,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(UpDownDrawers, ""); //Correct
 
                 // set input into _desk
-                Desk.drawers = drawerInput;
+                DeskQuote.desk.drawers = drawerInput;
             }
         }
 
@@ -166,16 +172,16 @@ namespace MegaDeskAngeles
 
             if (deskWidth != String.Empty)
             {
-                Desk.width = Convert.ToInt32(deskWidth);
+                DeskQuote.desk.width = Convert.ToInt32(deskWidth);
             }
             if (deskDepth != String.Empty)
             {
-                Desk.depth = Convert.ToInt32(deskDepth);
+                DeskQuote.desk.depth = Convert.ToInt32(deskDepth);
             }
-                Desk.Material = (DesktopMaterial)materialType;
+                DeskQuote.desk.Material = (DesktopMaterial)materialType;
             if (drawerNum != String.Empty)
             {
-                Desk.drawers = Convert.ToInt32(drawerNum);
+                DeskQuote.desk.drawers = Convert.ToInt32(drawerNum);
             }
         }
 
@@ -197,14 +203,14 @@ namespace MegaDeskAngeles
             {
                 DeskQuote.rushOption = rushTime;
             }
-            DeskQuote.desk = Desk;
+            //DeskQuote.desk = Desk;
         }
 
         private void ButtonGetQuote_Click(object sender, EventArgs e)
         {
             ValidateDesk();
             ValidateDeskQuote();
-            var displayQuote = new DisplayQuote(AllTheQuotes, DeskQuote)
+            var displayQuote = new DisplayQuote(AllTheQuotes, DeskQuote, mainMenu)
             {
                 Tag = this
             };

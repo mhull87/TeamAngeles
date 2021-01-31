@@ -26,7 +26,7 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonAddNewQuote_Click(object sender, EventArgs e)
         {
-            AddQuote viewAddQuote = new AddQuote(AllTheQuotes)
+            AddQuote viewAddQuote = new AddQuote(AllTheQuotes, this)
             {
                 Tag = this
             };

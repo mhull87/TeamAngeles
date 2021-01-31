@@ -47,6 +47,7 @@ namespace MegaDeskAngeles
             this.TextBoxPrice = new System.Windows.Forms.TextBox();
             this.TextBoxDate = new System.Windows.Forms.TextBox();
             this.ButtonSave = new System.Windows.Forms.Button();
+            this.LabelSaveStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LabelDeskQuote
@@ -226,11 +227,21 @@ namespace MegaDeskAngeles
             this.ButtonSave.UseVisualStyleBackColor = true;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
+            // LabelSaveStatus
+            // 
+            this.LabelSaveStatus.AutoSize = true;
+            this.LabelSaveStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelSaveStatus.Location = new System.Drawing.Point(350, 320);
+            this.LabelSaveStatus.Name = "LabelSaveStatus";
+            this.LabelSaveStatus.Size = new System.Drawing.Size(0, 15);
+            this.LabelSaveStatus.TabIndex = 26;
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 402);
+            this.ClientSize = new System.Drawing.Size(414, 406);
+            this.Controls.Add(this.LabelSaveStatus);
             this.Controls.Add(this.ButtonSave);
             this.Controls.Add(this.TextBoxDate);
             this.Controls.Add(this.TextBoxPrice);
@@ -278,5 +289,6 @@ namespace MegaDeskAngeles
         private System.Windows.Forms.TextBox TextBoxPrice;
         private System.Windows.Forms.TextBox TextBoxDate;
         private System.Windows.Forms.Button ButtonSave;
+        private System.Windows.Forms.Label LabelSaveStatus;
     }
 }

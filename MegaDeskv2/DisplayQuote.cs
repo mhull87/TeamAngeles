@@ -15,12 +15,15 @@ namespace MegaDeskAngeles
 
         List<DeskQuote> AllTheQuotes;
 
-        public DisplayQuote(List<DeskQuote> AllTheQuotes, DeskQuote deskQuote)
+        private MainMenu mainMenu;
+
+        public DisplayQuote(List<DeskQuote> AllTheQuotes, DeskQuote deskQuote, MainMenu theMainMenu)
         {
             DeskQuote = deskQuote;
-           // Desk = desk;
+           // Desk = desk; removed desk, referring to it thorugh the deskQuote and only passing deskQuote to save
             InitializeComponent();
             this.AllTheQuotes = AllTheQuotes;
+            mainMenu = theMainMenu;
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
@@ -57,12 +60,22 @@ namespace MegaDeskAngeles
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
 
+            LabelSaveStatus.Text = "Okay"; //quote saved notice
+
+            //add code to return to main menu
+            mainMenu.Show();
+            this.Close();
+            
+
+           
+
 
             // This code is totally useless here, but will be useful to write out the saved quotes. Use elsewhere!
             ////deserializing to object
             //var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<List<DeskQuote>>(jsonString);
         }
 
+       
         //example code for a method to add a new object to an existing JSON file
         /*public string AddObjectsToJson<T>(string json, List<T> objects)
         {
