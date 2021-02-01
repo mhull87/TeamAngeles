@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 
 namespace MegaDeskAngeles
@@ -56,7 +57,7 @@ namespace MegaDeskAngeles
 
             // See https://docs.microsoft.com/en-us/dotnet/api/system.io.file.openwrite?view=net-5.0            
             FileStream fs = File.OpenWrite("quotes.json");
-            Byte[] bytes = new System.Text.UTF8Encoding(true).GetBytes(jsonString);
+            Byte[] bytes = new UTF8Encoding(true).GetBytes(jsonString);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
 
@@ -64,32 +65,7 @@ namespace MegaDeskAngeles
 
             //add code to return to main menu
             mainMenu.Show();
-            this.Close();
-            
-
-           
-
-
-            // This code is totally useless here, but will be useful to write out the saved quotes. Use elsewhere!
-            ////deserializing to object
-            //var obj = Newtonsoft.Json.JsonConvert.DeserializeObject<List<DeskQuote>>(jsonString);
+            this.Close();                             
         }
-
-       
-        //example code for a method to add a new object to an existing JSON file
-        /*public string AddObjectsToJson<T>(string json, List<T> objects)
-        {
-            List<T> list = JsonConvert.DeserializeObject<List<T>>(json);
-            list.AddRange(objects);
-            return JsonConvert.SerializeObject(list);
-        }*/
-
-        //example code using method above
-        /*public string AddObjectsToJson<T>(string json, List<T> objects)
-        {
-            List<T> list = JsonConvert.DeserializeObject<List<T>>(json);
-            list.AddRange(objects);
-            return JsonConvert.SerializeObject(list);
-        }*/
     }
 }

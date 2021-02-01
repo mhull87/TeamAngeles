@@ -1,16 +1,26 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace MegaDeskAngeles
 {
     public partial class MainMenu : Form
     {
         public List<DeskQuote> AllTheQuotes;
+
+        
+
         public MainMenu()
         {
             InitializeComponent();
             AllTheQuotes = new List<DeskQuote>();
+
+            //deserializing list of quotes into AllTheQuotes object from quotes.json
+            //see https://stackoverflow.com/questions/16416138/c-sharp-json-file-into-list
+            string json = File.ReadAllText("quotes.json");
+            AllTheQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(json);
         }
 
         //exit application
