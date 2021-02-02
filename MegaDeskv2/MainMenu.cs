@@ -23,6 +23,7 @@ namespace MegaDeskAngeles
             try
             {
                 AllTheQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(json);
+                Console.WriteLine("revisar json");
             }
             catch (Exception)
             {
@@ -75,10 +76,7 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            SearchQuotes viewSearchQuotes = new SearchQuotes
-            {
-                Tag = this
-            };
+            SearchQuotes viewSearchQuotes = new SearchQuotes(this.AllTheQuotes, this);
             viewSearchQuotes.Show(this);
             Hide(); //hide MainMenu
         }

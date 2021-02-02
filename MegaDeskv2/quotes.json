@@ -24,5 +24,31 @@
     },
     "rushOption": "None",
     "totalCost": 770.0
+  },
+  {
+    "customerName": "Alex Smith",
+    "quoteDate": "Feb. 01, 2021",
+    "desk": {
+      "width": 60,
+      "depth": 20,
+      "drawers": 4,
+      "Material": 3,
+      "area": 1200
+    },
+    "rushOption": "7 Days",
+    "totalCost": 935.0
+  },
+  {
+    "customerName": "Rose Dawson",
+    "quoteDate": "Feb. 01, 2021",
+    "desk": {
+      "width": 75,
+      "depth": 30,
+      "drawers": 4,
+      "Material": 4,
+      "area": 2250
+    },
+    "rushOption": "5 Days",
+    "totalCost": 1835.0
   }
 ]
