@@ -8,11 +8,14 @@ namespace MegaDeskAngeles
 {
     public class DeskQuote
     {
-        public string customerName;
-        public string quoteDate;
+        public string customerName { get; set; }
+        public string quoteDate { get; set; }
         public Desk desk;
-        public string rushOption;
-        public double totalCost;
+
+        public int deskWidth { get { return desk.width; } }
+        public string deskDescription { get { return String.Format("{0} {1} x {2}", desk.Material, desk.width, desk.depth); } }
+        public string rushOption { get; set; }
+        public double totalCost { get; set; }
 
         public const int BASEPRICE = 200;
         public const int INCHPRICE = 1;

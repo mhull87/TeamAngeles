@@ -22,6 +22,7 @@ namespace MegaDeskAngeles
             string json = File.ReadAllText("quotes.json");
             try
             {
+                string json = File.ReadAllText("quotes.json", System.Text.Encoding.UTF8);
                 AllTheQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(json);
                 Console.WriteLine("revisar json");
             }
@@ -61,7 +62,7 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonViewQuotes_Click(object sender, EventArgs e)
         {
-            ViewAllQuotes viewAllQuotes = new ViewAllQuotes
+            ViewAllQuotes viewAllQuotes = new ViewAllQuotes(AllTheQuotes) 
             {
                 Tag = this
             };
