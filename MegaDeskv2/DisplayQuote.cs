@@ -66,5 +66,10 @@ namespace MegaDeskAngeles
             mainMenu.Show();
             this.Close();
         }
+
+        private void TextBoxDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

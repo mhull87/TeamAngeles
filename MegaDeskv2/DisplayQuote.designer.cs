@@ -30,219 +30,88 @@ namespace MegaDeskAngeles
         private void InitializeComponent()
         {
             this.LabelDeskQuote = new System.Windows.Forms.Label();
-            this.LabelCustomerName = new System.Windows.Forms.Label();
-            this.LabelWidth = new System.Windows.Forms.Label();
-            this.LabelDepth = new System.Windows.Forms.Label();
-            this.LabelDrawers = new System.Windows.Forms.Label();
-            this.LabelMaterial = new System.Windows.Forms.Label();
-            this.LabelRushOrder = new System.Windows.Forms.Label();
             this.ButtonBack = new System.Windows.Forms.Button();
-            this.LabelQuotedPrice = new System.Windows.Forms.Label();
-            this.TextBoxName = new System.Windows.Forms.TextBox();
-            this.TextBoxWidth = new System.Windows.Forms.TextBox();
-            this.TextBoxDepth = new System.Windows.Forms.TextBox();
-            this.TextBoxDrawers = new System.Windows.Forms.TextBox();
-            this.TextBoxMaterial = new System.Windows.Forms.TextBox();
-            this.TextBoxRush = new System.Windows.Forms.TextBox();
-            this.TextBoxPrice = new System.Windows.Forms.TextBox();
             this.TextBoxDate = new System.Windows.Forms.TextBox();
             this.ButtonSave = new System.Windows.Forms.Button();
             this.LabelSaveStatus = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TextBoxPrice = new System.Windows.Forms.TextBox();
+            this.TextBoxRush = new System.Windows.Forms.TextBox();
+            this.TextBoxMaterial = new System.Windows.Forms.TextBox();
+            this.TextBoxDrawers = new System.Windows.Forms.TextBox();
+            this.TextBoxDepth = new System.Windows.Forms.TextBox();
+            this.TextBoxWidth = new System.Windows.Forms.TextBox();
+            this.TextBoxName = new System.Windows.Forms.TextBox();
+            this.LabelQuotedPrice = new System.Windows.Forms.Label();
+            this.LabelRushOrder = new System.Windows.Forms.Label();
+            this.LabelMaterial = new System.Windows.Forms.Label();
+            this.LabelDrawers = new System.Windows.Forms.Label();
+            this.LabelDepth = new System.Windows.Forms.Label();
+            this.LabelWidth = new System.Windows.Forms.Label();
+            this.LabelCustomerName = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelDeskQuote
             // 
             this.LabelDeskQuote.AutoSize = true;
-            this.LabelDeskQuote.Font = new System.Drawing.Font("Myanmar Text", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDeskQuote.Location = new System.Drawing.Point(45, 12);
+            this.LabelDeskQuote.Font = new System.Drawing.Font("Myanmar Text", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDeskQuote.Location = new System.Drawing.Point(384, 24);
             this.LabelDeskQuote.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LabelDeskQuote.Name = "LabelDeskQuote";
-            this.LabelDeskQuote.Size = new System.Drawing.Size(168, 50);
+            this.LabelDeskQuote.Size = new System.Drawing.Size(311, 89);
             this.LabelDeskQuote.TabIndex = 6;
             this.LabelDeskQuote.Text = "Desk Quote";
-            // 
-            // LabelCustomerName
-            // 
-            this.LabelCustomerName.AutoSize = true;
-            this.LabelCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCustomerName.Location = new System.Drawing.Point(64, 87);
-            this.LabelCustomerName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LabelCustomerName.Name = "LabelCustomerName";
-            this.LabelCustomerName.Size = new System.Drawing.Size(136, 20);
-            this.LabelCustomerName.TabIndex = 7;
-            this.LabelCustomerName.Text = "Customer Name:";
-            // 
-            // LabelWidth
-            // 
-            this.LabelWidth.AutoSize = true;
-            this.LabelWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelWidth.Location = new System.Drawing.Point(85, 138);
-            this.LabelWidth.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LabelWidth.Name = "LabelWidth";
-            this.LabelWidth.Size = new System.Drawing.Size(116, 20);
-            this.LabelWidth.TabIndex = 8;
-            this.LabelWidth.Text = "Width (24-96):";
-            // 
-            // LabelDepth
-            // 
-            this.LabelDepth.AutoSize = true;
-            this.LabelDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDepth.Location = new System.Drawing.Point(83, 189);
-            this.LabelDepth.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LabelDepth.Name = "LabelDepth";
-            this.LabelDepth.Size = new System.Drawing.Size(118, 20);
-            this.LabelDepth.TabIndex = 9;
-            this.LabelDepth.Text = "Depth (12-48):";
-            // 
-            // LabelDrawers
-            // 
-            this.LabelDrawers.AutoSize = true;
-            this.LabelDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDrawers.Location = new System.Drawing.Point(83, 240);
-            this.LabelDrawers.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LabelDrawers.Name = "LabelDrawers";
-            this.LabelDrawers.Size = new System.Drawing.Size(119, 20);
-            this.LabelDrawers.TabIndex = 11;
-            this.LabelDrawers.Text = "Drawers (0-7):";
-            // 
-            // LabelMaterial
-            // 
-            this.LabelMaterial.AutoSize = true;
-            this.LabelMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelMaterial.Location = new System.Drawing.Point(133, 291);
-            this.LabelMaterial.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LabelMaterial.Name = "LabelMaterial";
-            this.LabelMaterial.Size = new System.Drawing.Size(74, 20);
-            this.LabelMaterial.TabIndex = 13;
-            this.LabelMaterial.Text = "Material:";
-            // 
-            // LabelRushOrder
-            // 
-            this.LabelRushOrder.AutoSize = true;
-            this.LabelRushOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelRushOrder.Location = new System.Drawing.Point(38, 342);
-            this.LabelRushOrder.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LabelRushOrder.Name = "LabelRushOrder";
-            this.LabelRushOrder.Size = new System.Drawing.Size(153, 20);
-            this.LabelRushOrder.TabIndex = 14;
-            this.LabelRushOrder.Text = "Rush Order (3,5,7):";
+            this.LabelDeskQuote.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonBack
             // 
+            this.ButtonBack.BackColor = System.Drawing.Color.Silver;
             this.ButtonBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ButtonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonBack.Location = new System.Drawing.Point(16, 464);
+            this.ButtonBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ButtonBack.FlatAppearance.BorderSize = 0;
+            this.ButtonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
+            this.ButtonBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ButtonBack.Font = new System.Drawing.Font("Myanmar Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonBack.Location = new System.Drawing.Point(14, 13);
             this.ButtonBack.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ButtonBack.Name = "ButtonBack";
-            this.ButtonBack.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.ButtonBack.Size = new System.Drawing.Size(126, 46);
-            this.ButtonBack.TabIndex = 15;
-            this.ButtonBack.Text = "Back";
-            this.ButtonBack.UseVisualStyleBackColor = true;
+            this.ButtonBack.Padding = new System.Windows.Forms.Padding(3);
+            this.ButtonBack.Size = new System.Drawing.Size(71, 34);
+            this.ButtonBack.TabIndex = 1;
+            this.ButtonBack.Text = "&Back";
+            this.ButtonBack.UseVisualStyleBackColor = false;
             this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
-            // 
-            // LabelQuotedPrice
-            // 
-            this.LabelQuotedPrice.AutoSize = true;
-            this.LabelQuotedPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelQuotedPrice.Location = new System.Drawing.Point(88, 395);
-            this.LabelQuotedPrice.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.LabelQuotedPrice.Name = "LabelQuotedPrice";
-            this.LabelQuotedPrice.Size = new System.Drawing.Size(112, 20);
-            this.LabelQuotedPrice.TabIndex = 16;
-            this.LabelQuotedPrice.Text = "Quoted Price:";
-            // 
-            // TextBoxName
-            // 
-            this.TextBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxName.Location = new System.Drawing.Point(222, 83);
-            this.TextBoxName.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.TextBoxName.Name = "TextBoxName";
-            this.TextBoxName.ReadOnly = true;
-            this.TextBoxName.Size = new System.Drawing.Size(186, 26);
-            this.TextBoxName.TabIndex = 17;
-            // 
-            // TextBoxWidth
-            // 
-            this.TextBoxWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxWidth.Location = new System.Drawing.Point(224, 134);
-            this.TextBoxWidth.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.TextBoxWidth.Name = "TextBoxWidth";
-            this.TextBoxWidth.ReadOnly = true;
-            this.TextBoxWidth.Size = new System.Drawing.Size(186, 26);
-            this.TextBoxWidth.TabIndex = 18;
-            // 
-            // TextBoxDepth
-            // 
-            this.TextBoxDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxDepth.Location = new System.Drawing.Point(222, 185);
-            this.TextBoxDepth.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.TextBoxDepth.Name = "TextBoxDepth";
-            this.TextBoxDepth.ReadOnly = true;
-            this.TextBoxDepth.Size = new System.Drawing.Size(186, 26);
-            this.TextBoxDepth.TabIndex = 19;
-            // 
-            // TextBoxDrawers
-            // 
-            this.TextBoxDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxDrawers.Location = new System.Drawing.Point(222, 236);
-            this.TextBoxDrawers.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.TextBoxDrawers.Name = "TextBoxDrawers";
-            this.TextBoxDrawers.ReadOnly = true;
-            this.TextBoxDrawers.Size = new System.Drawing.Size(186, 26);
-            this.TextBoxDrawers.TabIndex = 20;
-            // 
-            // TextBoxMaterial
-            // 
-            this.TextBoxMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxMaterial.Location = new System.Drawing.Point(222, 287);
-            this.TextBoxMaterial.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.TextBoxMaterial.Name = "TextBoxMaterial";
-            this.TextBoxMaterial.ReadOnly = true;
-            this.TextBoxMaterial.Size = new System.Drawing.Size(186, 26);
-            this.TextBoxMaterial.TabIndex = 21;
-            // 
-            // TextBoxRush
-            // 
-            this.TextBoxRush.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxRush.Location = new System.Drawing.Point(222, 338);
-            this.TextBoxRush.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.TextBoxRush.Name = "TextBoxRush";
-            this.TextBoxRush.ReadOnly = true;
-            this.TextBoxRush.Size = new System.Drawing.Size(186, 26);
-            this.TextBoxRush.TabIndex = 22;
-            // 
-            // TextBoxPrice
-            // 
-            this.TextBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxPrice.Location = new System.Drawing.Point(222, 391);
-            this.TextBoxPrice.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.TextBoxPrice.Name = "TextBoxPrice";
-            this.TextBoxPrice.ReadOnly = true;
-            this.TextBoxPrice.Size = new System.Drawing.Size(186, 26);
-            this.TextBoxPrice.TabIndex = 23;
             // 
             // TextBoxDate
             // 
-            this.TextBoxDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBoxDate.Location = new System.Drawing.Point(224, 17);
+            this.TextBoxDate.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxDate.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxDate.Location = new System.Drawing.Point(409, 86);
             this.TextBoxDate.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.TextBoxDate.Name = "TextBoxDate";
             this.TextBoxDate.ReadOnly = true;
-            this.TextBoxDate.Size = new System.Drawing.Size(186, 26);
+            this.TextBoxDate.Size = new System.Drawing.Size(186, 32);
             this.TextBoxDate.TabIndex = 24;
+            this.TextBoxDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ButtonSave
             // 
-            this.ButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSave.Location = new System.Drawing.Point(408, 464);
+            this.ButtonSave.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ButtonSave.FlatAppearance.BorderSize = 0;
+            this.ButtonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
+            this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ButtonSave.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSave.Location = new System.Drawing.Point(910, 627);
             this.ButtonSave.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ButtonSave.Name = "ButtonSave";
-            this.ButtonSave.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ButtonSave.Padding = new System.Windows.Forms.Padding(6);
             this.ButtonSave.Size = new System.Drawing.Size(128, 46);
-            this.ButtonSave.TabIndex = 25;
-            this.ButtonSave.Text = "Save";
-            this.ButtonSave.UseVisualStyleBackColor = true;
+            this.ButtonSave.TabIndex = 0;
+            this.ButtonSave.Text = "&Save";
+            this.ButtonSave.UseVisualStyleBackColor = false;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // LabelSaveStatus
@@ -255,36 +124,210 @@ namespace MegaDeskAngeles
             this.LabelSaveStatus.Size = new System.Drawing.Size(0, 18);
             this.LabelSaveStatus.TabIndex = 26;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.TextBoxPrice);
+            this.panel1.Controls.Add(this.TextBoxRush);
+            this.panel1.Controls.Add(this.TextBoxMaterial);
+            this.panel1.Controls.Add(this.TextBoxDrawers);
+            this.panel1.Controls.Add(this.TextBoxDepth);
+            this.panel1.Controls.Add(this.TextBoxWidth);
+            this.panel1.Controls.Add(this.TextBoxName);
+            this.panel1.Controls.Add(this.LabelQuotedPrice);
+            this.panel1.Controls.Add(this.LabelRushOrder);
+            this.panel1.Controls.Add(this.LabelMaterial);
+            this.panel1.Controls.Add(this.LabelDrawers);
+            this.panel1.Controls.Add(this.LabelDepth);
+            this.panel1.Controls.Add(this.LabelWidth);
+            this.panel1.Controls.Add(this.LabelCustomerName);
+            this.panel1.Location = new System.Drawing.Point(354, 111);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(408, 482);
+            this.panel1.TabIndex = 27;
+            // 
+            // TextBoxPrice
+            // 
+            this.TextBoxPrice.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxPrice.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxPrice.Location = new System.Drawing.Point(186, 385);
+            this.TextBoxPrice.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TextBoxPrice.Name = "TextBoxPrice";
+            this.TextBoxPrice.ReadOnly = true;
+            this.TextBoxPrice.Size = new System.Drawing.Size(186, 38);
+            this.TextBoxPrice.TabIndex = 37;
+            // 
+            // TextBoxRush
+            // 
+            this.TextBoxRush.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxRush.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxRush.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxRush.Location = new System.Drawing.Point(186, 329);
+            this.TextBoxRush.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TextBoxRush.Name = "TextBoxRush";
+            this.TextBoxRush.ReadOnly = true;
+            this.TextBoxRush.Size = new System.Drawing.Size(186, 38);
+            this.TextBoxRush.TabIndex = 36;
+            // 
+            // TextBoxMaterial
+            // 
+            this.TextBoxMaterial.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxMaterial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxMaterial.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxMaterial.Location = new System.Drawing.Point(186, 273);
+            this.TextBoxMaterial.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TextBoxMaterial.Name = "TextBoxMaterial";
+            this.TextBoxMaterial.ReadOnly = true;
+            this.TextBoxMaterial.Size = new System.Drawing.Size(186, 38);
+            this.TextBoxMaterial.TabIndex = 35;
+            // 
+            // TextBoxDrawers
+            // 
+            this.TextBoxDrawers.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxDrawers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxDrawers.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxDrawers.Location = new System.Drawing.Point(186, 217);
+            this.TextBoxDrawers.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TextBoxDrawers.Name = "TextBoxDrawers";
+            this.TextBoxDrawers.ReadOnly = true;
+            this.TextBoxDrawers.Size = new System.Drawing.Size(186, 38);
+            this.TextBoxDrawers.TabIndex = 34;
+            // 
+            // TextBoxDepth
+            // 
+            this.TextBoxDepth.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxDepth.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxDepth.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxDepth.Location = new System.Drawing.Point(186, 161);
+            this.TextBoxDepth.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TextBoxDepth.Name = "TextBoxDepth";
+            this.TextBoxDepth.ReadOnly = true;
+            this.TextBoxDepth.Size = new System.Drawing.Size(186, 38);
+            this.TextBoxDepth.TabIndex = 33;
+            // 
+            // TextBoxWidth
+            // 
+            this.TextBoxWidth.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxWidth.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxWidth.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxWidth.Location = new System.Drawing.Point(186, 105);
+            this.TextBoxWidth.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TextBoxWidth.Name = "TextBoxWidth";
+            this.TextBoxWidth.ReadOnly = true;
+            this.TextBoxWidth.Size = new System.Drawing.Size(186, 38);
+            this.TextBoxWidth.TabIndex = 32;
+            // 
+            // TextBoxName
+            // 
+            this.TextBoxName.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBoxName.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBoxName.Location = new System.Drawing.Point(186, 49);
+            this.TextBoxName.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.TextBoxName.Name = "TextBoxName";
+            this.TextBoxName.ReadOnly = true;
+            this.TextBoxName.Size = new System.Drawing.Size(186, 38);
+            this.TextBoxName.TabIndex = 31;
+            // 
+            // LabelQuotedPrice
+            // 
+            this.LabelQuotedPrice.AutoSize = true;
+            this.LabelQuotedPrice.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelQuotedPrice.Location = new System.Drawing.Point(39, 385);
+            this.LabelQuotedPrice.Margin = new System.Windows.Forms.Padding(10);
+            this.LabelQuotedPrice.Name = "LabelQuotedPrice";
+            this.LabelQuotedPrice.Size = new System.Drawing.Size(143, 36);
+            this.LabelQuotedPrice.TabIndex = 30;
+            this.LabelQuotedPrice.Text = "Quoted Price:";
+            // 
+            // LabelRushOrder
+            // 
+            this.LabelRushOrder.AutoSize = true;
+            this.LabelRushOrder.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelRushOrder.Location = new System.Drawing.Point(39, 329);
+            this.LabelRushOrder.Margin = new System.Windows.Forms.Padding(10);
+            this.LabelRushOrder.Name = "LabelRushOrder";
+            this.LabelRushOrder.Size = new System.Drawing.Size(126, 36);
+            this.LabelRushOrder.TabIndex = 29;
+            this.LabelRushOrder.Text = "Rush Order:";
+            // 
+            // LabelMaterial
+            // 
+            this.LabelMaterial.AutoSize = true;
+            this.LabelMaterial.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMaterial.Location = new System.Drawing.Point(39, 273);
+            this.LabelMaterial.Margin = new System.Windows.Forms.Padding(10);
+            this.LabelMaterial.Name = "LabelMaterial";
+            this.LabelMaterial.Size = new System.Drawing.Size(100, 36);
+            this.LabelMaterial.TabIndex = 28;
+            this.LabelMaterial.Text = "Material:";
+            // 
+            // LabelDrawers
+            // 
+            this.LabelDrawers.AutoSize = true;
+            this.LabelDrawers.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDrawers.Location = new System.Drawing.Point(36, 217);
+            this.LabelDrawers.Margin = new System.Windows.Forms.Padding(10);
+            this.LabelDrawers.Name = "LabelDrawers";
+            this.LabelDrawers.Size = new System.Drawing.Size(98, 36);
+            this.LabelDrawers.TabIndex = 27;
+            this.LabelDrawers.Text = "Drawers:";
+            // 
+            // LabelDepth
+            // 
+            this.LabelDepth.AutoSize = true;
+            this.LabelDepth.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDepth.Location = new System.Drawing.Point(39, 161);
+            this.LabelDepth.Margin = new System.Windows.Forms.Padding(10);
+            this.LabelDepth.Name = "LabelDepth";
+            this.LabelDepth.Size = new System.Drawing.Size(78, 36);
+            this.LabelDepth.TabIndex = 26;
+            this.LabelDepth.Text = "Depth:";
+            // 
+            // LabelWidth
+            // 
+            this.LabelWidth.AutoSize = true;
+            this.LabelWidth.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelWidth.Location = new System.Drawing.Point(36, 105);
+            this.LabelWidth.Margin = new System.Windows.Forms.Padding(10);
+            this.LabelWidth.Name = "LabelWidth";
+            this.LabelWidth.Size = new System.Drawing.Size(78, 36);
+            this.LabelWidth.TabIndex = 25;
+            this.LabelWidth.Text = "Width:";
+            // 
+            // LabelCustomerName
+            // 
+            this.LabelCustomerName.AutoSize = true;
+            this.LabelCustomerName.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCustomerName.Location = new System.Drawing.Point(36, 49);
+            this.LabelCustomerName.Margin = new System.Windows.Forms.Padding(10);
+            this.LabelCustomerName.Name = "LabelCustomerName";
+            this.LabelCustomerName.Size = new System.Drawing.Size(76, 36);
+            this.LabelCustomerName.TabIndex = 24;
+            this.LabelCustomerName.Text = "Name:";
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 531);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(1052, 686);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LabelSaveStatus);
             this.Controls.Add(this.ButtonSave);
             this.Controls.Add(this.TextBoxDate);
-            this.Controls.Add(this.TextBoxPrice);
-            this.Controls.Add(this.TextBoxRush);
-            this.Controls.Add(this.TextBoxMaterial);
-            this.Controls.Add(this.TextBoxDrawers);
-            this.Controls.Add(this.TextBoxDepth);
-            this.Controls.Add(this.TextBoxWidth);
-            this.Controls.Add(this.TextBoxName);
-            this.Controls.Add(this.LabelQuotedPrice);
             this.Controls.Add(this.ButtonBack);
-            this.Controls.Add(this.LabelRushOrder);
-            this.Controls.Add(this.LabelMaterial);
-            this.Controls.Add(this.LabelDrawers);
-            this.Controls.Add(this.LabelDepth);
-            this.Controls.Add(this.LabelWidth);
-            this.Controls.Add(this.LabelCustomerName);
             this.Controls.Add(this.LabelDeskQuote);
             this.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MinimumSize = new System.Drawing.Size(450, 625);
             this.Name = "DisplayQuote";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DisplayQuote";
             this.Load += new System.EventHandler(this.DisplayQuote_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,23 +336,24 @@ namespace MegaDeskAngeles
         #endregion
 
         private System.Windows.Forms.Label LabelDeskQuote;
-        private System.Windows.Forms.Label LabelCustomerName;
-        private System.Windows.Forms.Label LabelWidth;
-        private System.Windows.Forms.Label LabelDepth;
-        private System.Windows.Forms.Label LabelDrawers;
-        private System.Windows.Forms.Label LabelMaterial;
-        private System.Windows.Forms.Label LabelRushOrder;
         private System.Windows.Forms.Button ButtonBack;
-        private System.Windows.Forms.Label LabelQuotedPrice;
-        private System.Windows.Forms.TextBox TextBoxName;
-        private System.Windows.Forms.TextBox TextBoxWidth;
-        private System.Windows.Forms.TextBox TextBoxDepth;
-        private System.Windows.Forms.TextBox TextBoxDrawers;
-        private System.Windows.Forms.TextBox TextBoxMaterial;
-        private System.Windows.Forms.TextBox TextBoxRush;
-        private System.Windows.Forms.TextBox TextBoxPrice;
         private System.Windows.Forms.TextBox TextBoxDate;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Label LabelSaveStatus;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox TextBoxPrice;
+        private System.Windows.Forms.TextBox TextBoxRush;
+        private System.Windows.Forms.TextBox TextBoxMaterial;
+        private System.Windows.Forms.TextBox TextBoxDrawers;
+        private System.Windows.Forms.TextBox TextBoxDepth;
+        private System.Windows.Forms.TextBox TextBoxWidth;
+        private System.Windows.Forms.TextBox TextBoxName;
+        private System.Windows.Forms.Label LabelQuotedPrice;
+        private System.Windows.Forms.Label LabelRushOrder;
+        private System.Windows.Forms.Label LabelMaterial;
+        private System.Windows.Forms.Label LabelDrawers;
+        private System.Windows.Forms.Label LabelDepth;
+        private System.Windows.Forms.Label LabelWidth;
+        private System.Windows.Forms.Label LabelCustomerName;
     }
 }
