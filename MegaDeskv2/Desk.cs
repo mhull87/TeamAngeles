@@ -4,10 +4,10 @@ namespace MegaDeskAngeles
 {
     public class Desk
     {
-        public int width;
-        public int depth;
-        public int drawers;
-        public DesktopMaterial Material;
+        public int width { get; set; }
+        public int depth { get; set; }
+        public int drawers { get; set; }
+        public DesktopMaterial Material { get; set; }
         public int area;
 
         //Desk Constraints

@@ -19,7 +19,7 @@ namespace MegaDeskAngeles
 
             //deserializing list of quotes into AllTheQuotes object from quotes.json
             //see https://stackoverflow.com/questions/16416138/c-sharp-json-file-into-list
-            string json = File.ReadAllText("quotes.json");
+            string json = File.ReadAllText("quotes.json", System.Text.Encoding.UTF8);
             AllTheQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(json);
         }
 
@@ -51,7 +51,7 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonViewQuotes_Click(object sender, EventArgs e)
         {
-            ViewAllQuotes viewAllQuotes = new ViewAllQuotes
+            ViewAllQuotes viewAllQuotes = new ViewAllQuotes(AllTheQuotes) 
             {
                 Tag = this
             };
@@ -66,7 +66,7 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            SearchQuotes viewSearchQuotes = new SearchQuotes
+            SearchQuotes viewSearchQuotes = new SearchQuotes() //AllTheQuotes
             {
                 Tag = this
             };

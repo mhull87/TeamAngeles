@@ -12,9 +12,17 @@ namespace MegaDeskAngeles
 {
     public partial class ViewAllQuotes : Form
     {
-        public ViewAllQuotes()
+        public List<DeskQuote> AllTheQuotes;
+
+        public ViewAllQuotes(List<DeskQuote> AllTheQuotes) 
         {
             InitializeComponent();
+            this.AllTheQuotes = AllTheQuotes;
+
+            /*var list = new BindingList<DeskQuote>(AllTheQuotes);
+            dataGridViewAll.DataSource = list;*/
+
+            //dataGridViewAll.DataSource = AllTheQuotes; this didn't work
         }
 
         /// <summary>
@@ -27,6 +35,11 @@ namespace MegaDeskAngeles
             MainMenu viewMainMenu = (MainMenu)Tag;
             viewMainMenu.Show();
             Close(); //close ViewAllQuotes window
+        }
+
+        private void ViewAllQuotes_Load(object sender, EventArgs e)
+        {
+            dataGridViewAll.DataSource = AllTheQuotes;
         }
     }
 }

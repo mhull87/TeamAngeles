@@ -12,7 +12,7 @@ namespace MegaDeskAngeles
 {
     public partial class SearchQuotes : Form
     {
-        public SearchQuotes()
+        public SearchQuotes() //List<DeskQuote> AllTheQuotes
         {
             InitializeComponent();
         }
