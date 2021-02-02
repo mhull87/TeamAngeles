@@ -50,5 +50,148 @@
     },
     "rushOption": "5 Days",
     "totalCost": 1835.0
+  },
+  {
+    "customerName": "Brenda Jones",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 25,
+      "depth": 12,
+      "drawers": 3,
+      "Material": 0,
+      "area": 300
+    },
+    "rushOption": "None",
+    "totalCost": 550.0
+  },
+  {
+    "customerName": "Fred Murphy",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 96,
+      "depth": 48,
+      "drawers": 7,
+      "Material": 1,
+      "area": 4608
+    },
+    "rushOption": "3 Days",
+    "totalCost": 4338.0
+  },
+  {
+    "customerName": "Louise Andrews",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 34,
+      "depth": 32,
+      "drawers": 1,
+      "Material": 2,
+      "area": 1088
+    },
+    "rushOption": "5 Days",
+    "totalCost": 438.0
+  },
+  {
+    "customerName": "Rebecca Daniels",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 24,
+      "depth": 12,
+      "drawers": 1,
+      "Material": 3,
+      "area": 288
+    },
+    "rushOption": "7 Days",
+    "totalCost": 580.0
+  },
+  {
+    "customerName": "Clark Hammonds",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 86,
+      "depth": 38,
+      "drawers": 6,
+      "Material": 4,
+      "area": 3268
+    },
+    "rushOption": "None",
+    "totalCost": 2893.0
+  },
+  {
+    "customerName": "Maria Simmons",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 30,
+      "depth": 40,
+      "drawers": 2,
+      "Material": 0,
+      "area": 1200
+    },
+    "rushOption": "3 Days",
+    "totalCost": 770.0
+  },
+  {
+    "customerName": "Iris Jones",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 73,
+      "depth": 25,
+      "drawers": 3,
+      "Material": 1,
+      "area": 1825
+    },
+    "rushOption": "5 Days",
+    "totalCost": 1325.0
+  },
+  {
+    "customerName": "Miles Taylor",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 61,
+      "depth": 17,
+      "drawers": 4,
+      "Material": 2,
+      "area": 1037
+    },
+    "rushOption": "5 Days",
+    "totalCost": 537.0
+  },
+  {
+    "customerName": "Jaden Spring",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 80,
+      "depth": 40,
+      "drawers": 5,
+      "Material": 3,
+      "area": 3200
+    },
+    "rushOption": "7 Days",
+    "totalCost": 2990.0
+  },
+  {
+    "customerName": "William Farnsworth",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 55,
+      "depth": 36,
+      "drawers": 6,
+      "Material": 4,
+      "area": 1980
+    },
+    "rushOption": "None",
+    "totalCost": 1605.0
+  },
+  {
+    "customerName": "Tommy Henderson",
+    "quoteDate": "Feb 01, 2021",
+    "desk": {
+      "width": 45,
+      "depth": 18,
+      "drawers": 0,
+      "Material": 1,
+      "area": 810
+    },
+    "rushOption": "None",
+    "totalCost": 300.0
   }
-{"customerName":"Brenda Jones","quoteDate":"Feb 01, 2021","desk":{"width":25,"depth":12,"drawers":3,"Material":0,"area":300},"rushOption":"None","totalCost":550.0},{"customerName":"Fred Murphy","quoteDate":"Feb 01, 2021","desk":{"width":96,"depth":48,"drawers":7,"Material":1,"area":4608},"rushOption":"3 Days","totalCost":4338.0},{"customerName":"Louise Andrews","quoteDate":"Feb 01, 2021","desk":{"width":34,"depth":32,"drawers":1,"Material":2,"area":1088},"rushOption":"5 Days","totalCost":438.0},{"customerName":"Rebecca Daniels","quoteDate":"Feb 01, 2021","desk":{"width":24,"depth":12,"drawers":1,"Material":3,"area":288},"rushOption":"7 Days","totalCost":580.0},{"customerName":"Clark Hammonds","quoteDate":"Feb 01, 2021","desk":{"width":86,"depth":38,"drawers":6,"Material":4,"area":3268},"rushOption":"None","totalCost":2893.0},{"customerName":"Maria Simmons","quoteDate":"Feb 01, 2021","desk":{"width":30,"depth":40,"drawers":2,"Material":0,"area":1200},"rushOption":"3 Days","totalCost":770.0},{"customerName":"Iris Jones","quoteDate":"Feb 01, 2021","desk":{"width":73,"depth":25,"drawers":3,"Material":1,"area":1825},"rushOption":"5 Days","totalCost":1325.0},{"customerName":"Miles Taylor","quoteDate":"Feb 01, 2021","desk":{"width":61,"depth":17,"drawers":4,"Material":2,"area":1037},"rushOption":"5 Days","totalCost":537.0},{"customerName":"Jaden Spring","quoteDate":"Feb 01, 2021","desk":{"width":80,"depth":40,"drawers":5,"Material":3,"area":3200},"rushOption":"7 Days","totalCost":2990.0},{"customerName":"William Farnsworth","quoteDate":"Feb 01, 2021","desk":{"width":55,"depth":36,"drawers":6,"Material":4,"area":1980},"rushOption":"None","totalCost":1605.0},{"customerName":"Tommy Henderson","quoteDate":"Feb 01, 2021","desk":{"width":45,"depth":18,"drawers":0,"Material":1,"area":810},"rushOption":"None","totalCost":300.0}]
+]
