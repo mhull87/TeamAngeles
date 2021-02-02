@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MegaDeskAngeles
 {
@@ -46,63 +48,75 @@ namespace MegaDeskAngeles
             return desk.drawers * DRAWERPRICE;
         }
 
-        public double RushSelection()
+        public double GetRushOrder()
         {
-            double rushCost = 0;
+            
+            var lines = File.ReadAllLines("rushOrderPrices.txt", Encoding.UTF8);
+
             try
             {
+                double[,] rushCosts = new double[3, 3]
+                {
+                    {Convert.ToDouble(lines[0]), Convert.ToDouble(lines[1]), Convert.ToDouble(lines[2])},
+                    {Convert.ToDouble(lines[3]), Convert.ToDouble(lines[4]), Convert.ToDouble(lines[5])},
+                    {Convert.ToDouble(lines[6]), Convert.ToDouble(lines[7]), Convert.ToDouble(lines[8])},
+                };
+
+                double rushCost = 0;
+            
                 switch (rushOption)
                 {
                     case "3 Days":
                         if (desk.area < 1000)
                         {
-                            rushCost = 60;
+                            rushCost = rushCosts[0,0];
                         }
                         else if (desk.area > 2000)
                         {
-                            rushCost = 80;
+                            rushCost = rushCosts[0, 2];
                         }
                         else
                         {
-                            rushCost = 70;
+                            rushCost = rushCosts[0, 1];
                         }
                         break;
                     case "5 Days":
                         if (desk.area < 1000)
                         {
-                            rushCost = 40;
+                            rushCost = rushCosts[1, 0];
                         }
                         else if (desk.area > 2000)
                         {
-                            rushCost = 60;
+                            rushCost = rushCosts[1, 2];
                         }
                         else
                         {
-                            rushCost = 50;
+                            rushCost = rushCosts[1, 1];
                         }
                         break;
                     case "7 Days":
                         if (desk.area < 1000)
                         {
-                            rushCost = 30;
+                            rushCost = rushCosts[2, 0];
                         }
                         else if (desk.area > 2000)
                         {
-                            rushCost = 40;
+                            rushCost = rushCosts[2, 2];
                         }
                         else
                         {
-                            rushCost = 35;
+                            rushCost = rushCosts[2, 1];
                         }
                         break;
                 }
+                return rushCost;                
             }
             catch (Exception)
             {
 
                 throw;
             }
-            return rushCost;
+            
         }
 
         public double MaterialPrice()
@@ -127,7 +141,7 @@ namespace MegaDeskAngeles
 
         public double TotalQuote()
         {
-            totalCost = AreaPrice() + DrawersPrice() + RushSelection() + MaterialPrice();
+            totalCost = AreaPrice() + DrawersPrice() + GetRushOrder() + MaterialPrice();
             return totalCost;
         }
     }
