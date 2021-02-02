@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace MegaDeskAngeles
+﻿namespace MegaDeskAngeles
 {
     public class Desk
     {
-        public int width { get; set; }
-        public int depth { get; set; }
-        public int drawers { get; set; }
+        public int Width { get; set; }
+        public int Depth { get; set; }
+        public int Drawers { get; set; }
         public DesktopMaterial Material { get; set; }
         public int area;
 
@@ -18,15 +16,15 @@ namespace MegaDeskAngeles
 
         public Desk()
         {
-            width = 0;
-            depth = 0;
-            drawers = 0;
+            Width = 0;
+            Depth = 0;
+            Drawers = 0;
             Material = 0;
         }
 
         public int CalculateArea()
         {
-            area = width * depth;
+            area = Width * Depth;
             return area;
         }
     }

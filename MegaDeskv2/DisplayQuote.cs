@@ -1,9 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Windows.Forms;
 
 
 namespace MegaDeskAngeles
@@ -13,15 +13,14 @@ namespace MegaDeskAngeles
     {
         //readonly Desk Desk;
         readonly DeskQuote DeskQuote;
+        readonly List<DeskQuote> AllTheQuotes;
 
-        List<DeskQuote> AllTheQuotes;
-
-        private MainMenu mainMenu;
+        private readonly MainMenu mainMenu;
 
         public DisplayQuote(List<DeskQuote> AllTheQuotes, DeskQuote deskQuote, MainMenu theMainMenu)
         {
             DeskQuote = deskQuote;
-           // Desk = desk; removed desk, referring to it thorugh the deskQuote and only passing deskQuote to save
+            // Desk = desk; removed desk, referring to it thorugh the deskQuote and only passing deskQuote to save
             InitializeComponent();
             this.AllTheQuotes = AllTheQuotes;
             mainMenu = theMainMenu;
@@ -36,13 +35,13 @@ namespace MegaDeskAngeles
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
-            TextBoxDate.Text = DeskQuote.quoteDate;
-            TextBoxName.Text = DeskQuote.customerName;
-            TextBoxWidth.Text = DeskQuote.desk.width.ToString();
-            TextBoxDepth.Text = DeskQuote.desk.depth.ToString();
-            TextBoxDrawers.Text = DeskQuote.desk.drawers.ToString();
+            TextBoxDate.Text = DeskQuote.QuoteDate;
+            TextBoxName.Text = DeskQuote.CustomerName;
+            TextBoxWidth.Text = DeskQuote.desk.Width.ToString();
+            TextBoxDepth.Text = DeskQuote.desk.Depth.ToString();
+            TextBoxDrawers.Text = DeskQuote.desk.Drawers.ToString();
             TextBoxMaterial.Text = DeskQuote.desk.Material.ToString();
-            TextBoxRush.Text = DeskQuote.rushOption.ToString();
+            TextBoxRush.Text = DeskQuote.RushOption.ToString();
             TextBoxPrice.Text = $@"${DeskQuote.TotalQuote()}.00";
         }
 
@@ -65,7 +64,7 @@ namespace MegaDeskAngeles
 
             //add code to return to main menu
             mainMenu.Show();
-            this.Close();                             
+            this.Close();
         }
     }
 }

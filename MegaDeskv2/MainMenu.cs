@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 using System.IO;
+using System.Windows.Forms;
 
 namespace MegaDeskAngeles
 {
@@ -10,7 +10,7 @@ namespace MegaDeskAngeles
     {
         public List<DeskQuote> AllTheQuotes;
 
-        
+
 
         public MainMenu()
         {
@@ -19,7 +19,7 @@ namespace MegaDeskAngeles
 
             //deserializing list of quotes into AllTheQuotes object from quotes.json
             //see https://stackoverflow.com/questions/16416138/c-sharp-json-file-into-list
-           
+
             try
             {
                 string json = File.ReadAllText("quotes.json", System.Text.Encoding.UTF8);
@@ -31,7 +31,7 @@ namespace MegaDeskAngeles
 
                 MessageBox.Show("No quotes added", String.Format("Error: {0}", ex.Message));
             }
-            
+
         }
 
         //exit application
@@ -62,7 +62,7 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonViewQuotes_Click(object sender, EventArgs e)
         {
-            ViewAllQuotes viewAllQuotes = new ViewAllQuotes(AllTheQuotes) 
+            ViewAllQuotes viewAllQuotes = new ViewAllQuotes(AllTheQuotes)
             {
                 Tag = this
             };
