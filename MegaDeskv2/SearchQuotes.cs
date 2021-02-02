@@ -38,6 +38,7 @@ namespace MegaDeskAngeles
             List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
             ComboBoxMaterial.DataSource = desktopMaterial;
 
+            
             // Add datagridQuotes header
             //dataGridQuotes.ColumnCount = 8;
             //dataGridQuotes.Columns[0].HeaderCell.Value = "Customer Name";
@@ -54,8 +55,11 @@ namespace MegaDeskAngeles
         private void ComboBoxMaterial_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            
-            
+
+            Quotes quotesFound = new Quotes();
+
+            quotesFound.customerName = "a";
+            quotesFound.quoteDate ="11/11/11"
             
             var source = new BindingSource();
 

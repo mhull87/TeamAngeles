@@ -128,4 +128,18 @@ namespace MegaDeskAngeles
             return totalCost;
         }
     }
+
+    public struct Quotes
+    {
+        public string customerName;
+        public string quoteDate;
+        public string rushOption;
+        public double totalCost;
+        public int width;
+        public int depth;
+        public int drawers;
+        public string material;
+        public int area;
+    }
+
 }
