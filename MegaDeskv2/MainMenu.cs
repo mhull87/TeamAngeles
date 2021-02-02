@@ -19,17 +19,17 @@ namespace MegaDeskAngeles
 
             //deserializing list of quotes into AllTheQuotes object from quotes.json
             //see https://stackoverflow.com/questions/16416138/c-sharp-json-file-into-list
-            string json = File.ReadAllText("quotes.json");
+           
             try
             {
-                json = File.ReadAllText("quotes.json", System.Text.Encoding.UTF8);
+                string json = File.ReadAllText("quotes.json", System.Text.Encoding.UTF8);
                 AllTheQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(json);
                 Console.WriteLine("revisar json");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("No quotes added", "Error");
+                MessageBox.Show("No quotes added", String.Format("Error: {0}", ex.Message));
             }
             
         }
