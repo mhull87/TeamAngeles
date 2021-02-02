@@ -22,7 +22,7 @@ namespace MegaDeskAngeles
            
             try
             {
-                string json = File.ReadAllText("quotes.json", System.Text.Encoding.UTF8);
+                json = File.ReadAllText("quotes.json", System.Text.Encoding.UTF8);
                 AllTheQuotes = JsonConvert.DeserializeObject<List<DeskQuote>>(json);
                 Console.WriteLine("revisar json");
             }

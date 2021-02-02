@@ -57,14 +57,45 @@ namespace MegaDeskAngeles
 
 
             Quotes quotesFound = new Quotes();
+            List<Quotes> quotes = new List<Quotes>();
 
-            quotesFound.customerName = "a";
-            quotesFound.quoteDate ="11/11/11"
+            foreach (var item in allTheQuotes)
+            {
+                int materialItem = (int)ComboBoxMaterial.SelectedItem;
+                if ((int)item.desk.Material == materialItem )
+                {
+                    var material = (DesktopMaterial)materialItem;
+                    quotesFound.customerName = item.customerName;
+                    quotesFound.quoteDate = item.quoteDate;
+                    quotesFound.width = item.desk.width;
+                    quotesFound.depth = item.desk.depth;
+                    quotesFound.material = material.ToString();
+                    quotesFound.drawers = item.desk.drawers;
+                    quotesFound.rushOption = item.rushOption;
+                    quotesFound.totalCost = item.totalCost;
+                    
+                    quotes.Add(quotesFound);
+                }
+            }
+            //quotesFound.customerName = "a";
+            //quotesFound.quoteDate = "11/11/11";
+            //quotesFound.width = 70;
+            //quotesFound.depth = 70;
+            //quotesFound.material = "Oak";
+            //quotesFound.drawers = 4;
+            //quotesFound.rushOption = "3 days";
+            //quotesFound.totalCost = 1200;
+
             
-            var source = new BindingSource();
+            
 
-            source.DataSource = allTheQuotes;
-            dataGridQuotes.DataSource = source;
+            //var source = new BindingSource();
+
+            //source.DataSource = quotes;
+
+            dataGridQuotes.AutoGenerateColumns = true;
+            dataGridQuotes.DataSource = quotes;
+            Console.WriteLine(dataGridQuotes.Rows.Count);
         }
     }
 }

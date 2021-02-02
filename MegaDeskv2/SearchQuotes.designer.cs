@@ -40,7 +40,7 @@ namespace MegaDeskAngeles
             // 
             this.ButtonMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonMainMenu.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonMainMenu.Location = new System.Drawing.Point(21, 478);
+            this.ButtonMainMenu.Location = new System.Drawing.Point(21, 442);
             this.ButtonMainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonMainMenu.Name = "ButtonMainMenu";
             this.ButtonMainMenu.Size = new System.Drawing.Size(221, 63);
@@ -56,9 +56,9 @@ namespace MegaDeskAngeles
             this.LabelSearchByMaterial.Location = new System.Drawing.Point(15, 27);
             this.LabelSearchByMaterial.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelSearchByMaterial.Name = "LabelSearchByMaterial";
-            this.LabelSearchByMaterial.Size = new System.Drawing.Size(160, 36);
+            this.LabelSearchByMaterial.Size = new System.Drawing.Size(159, 36);
             this.LabelSearchByMaterial.TabIndex = 11;
-            this.LabelSearchByMaterial.Text = "Customer Name:";
+            this.LabelSearchByMaterial.Text = "Destop Material:";
             // 
             // ComboBoxMaterial
             // 
@@ -75,12 +75,12 @@ namespace MegaDeskAngeles
             // 
             this.dataGridQuotes.AllowUserToDeleteRows = false;
             this.dataGridQuotes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridQuotes.Location = new System.Drawing.Point(21, 90);
+            this.dataGridQuotes.Location = new System.Drawing.Point(21, 101);
             this.dataGridQuotes.Name = "dataGridQuotes";
             this.dataGridQuotes.ReadOnly = true;
             this.dataGridQuotes.RowHeadersWidth = 51;
             this.dataGridQuotes.RowTemplate.Height = 24;
-            this.dataGridQuotes.Size = new System.Drawing.Size(784, 349);
+            this.dataGridQuotes.Size = new System.Drawing.Size(1078, 281);
             this.dataGridQuotes.TabIndex = 13;
             // 
             // SearchQuotes
@@ -88,7 +88,7 @@ namespace MegaDeskAngeles
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.ButtonMainMenu;
-            this.ClientSize = new System.Drawing.Size(825, 554);
+            this.ClientSize = new System.Drawing.Size(1117, 525);
             this.Controls.Add(this.dataGridQuotes);
             this.Controls.Add(this.ComboBoxMaterial);
             this.Controls.Add(this.LabelSearchByMaterial);
