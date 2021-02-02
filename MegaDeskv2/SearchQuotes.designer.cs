@@ -56,9 +56,9 @@ namespace MegaDeskAngeles
             this.LabelSearchByMaterial.Location = new System.Drawing.Point(15, 27);
             this.LabelSearchByMaterial.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LabelSearchByMaterial.Name = "LabelSearchByMaterial";
-            this.LabelSearchByMaterial.Size = new System.Drawing.Size(160, 36);
+            this.LabelSearchByMaterial.Size = new System.Drawing.Size(159, 36);
             this.LabelSearchByMaterial.TabIndex = 11;
-            this.LabelSearchByMaterial.Text = "Customer Name:";
+            this.LabelSearchByMaterial.Text = "Destop Material:";
             // 
             // ComboBoxMaterial
             // 
