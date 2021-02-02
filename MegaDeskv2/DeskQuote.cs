@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace MegaDeskAngeles
 {
     public class DeskQuote
     {
-        public string customerName { get; set; }
-        public string quoteDate { get; set; }
+        public string CustomerName { get; set; }
+        public string QuoteDate { get; set; }
         public Desk desk;
 
-        public int deskWidth { get { return desk.width; } }
-        public string deskDescription { get { return String.Format("{0} {1} x {2}", desk.Material, desk.width, desk.depth); } }
-        public string rushOption { get; set; }
-        public double totalCost { get; set; }
+        public int DeskWidth { get { return desk.Width; } }
+        public string DeskDescription { get { return String.Format("{0} {1} x {2}", desk.Material, desk.Width, desk.Depth); } }
+        public string RushOption { get; set; }
+        public double TotalCost { get; set; }
 
         public const int BASEPRICE = 200;
         public const int INCHPRICE = 1;
@@ -25,9 +21,9 @@ namespace MegaDeskAngeles
 
         public DeskQuote()
         {
-            customerName = string.Empty;
-            quoteDate = string.Empty;
-            rushOption = string.Empty;
+            CustomerName = string.Empty;
+            QuoteDate = string.Empty;
+            RushOption = string.Empty;
             desk = new Desk();
         }
 
@@ -37,20 +33,21 @@ namespace MegaDeskAngeles
             if (desk.area > 1000)
             {
                 return BASEPRICE + (desk.area - 1000) * INCHPRICE;
-            } else
+            }
+            else
             {
                 return BASEPRICE;
-            }            
+            }
         }
 
         public double DrawersPrice()
         {
-            return desk.drawers * DRAWERPRICE;
+            return desk.Drawers * DRAWERPRICE;
         }
 
         public double GetRushOrder()
         {
-            
+
             var lines = File.ReadAllLines("rushOrderPrices.txt", Encoding.UTF8);
 
             try
@@ -63,13 +60,13 @@ namespace MegaDeskAngeles
                 };
 
                 double rushCost = 0;
-            
-                switch (rushOption)
+
+                switch (RushOption)
                 {
                     case "3 Days":
                         if (desk.area < 1000)
                         {
-                            rushCost = rushCosts[0,0];
+                            rushCost = rushCosts[0, 0];
                         }
                         else if (desk.area > 2000)
                         {
@@ -109,14 +106,14 @@ namespace MegaDeskAngeles
                         }
                         break;
                 }
-                return rushCost;                
+                return rushCost;
             }
             catch (Exception)
             {
 
                 throw;
             }
-            
+
         }
 
         public double MaterialPrice()
@@ -141,22 +138,22 @@ namespace MegaDeskAngeles
 
         public double TotalQuote()
         {
-            totalCost = AreaPrice() + DrawersPrice() + GetRushOrder() + MaterialPrice();
-            return totalCost;
+            TotalCost = AreaPrice() + DrawersPrice() + GetRushOrder() + MaterialPrice();
+            return TotalCost;
         }
     }
 
     public struct Quotes
     {
-        public string customerName { get; set; }
-        public string quoteDate { get; set; }
-        public string rushOption { get; set; }
-        public double totalCost { get; set; }
-        public int width { get; set; }
-        public int depth { get; set; }
-        public int drawers { get; set; }
-        public string material { get; set; }
-        public int area { get; set; }
+        public string CustomerName { get; set; }
+        public string QuoteDate { get; set; }
+        public string RushOption { get; set; }
+        public double TotalCost { get; set; }
+        public int Width { get; set; }
+        public int Depth { get; set; }
+        public int Drawers { get; set; }
+        public string Material { get; set; }
+        public int Area { get; set; }
     }
 
 }

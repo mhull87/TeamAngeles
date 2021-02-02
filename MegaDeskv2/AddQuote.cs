@@ -9,15 +9,13 @@ namespace MegaDeskAngeles
 {
     public partial class AddQuote : Form
     {
-
-        DateTime todayDate = DateTime.Today;
-
-        List<DeskQuote> AllTheQuotes;
+        readonly DateTime todayDate = DateTime.Today;
+        readonly List<DeskQuote> AllTheQuotes;
 
         //desk not required; it is inside deskquote
         public DeskQuote DeskQuote;
 
-        private MainMenu mainMenu;
+        private readonly MainMenu mainMenu;
 
         public AddQuote(List<DeskQuote> AllTheQuotes, MainMenu theMainMenu)
         {
@@ -70,7 +68,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(TextBoxWidth, ""); //Correct
 
                 //set input into _desk
-                DeskQuote.desk.width = widthInput;
+                DeskQuote.desk.Width = widthInput;
             }
         }
 
@@ -116,7 +114,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(TextBoxDepth, ""); //Correct
 
                 // set input into _desk
-                DeskQuote.desk.depth = depthInput;
+                DeskQuote.desk.Depth = depthInput;
             }
         }
 
@@ -137,7 +135,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(TextBoxCustomerName, ""); //Correct
 
                 // set input into _desk
-                DeskQuote.customerName = nameInput;
+                DeskQuote.CustomerName = nameInput;
             }
         }
 
@@ -159,7 +157,7 @@ namespace MegaDeskAngeles
                 errorProvider3.SetError(UpDownDrawers, ""); //Correct
 
                 // set input into _desk
-                DeskQuote.desk.drawers = drawerInput;
+                DeskQuote.desk.Drawers = drawerInput;
             }
         }
 
@@ -172,16 +170,16 @@ namespace MegaDeskAngeles
 
             if (deskWidth != String.Empty)
             {
-                DeskQuote.desk.width = Convert.ToInt32(deskWidth);
+                DeskQuote.desk.Width = Convert.ToInt32(deskWidth);
             }
             if (deskDepth != String.Empty)
             {
-                DeskQuote.desk.depth = Convert.ToInt32(deskDepth);
+                DeskQuote.desk.Depth = Convert.ToInt32(deskDepth);
             }
-                DeskQuote.desk.Material = (DesktopMaterial)materialType;
+            DeskQuote.desk.Material = (DesktopMaterial)materialType;
             if (drawerNum != String.Empty)
             {
-                DeskQuote.desk.drawers = Convert.ToInt32(drawerNum);
+                DeskQuote.desk.Drawers = Convert.ToInt32(drawerNum);
             }
         }
 
@@ -193,15 +191,15 @@ namespace MegaDeskAngeles
 
             if (customerName != String.Empty)
             {
-                DeskQuote.customerName = customerName;
+                DeskQuote.CustomerName = customerName;
             }
             if (todayDate != String.Empty)
             {
-                DeskQuote.quoteDate = todayDate;
+                DeskQuote.QuoteDate = todayDate;
             }
             if (rushTime != String.Empty)
             {
-                DeskQuote.rushOption = rushTime;
+                DeskQuote.RushOption = rushTime;
             }
             //DeskQuote.desk = Desk;
         }

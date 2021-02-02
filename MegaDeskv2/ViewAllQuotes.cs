@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MegaDeskAngeles
@@ -14,7 +8,7 @@ namespace MegaDeskAngeles
     {
         public List<DeskQuote> AllTheQuotes;
 
-        public ViewAllQuotes(List<DeskQuote> AllTheQuotes) 
+        public ViewAllQuotes(List<DeskQuote> AllTheQuotes)
         {
             InitializeComponent();
             this.AllTheQuotes = AllTheQuotes;

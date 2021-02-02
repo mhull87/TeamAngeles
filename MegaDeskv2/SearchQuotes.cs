@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MegaDeskAngeles
@@ -13,12 +9,12 @@ namespace MegaDeskAngeles
     public partial class SearchQuotes : Form
     {
         public List<DeskQuote> allTheQuotes;
-        private MainMenu mainMenu;
+        private readonly MainMenu mainMenu;
 
         public SearchQuotes(List<DeskQuote> allTheQuotes, MainMenu theMainMenu)
         {
             this.allTheQuotes = allTheQuotes;
-            
+
             InitializeComponent();
             mainMenu = theMainMenu;
         }
@@ -38,7 +34,7 @@ namespace MegaDeskAngeles
             List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
             ComboBoxMaterial.DataSource = desktopMaterial;
 
-            
+
             // Add datagridQuotes header
             //dataGridQuotes.ColumnCount = 8;
             //dataGridQuotes.Columns[0].HeaderCell.Value = "Customer Name";
@@ -62,18 +58,18 @@ namespace MegaDeskAngeles
             foreach (var item in allTheQuotes)
             {
                 int materialItem = (int)ComboBoxMaterial.SelectedItem;
-                if ((int)item.desk.Material == materialItem )
+                if ((int)item.desk.Material == materialItem)
                 {
                     var material = (DesktopMaterial)materialItem;
-                    quotesFound.customerName = item.customerName;
-                    quotesFound.quoteDate = item.quoteDate;
-                    quotesFound.width = item.desk.width;
-                    quotesFound.depth = item.desk.depth;
-                    quotesFound.material = material.ToString();
-                    quotesFound.drawers = item.desk.drawers;
-                    quotesFound.rushOption = item.rushOption;
-                    quotesFound.totalCost = item.totalCost;
-                    
+                    quotesFound.CustomerName = item.CustomerName;
+                    quotesFound.QuoteDate = item.QuoteDate;
+                    quotesFound.Width = item.desk.Width;
+                    quotesFound.Depth = item.desk.Depth;
+                    quotesFound.Material = material.ToString();
+                    quotesFound.Drawers = item.desk.Drawers;
+                    quotesFound.RushOption = item.RushOption;
+                    quotesFound.TotalCost = item.TotalCost;
+
                     quotes.Add(quotesFound);
                 }
             }
@@ -86,8 +82,8 @@ namespace MegaDeskAngeles
             //quotesFound.rushOption = "3 days";
             //quotesFound.totalCost = 1200;
 
-            
-            
+
+
 
             //var source = new BindingSource();
 
