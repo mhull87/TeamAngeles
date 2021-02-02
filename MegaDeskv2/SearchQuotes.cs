@@ -34,18 +34,6 @@ namespace MegaDeskAngeles
             List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
             ComboBoxMaterial.DataSource = desktopMaterial;
 
-
-            // Add datagridQuotes header
-            //dataGridQuotes.ColumnCount = 8;
-            //dataGridQuotes.Columns[0].HeaderCell.Value = "Customer Name";
-            //dataGridQuotes.Columns[1].HeaderCell.Value = "Quote Date";
-            //dataGridQuotes.Columns[2].HeaderCell.Value = "Desk Width";
-            //dataGridQuotes.Columns[3].HeaderCell.Value = "Desk Depth";
-            //dataGridQuotes.Columns[4].HeaderCell.Value = "Desk Drawers";
-            //dataGridQuotes.Columns[5].HeaderCell.Value = "Desk Depth";
-            //dataGridQuotes.Columns[6].HeaderCell.Value = "Rush Order";
-            //dataGridQuotes.Columns[7].HeaderCell.Value = "Quote Price";
-
         }
 
         private void ComboBoxMaterial_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,7 +57,7 @@ namespace MegaDeskAngeles
                     quotesFound.Drawers = item.desk.Drawers;
                     quotesFound.RushOption = item.RushOption;
                     quotesFound.TotalCost = item.TotalCost;
-
+                    quotesFound.Area = item.desk.CalculateArea();
                     quotes.Add(quotesFound);
                 }
             }
