@@ -1,3 +1,28 @@
-{
-
-}
+[
+  {
+    "customerName": "Cris",
+    "quoteDate": "Feb. 01, 2021",
+    "desk": {
+      "width": 25,
+      "depth": 45,
+      "drawers": 3,
+      "Material": 0,
+      "area": 1125
+    },
+    "rushOption": "3 Days",
+    "totalCost": 745.0
+  },
+  {
+    "customerName": "Carlos",
+    "quoteDate": "Feb. 01, 2021",
+    "desk": {
+      "width": 60,
+      "depth": 22,
+      "drawers": 3,
+      "Material": 1,
+      "area": 1320
+    },
+    "rushOption": "None",
+    "totalCost": 770.0
+  }
+]
