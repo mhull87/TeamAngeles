@@ -38,7 +38,6 @@ namespace MegaDeskAngeles
             this.LabelSearchByMaterial = new System.Windows.Forms.Label();
             this.ComboBoxMaterial = new System.Windows.Forms.ComboBox();
             this.dataGridQuotes = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quoteDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rushOptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +48,7 @@ namespace MegaDeskAngeles
             this.materialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quotesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridQuotes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +77,7 @@ namespace MegaDeskAngeles
             this.LabelSearchByMaterial.Location = new System.Drawing.Point(18, 140);
             this.LabelSearchByMaterial.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.LabelSearchByMaterial.Name = "LabelSearchByMaterial";
-            this.LabelSearchByMaterial.Size = new System.Drawing.Size(134, 29);
+            this.LabelSearchByMaterial.Size = new System.Drawing.Size(169, 36);
             this.LabelSearchByMaterial.TabIndex = 11;
             this.LabelSearchByMaterial.Text = "Desktop Material:";
             // 
@@ -89,7 +89,7 @@ namespace MegaDeskAngeles
             this.ComboBoxMaterial.Location = new System.Drawing.Point(168, 132);
             this.ComboBoxMaterial.Margin = new System.Windows.Forms.Padding(8, 17, 8, 17);
             this.ComboBoxMaterial.Name = "ComboBoxMaterial";
-            this.ComboBoxMaterial.Size = new System.Drawing.Size(342, 37);
+            this.ComboBoxMaterial.Size = new System.Drawing.Size(342, 44);
             this.ComboBoxMaterial.TabIndex = 12;
             this.ComboBoxMaterial.SelectedIndexChanged += new System.EventHandler(this.ComboBoxMaterial_SelectedIndexChanged);
             // 
@@ -151,17 +151,6 @@ namespace MegaDeskAngeles
             this.dataGridQuotes.Size = new System.Drawing.Size(911, 236);
             this.dataGridQuotes.TabIndex = 13;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(326, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 71);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Search Quotes";
-            // 
             // customerNameDataGridViewTextBoxColumn
             // 
             this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
@@ -169,7 +158,7 @@ namespace MegaDeskAngeles
             this.customerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
             this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerNameDataGridViewTextBoxColumn.Width = 145;
+            this.customerNameDataGridViewTextBoxColumn.Width = 170;
             // 
             // quoteDateDataGridViewTextBoxColumn
             // 
@@ -178,7 +167,7 @@ namespace MegaDeskAngeles
             this.quoteDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quoteDateDataGridViewTextBoxColumn.Name = "quoteDateDataGridViewTextBoxColumn";
             this.quoteDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quoteDateDataGridViewTextBoxColumn.Width = 113;
+            this.quoteDateDataGridViewTextBoxColumn.Width = 133;
             // 
             // rushOptionDataGridViewTextBoxColumn
             // 
@@ -187,7 +176,7 @@ namespace MegaDeskAngeles
             this.rushOptionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.rushOptionDataGridViewTextBoxColumn.Name = "rushOptionDataGridViewTextBoxColumn";
             this.rushOptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rushOptionDataGridViewTextBoxColumn.Width = 118;
+            this.rushOptionDataGridViewTextBoxColumn.Width = 140;
             // 
             // totalCostDataGridViewTextBoxColumn
             // 
@@ -196,7 +185,7 @@ namespace MegaDeskAngeles
             this.totalCostDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.totalCostDataGridViewTextBoxColumn.Name = "totalCostDataGridViewTextBoxColumn";
             this.totalCostDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalCostDataGridViewTextBoxColumn.Width = 104;
+            this.totalCostDataGridViewTextBoxColumn.Width = 122;
             // 
             // widthDataGridViewTextBoxColumn
             // 
@@ -205,7 +194,7 @@ namespace MegaDeskAngeles
             this.widthDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.widthDataGridViewTextBoxColumn.Name = "widthDataGridViewTextBoxColumn";
             this.widthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.widthDataGridViewTextBoxColumn.Width = 81;
+            this.widthDataGridViewTextBoxColumn.Width = 96;
             // 
             // depthDataGridViewTextBoxColumn
             // 
@@ -214,7 +203,7 @@ namespace MegaDeskAngeles
             this.depthDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.depthDataGridViewTextBoxColumn.Name = "depthDataGridViewTextBoxColumn";
             this.depthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.depthDataGridViewTextBoxColumn.Width = 81;
+            this.depthDataGridViewTextBoxColumn.Width = 96;
             // 
             // drawersDataGridViewTextBoxColumn
             // 
@@ -223,7 +212,7 @@ namespace MegaDeskAngeles
             this.drawersDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.drawersDataGridViewTextBoxColumn.Name = "drawersDataGridViewTextBoxColumn";
             this.drawersDataGridViewTextBoxColumn.ReadOnly = true;
-            this.drawersDataGridViewTextBoxColumn.Width = 96;
+            this.drawersDataGridViewTextBoxColumn.Width = 112;
             // 
             // materialDataGridViewTextBoxColumn
             // 
@@ -232,7 +221,7 @@ namespace MegaDeskAngeles
             this.materialDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.materialDataGridViewTextBoxColumn.Name = "materialDataGridViewTextBoxColumn";
             this.materialDataGridViewTextBoxColumn.ReadOnly = true;
-            this.materialDataGridViewTextBoxColumn.Width = 97;
+            this.materialDataGridViewTextBoxColumn.Width = 113;
             // 
             // areaDataGridViewTextBoxColumn
             // 
@@ -241,15 +230,26 @@ namespace MegaDeskAngeles
             this.areaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
             this.areaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.areaDataGridViewTextBoxColumn.Width = 73;
+            this.areaDataGridViewTextBoxColumn.Width = 83;
             // 
             // quotesBindingSource
             // 
             this.quotesBindingSource.DataSource = typeof(MegaDeskAngeles.Quotes);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(326, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(375, 89);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Search Quotes";
+            // 
             // SearchQuotes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Tan;
@@ -265,6 +265,7 @@ namespace MegaDeskAngeles
             this.Name = "SearchQuotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchQuotes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchQuotes_FormClosing);
             this.Load += new System.EventHandler(this.SearchQuotes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridQuotes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesBindingSource)).EndInit();

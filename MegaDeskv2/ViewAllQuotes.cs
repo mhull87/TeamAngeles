@@ -26,8 +26,6 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonMainMenu_Click(object sender, EventArgs e)
         {
-            MainMenu viewMainMenu = (MainMenu)Tag;
-            viewMainMenu.Show();
             Close(); //close ViewAllQuotes window
         }
 
@@ -52,6 +50,13 @@ namespace MegaDeskAngeles
             }
             dataGridViewAll.AutoGenerateColumns = true;
             dataGridViewAll.DataSource = quotes;
+        }
+
+        private void ViewAllQuotes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Return to Main Menu
+            MainMenu viewMainMenu = (MainMenu)Tag;
+            viewMainMenu.Show();
         }
     }
 }

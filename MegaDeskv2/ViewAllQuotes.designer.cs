@@ -37,7 +37,6 @@ namespace MegaDeskAngeles
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ButtonMainMenu = new System.Windows.Forms.Button();
             this.dataGridViewAll = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quoteDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rushOptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,7 @@ namespace MegaDeskAngeles
             this.materialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quotesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -143,16 +143,6 @@ namespace MegaDeskAngeles
             this.dataGridViewAll.Size = new System.Drawing.Size(942, 448);
             this.dataGridViewAll.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(370, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 71);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "All Quotes";
-            // 
             // customerNameDataGridViewTextBoxColumn
             // 
             this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
@@ -160,7 +150,7 @@ namespace MegaDeskAngeles
             this.customerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
             this.customerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.customerNameDataGridViewTextBoxColumn.Width = 145;
+            this.customerNameDataGridViewTextBoxColumn.Width = 170;
             // 
             // quoteDateDataGridViewTextBoxColumn
             // 
@@ -169,7 +159,7 @@ namespace MegaDeskAngeles
             this.quoteDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quoteDateDataGridViewTextBoxColumn.Name = "quoteDateDataGridViewTextBoxColumn";
             this.quoteDateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quoteDateDataGridViewTextBoxColumn.Width = 113;
+            this.quoteDateDataGridViewTextBoxColumn.Width = 133;
             // 
             // rushOptionDataGridViewTextBoxColumn
             // 
@@ -178,7 +168,7 @@ namespace MegaDeskAngeles
             this.rushOptionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.rushOptionDataGridViewTextBoxColumn.Name = "rushOptionDataGridViewTextBoxColumn";
             this.rushOptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rushOptionDataGridViewTextBoxColumn.Width = 118;
+            this.rushOptionDataGridViewTextBoxColumn.Width = 140;
             // 
             // totalCostDataGridViewTextBoxColumn
             // 
@@ -187,7 +177,7 @@ namespace MegaDeskAngeles
             this.totalCostDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.totalCostDataGridViewTextBoxColumn.Name = "totalCostDataGridViewTextBoxColumn";
             this.totalCostDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalCostDataGridViewTextBoxColumn.Width = 104;
+            this.totalCostDataGridViewTextBoxColumn.Width = 122;
             // 
             // widthDataGridViewTextBoxColumn
             // 
@@ -196,7 +186,7 @@ namespace MegaDeskAngeles
             this.widthDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.widthDataGridViewTextBoxColumn.Name = "widthDataGridViewTextBoxColumn";
             this.widthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.widthDataGridViewTextBoxColumn.Width = 81;
+            this.widthDataGridViewTextBoxColumn.Width = 96;
             // 
             // depthDataGridViewTextBoxColumn
             // 
@@ -205,7 +195,7 @@ namespace MegaDeskAngeles
             this.depthDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.depthDataGridViewTextBoxColumn.Name = "depthDataGridViewTextBoxColumn";
             this.depthDataGridViewTextBoxColumn.ReadOnly = true;
-            this.depthDataGridViewTextBoxColumn.Width = 81;
+            this.depthDataGridViewTextBoxColumn.Width = 96;
             // 
             // drawersDataGridViewTextBoxColumn
             // 
@@ -214,7 +204,7 @@ namespace MegaDeskAngeles
             this.drawersDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.drawersDataGridViewTextBoxColumn.Name = "drawersDataGridViewTextBoxColumn";
             this.drawersDataGridViewTextBoxColumn.ReadOnly = true;
-            this.drawersDataGridViewTextBoxColumn.Width = 96;
+            this.drawersDataGridViewTextBoxColumn.Width = 112;
             // 
             // materialDataGridViewTextBoxColumn
             // 
@@ -223,7 +213,7 @@ namespace MegaDeskAngeles
             this.materialDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.materialDataGridViewTextBoxColumn.Name = "materialDataGridViewTextBoxColumn";
             this.materialDataGridViewTextBoxColumn.ReadOnly = true;
-            this.materialDataGridViewTextBoxColumn.Width = 97;
+            this.materialDataGridViewTextBoxColumn.Width = 113;
             // 
             // areaDataGridViewTextBoxColumn
             // 
@@ -232,15 +222,25 @@ namespace MegaDeskAngeles
             this.areaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
             this.areaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.areaDataGridViewTextBoxColumn.Width = 73;
+            this.areaDataGridViewTextBoxColumn.Width = 83;
             // 
             // quotesBindingSource
             // 
             this.quotesBindingSource.DataSource = typeof(MegaDeskAngeles.Quotes);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(370, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(282, 89);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "All Quotes";
+            // 
             // ViewAllQuotes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.CancelButton = this.ButtonMainMenu;
@@ -253,6 +253,7 @@ namespace MegaDeskAngeles
             this.Name = "ViewAllQuotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewAllQuotes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ViewAllQuotes_FormClosing);
             this.Load += new System.EventHandler(this.ViewAllQuotes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quotesBindingSource)).EndInit();

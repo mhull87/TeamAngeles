@@ -34,8 +34,6 @@ namespace MegaDeskAngeles
         /// <param name="e"></param>
         private void ButtonMainMenu_Click(object sender, EventArgs e)
         {
-            MainMenu viewMainMenu = (MainMenu)Tag;
-            viewMainMenu.Show();
             Close(); //close AddQuote form
         }
 
@@ -221,6 +219,13 @@ namespace MegaDeskAngeles
             //populate materials combobox with enum List<DesktopMaterial> values
             List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
             ComboBoxMaterial.DataSource = desktopMaterial;
+        }
+
+        private void AddQuote_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Go back to Main Menu
+            MainMenu viewMainMenu = (MainMenu)Tag;
+            viewMainMenu.Show();
         }
     }
 }

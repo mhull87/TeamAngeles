@@ -19,12 +19,8 @@ namespace MegaDeskAngeles
             mainMenu = theMainMenu;
         }
 
-        //close SearchQuotes and return to Main Menu
         private void ButtonMainMenu_Click(object sender, EventArgs e)
         {
-            //MainMenu viewMainMenu = (MainMenu)Tag;
-            //viewMainMenu.Show();
-            mainMenu.Show();
             Close(); //close SearchQuotes window
         }
 
@@ -39,10 +35,11 @@ namespace MegaDeskAngeles
         private void ComboBoxMaterial_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
+            // Set struct with all columns required for the datagrid
             Quotes quotesFound = new Quotes();
             List<Quotes> quotes = new List<Quotes>();
 
+            // Fill quotes list with the records that match the search
             foreach (var item in allTheQuotes)
             {
                 int materialItem = (int)ComboBoxMaterial.SelectedItem;
@@ -62,9 +59,15 @@ namespace MegaDeskAngeles
                 }
             }
 
+            // Update datagrid
             dataGridQuotes.AutoGenerateColumns = true;
             dataGridQuotes.DataSource = quotes;
-            Console.WriteLine(dataGridQuotes.Rows.Count);
+        }
+
+        private void SearchQuotes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Return to Main Menu
+            mainMenu.Show();
         }
     }
 }

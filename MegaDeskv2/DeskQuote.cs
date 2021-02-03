@@ -10,8 +10,6 @@ namespace MegaDeskAngeles
         public string QuoteDate { get; set; }
         public Desk desk;
 
-        public int DeskWidth { get { return desk.Width; } }
-        public string DeskDescription { get { return String.Format("{0} {1} x {2}", desk.Material, desk.Width, desk.Depth); } }
         public string RushOption { get; set; }
         public double TotalCost { get; set; }
 
