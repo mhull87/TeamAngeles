@@ -28,6 +28,8 @@ namespace MegaDeskAngeles
 
         private void ButtonBack_Click(object sender, EventArgs e)
         {
+            AddQuote viewAddQuote = (AddQuote)Tag;
+            viewAddQuote.Show();
             Close(); //close DisplayQuote form
         }
 
@@ -73,8 +75,6 @@ namespace MegaDeskAngeles
         private void DisplayQuote_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Return to AddQuote
-            AddQuote viewAddQuote = (AddQuote)Tag;
-            viewAddQuote.Show();
         }
     }
 }
