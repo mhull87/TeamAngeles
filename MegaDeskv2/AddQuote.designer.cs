@@ -62,7 +62,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonMainMenu
             // 
-            this.ButtonMainMenu.BackColor = System.Drawing.Color.IndianRed;
+            this.ButtonMainMenu.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonMainMenu.Font = new System.Drawing.Font("Myanmar Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,7 +100,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonGetQuote
             // 
-            this.ButtonGetQuote.BackColor = System.Drawing.Color.IndianRed;
+            this.ButtonGetQuote.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonGetQuote.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ButtonGetQuote.FlatAppearance.BorderSize = 3;
             this.ButtonGetQuote.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));

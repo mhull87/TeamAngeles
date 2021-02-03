@@ -66,7 +66,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonBack
             // 
-            this.ButtonBack.BackColor = System.Drawing.Color.IndianRed;
+            this.ButtonBack.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.ButtonBack.FlatAppearance.BorderSize = 0;
@@ -98,7 +98,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonSave
             // 
-            this.ButtonSave.BackColor = System.Drawing.Color.IndianRed;
+            this.ButtonSave.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.ButtonSave.FlatAppearance.BorderSize = 0;
             this.ButtonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
