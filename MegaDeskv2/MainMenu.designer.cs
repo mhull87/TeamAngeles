@@ -38,7 +38,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonAddNewQuote
             // 
-            this.ButtonAddNewQuote.BackColor = System.Drawing.Color.IndianRed;
+            this.ButtonAddNewQuote.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonAddNewQuote.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.ButtonAddNewQuote.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonAddNewQuote.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -55,9 +55,8 @@ namespace MegaDeskAngeles
             // 
             // ButtonViewQuotes
             // 
-            this.ButtonViewQuotes.BackColor = System.Drawing.Color.IndianRed;
+            this.ButtonViewQuotes.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonViewQuotes.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
-            this.ButtonViewQuotes.FlatAppearance.BorderSize = 3;
             this.ButtonViewQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonViewQuotes.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonViewQuotes.ForeColor = System.Drawing.Color.White;
@@ -65,7 +64,7 @@ namespace MegaDeskAngeles
             this.ButtonViewQuotes.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonViewQuotes.Name = "ButtonViewQuotes";
             this.ButtonViewQuotes.Padding = new System.Windows.Forms.Padding(3);
-            this.ButtonViewQuotes.Size = new System.Drawing.Size(153, 41);
+            this.ButtonViewQuotes.Size = new System.Drawing.Size(153, 42);
             this.ButtonViewQuotes.TabIndex = 1;
             this.ButtonViewQuotes.Text = "&View Quotes";
             this.ButtonViewQuotes.UseVisualStyleBackColor = false;
@@ -73,7 +72,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.BackColor = System.Drawing.Color.IndianRed;
+            this.ButtonSearch.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonSearch.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonSearch.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,7 +89,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonExit
             // 
-            this.ButtonExit.BackColor = System.Drawing.Color.IndianRed;
+            this.ButtonExit.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonExit.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -100,7 +99,7 @@ namespace MegaDeskAngeles
             this.ButtonExit.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonExit.Name = "ButtonExit";
             this.ButtonExit.Padding = new System.Windows.Forms.Padding(3);
-            this.ButtonExit.Size = new System.Drawing.Size(153, 41);
+            this.ButtonExit.Size = new System.Drawing.Size(153, 42);
             this.ButtonExit.TabIndex = 3;
             this.ButtonExit.Text = "E&xit";
             this.ButtonExit.UseVisualStyleBackColor = false;
@@ -108,7 +107,7 @@ namespace MegaDeskAngeles
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.ButtonExit;
