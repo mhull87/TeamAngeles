@@ -61,21 +61,6 @@ namespace MegaDeskAngeles
                     quotes.Add(quotesFound);
                 }
             }
-            //quotesFound.customerName = "a";
-            //quotesFound.quoteDate = "11/11/11";
-            //quotesFound.width = 70;
-            //quotesFound.depth = 70;
-            //quotesFound.material = "Oak";
-            //quotesFound.drawers = 4;
-            //quotesFound.rushOption = "3 days";
-            //quotesFound.totalCost = 1200;
-
-
-
-
-            //var source = new BindingSource();
-
-            //source.DataSource = quotes;
 
             dataGridQuotes.AutoGenerateColumns = true;
             dataGridQuotes.DataSource = quotes;
