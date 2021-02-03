@@ -9,9 +9,6 @@ namespace MegaDeskAngeles
     public partial class MainMenu : Form
     {
         public List<DeskQuote> AllTheQuotes;
-
-
-
         public MainMenu()
         {
             InitializeComponent();
@@ -19,7 +16,6 @@ namespace MegaDeskAngeles
 
             //deserializing list of quotes into AllTheQuotes object from quotes.json
             //see https://stackoverflow.com/questions/16416138/c-sharp-json-file-into-list
-
             try
             {
                 string json = File.ReadAllText("quotes.json", System.Text.Encoding.UTF8);
@@ -31,7 +27,6 @@ namespace MegaDeskAngeles
 
                 MessageBox.Show("No quotes added", String.Format("Error: {0}", ex.Message));
             }
-
         }
 
         //exit application

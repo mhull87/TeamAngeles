@@ -12,11 +12,6 @@ namespace MegaDeskAngeles
         {
             this.allTheQuotes = allTheQuotes;
             InitializeComponent();
-
-            /*var list = new BindingList<DeskQuote>(AllTheQuotes);
-            dataGridViewAll.DataSource = list;*/
-
-            //dataGridViewAll.DataSource = AllTheQuotes; this didn't work
         }
 
         /// <summary>
@@ -46,8 +41,8 @@ namespace MegaDeskAngeles
                     quotesFound.TotalCost = item.TotalCost;
                     quotesFound.Area = item.desk.CalculateArea();
                     quotes.Add(quotesFound);
-                
             }
+
             dataGridViewAll.AutoGenerateColumns = true;
             dataGridViewAll.DataSource = quotes;
         }
