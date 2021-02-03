@@ -29,12 +29,10 @@ namespace MegaDeskAngeles
             // Set ComboBoxMaterial options
             List<DesktopMaterial> desktopMaterial = Enum.GetValues(typeof(DesktopMaterial)).Cast<DesktopMaterial>().ToList();
             ComboBoxMaterial.DataSource = desktopMaterial;
-
         }
 
         private void ComboBoxMaterial_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             // Set struct with all columns required for the datagrid
             Quotes quotesFound = new Quotes();
             List<Quotes> quotes = new List<Quotes>();

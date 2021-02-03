@@ -26,7 +26,6 @@ namespace MegaDeskAngeles
             mainMenu = theMainMenu;
         }
 
-
         /// <summary>
         /// Close AddQuote and return to Main Menu
         /// </summary>
@@ -199,7 +198,6 @@ namespace MegaDeskAngeles
             {
                 DeskQuote.RushOption = rushTime;
             }
-            //DeskQuote.desk = Desk;
         }
 
         private void ButtonGetQuote_Click(object sender, EventArgs e)

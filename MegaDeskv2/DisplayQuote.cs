@@ -7,7 +7,6 @@ using System.Windows.Forms;
 
 
 namespace MegaDeskAngeles
-
 {
     public partial class DisplayQuote : Form
     {
@@ -56,7 +55,7 @@ namespace MegaDeskAngeles
 
             // See https://docs.microsoft.com/en-us/dotnet/api/system.io.file.openwrite?view=net-5.0            
             FileStream fs = File.OpenWrite("quotes.json");
-            Byte[] bytes = new UTF8Encoding(true).GetBytes(jsonString);
+            byte[] bytes = new UTF8Encoding(true).GetBytes(jsonString);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
 
@@ -65,11 +64,6 @@ namespace MegaDeskAngeles
             //add code to return to main menu
             mainMenu.Show();
             this.Close();
-        }
-
-        private void TextBoxDate_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void DisplayQuote_FormClosing(object sender, FormClosingEventArgs e)

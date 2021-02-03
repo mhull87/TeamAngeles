@@ -45,11 +45,9 @@ namespace MegaDeskAngeles
 
         public double GetRushOrder()
         {
-
-            var lines = File.ReadAllLines("rushOrderPrices.txt", Encoding.UTF8);
-
             try
             {
+                var lines = File.ReadAllLines("rushOrderPrices.txt", Encoding.UTF8);
                 double[,] rushCosts = new double[3, 3]
                 {
                     {Convert.ToDouble(lines[0]), Convert.ToDouble(lines[1]), Convert.ToDouble(lines[2])},
@@ -108,10 +106,8 @@ namespace MegaDeskAngeles
             }
             catch (Exception)
             {
-
                 throw;
             }
-
         }
 
         public double MaterialPrice()
@@ -153,5 +149,4 @@ namespace MegaDeskAngeles
         public string Material { get; set; }
         public int Area { get; set; }
     }
-
 }
