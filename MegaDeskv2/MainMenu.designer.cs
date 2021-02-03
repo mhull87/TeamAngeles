@@ -95,7 +95,7 @@ namespace MegaDeskAngeles
             this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonExit.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonExit.ForeColor = System.Drawing.Color.White;
-            this.ButtonExit.Location = new System.Drawing.Point(12, 373);
+            this.ButtonExit.Location = new System.Drawing.Point(12, 361);
             this.ButtonExit.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonExit.Name = "ButtonExit";
             this.ButtonExit.Padding = new System.Windows.Forms.Padding(3);
@@ -111,7 +111,7 @@ namespace MegaDeskAngeles
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.ButtonExit;
-            this.ClientSize = new System.Drawing.Size(471, 431);
+            this.ClientSize = new System.Drawing.Size(471, 420);
             this.Controls.Add(this.ButtonExit);
             this.Controls.Add(this.ButtonSearch);
             this.Controls.Add(this.ButtonViewQuotes);
