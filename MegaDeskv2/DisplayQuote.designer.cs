@@ -66,7 +66,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonBack
             // 
-            this.ButtonBack.BackColor = System.Drawing.Color.Silver;
+            this.ButtonBack.BackColor = System.Drawing.Color.IndianRed;
             this.ButtonBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.ButtonBack.FlatAppearance.BorderSize = 0;
@@ -85,7 +85,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxDate
             // 
-            this.TextBoxDate.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxDate.BackColor = System.Drawing.Color.Tan;
             this.TextBoxDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxDate.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxDate.Location = new System.Drawing.Point(409, 86);
@@ -98,12 +98,13 @@ namespace MegaDeskAngeles
             // 
             // ButtonSave
             // 
-            this.ButtonSave.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonSave.BackColor = System.Drawing.Color.IndianRed;
             this.ButtonSave.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.ButtonSave.FlatAppearance.BorderSize = 0;
             this.ButtonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Salmon;
             this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonSave.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSave.ForeColor = System.Drawing.Color.White;
             this.ButtonSave.Location = new System.Drawing.Point(910, 627);
             this.ButtonSave.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ButtonSave.Name = "ButtonSave";
@@ -147,7 +148,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxPrice
             // 
-            this.TextBoxPrice.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxPrice.BackColor = System.Drawing.Color.Tan;
             this.TextBoxPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxPrice.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxPrice.Location = new System.Drawing.Point(186, 385);
@@ -159,7 +160,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxRush
             // 
-            this.TextBoxRush.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxRush.BackColor = System.Drawing.Color.Tan;
             this.TextBoxRush.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxRush.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxRush.Location = new System.Drawing.Point(186, 329);
@@ -171,7 +172,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxMaterial
             // 
-            this.TextBoxMaterial.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxMaterial.BackColor = System.Drawing.Color.Tan;
             this.TextBoxMaterial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxMaterial.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxMaterial.Location = new System.Drawing.Point(186, 273);
@@ -183,7 +184,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxDrawers
             // 
-            this.TextBoxDrawers.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxDrawers.BackColor = System.Drawing.Color.Tan;
             this.TextBoxDrawers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxDrawers.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxDrawers.Location = new System.Drawing.Point(186, 217);
@@ -195,7 +196,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxDepth
             // 
-            this.TextBoxDepth.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxDepth.BackColor = System.Drawing.Color.Tan;
             this.TextBoxDepth.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxDepth.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxDepth.Location = new System.Drawing.Point(186, 161);
@@ -207,7 +208,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxWidth
             // 
-            this.TextBoxWidth.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxWidth.BackColor = System.Drawing.Color.Tan;
             this.TextBoxWidth.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxWidth.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxWidth.Location = new System.Drawing.Point(186, 105);
@@ -219,7 +220,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxName
             // 
-            this.TextBoxName.BackColor = System.Drawing.Color.Gainsboro;
+            this.TextBoxName.BackColor = System.Drawing.Color.Tan;
             this.TextBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxName.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxName.Location = new System.Drawing.Point(186, 49);
@@ -310,7 +311,7 @@ namespace MegaDeskAngeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(1052, 686);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LabelSaveStatus);

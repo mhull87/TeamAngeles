@@ -62,7 +62,7 @@ namespace MegaDeskAngeles
             // 
             // ButtonMainMenu
             // 
-            this.ButtonMainMenu.BackColor = System.Drawing.Color.Silver;
+            this.ButtonMainMenu.BackColor = System.Drawing.Color.IndianRed;
             this.ButtonMainMenu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonMainMenu.Font = new System.Drawing.Font("Myanmar Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,14 +100,15 @@ namespace MegaDeskAngeles
             // 
             // ButtonGetQuote
             // 
-            this.ButtonGetQuote.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonGetQuote.BackColor = System.Drawing.Color.IndianRed;
             this.ButtonGetQuote.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ButtonGetQuote.FlatAppearance.BorderSize = 3;
             this.ButtonGetQuote.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ButtonGetQuote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.ButtonGetQuote.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonGetQuote.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonGetQuote.Location = new System.Drawing.Point(891, 625);
+            this.ButtonGetQuote.ForeColor = System.Drawing.Color.White;
+            this.ButtonGetQuote.Location = new System.Drawing.Point(910, 627);
             this.ButtonGetQuote.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ButtonGetQuote.Name = "ButtonGetQuote";
             this.ButtonGetQuote.Padding = new System.Windows.Forms.Padding(6);
@@ -152,6 +153,7 @@ namespace MegaDeskAngeles
             // 
             // RushBox
             // 
+            this.RushBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.RushBox.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RushBox.FormattingEnabled = true;
             this.RushBox.Items.AddRange(new object[] {
@@ -178,6 +180,7 @@ namespace MegaDeskAngeles
             // 
             // UpDownDrawers
             // 
+            this.UpDownDrawers.BackColor = System.Drawing.Color.WhiteSmoke;
             this.UpDownDrawers.Location = new System.Drawing.Point(417, 240);
             this.UpDownDrawers.Maximum = new decimal(new int[] {
             7,
@@ -191,6 +194,7 @@ namespace MegaDeskAngeles
             // 
             // ComboBoxMaterial
             // 
+            this.ComboBoxMaterial.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ComboBoxMaterial.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBoxMaterial.FormattingEnabled = true;
             this.ComboBoxMaterial.Location = new System.Drawing.Point(417, 305);
@@ -224,12 +228,14 @@ namespace MegaDeskAngeles
             // 
             // TextBoxDepth
             // 
+            this.TextBoxDepth.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TextBoxDepth.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxDepth.Location = new System.Drawing.Point(417, 180);
             this.TextBoxDepth.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.TextBoxDepth.Name = "TextBoxDepth";
             this.TextBoxDepth.Size = new System.Drawing.Size(274, 45);
             this.TextBoxDepth.TabIndex = 2;
+            this.TextBoxDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxDepth_KeyPress);
             this.TextBoxDepth.Validating += new System.ComponentModel.CancelEventHandler(this.TextBoxDepth_Validating);
             // 
             // LabelDepth
@@ -256,6 +262,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxCustomerName
             // 
+            this.TextBoxCustomerName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TextBoxCustomerName.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxCustomerName.Location = new System.Drawing.Point(417, 55);
             this.TextBoxCustomerName.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -277,6 +284,7 @@ namespace MegaDeskAngeles
             // 
             // TextBoxWidth
             // 
+            this.TextBoxWidth.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TextBoxWidth.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxWidth.Location = new System.Drawing.Point(417, 117);
             this.TextBoxWidth.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
@@ -293,7 +301,7 @@ namespace MegaDeskAngeles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.Tan;
             this.CancelButton = this.ButtonMainMenu;
             this.ClientSize = new System.Drawing.Size(1052, 686);
             this.Controls.Add(this.panel1);

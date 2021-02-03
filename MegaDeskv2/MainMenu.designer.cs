@@ -38,10 +38,11 @@ namespace MegaDeskAngeles
             // 
             // ButtonAddNewQuote
             // 
-            this.ButtonAddNewQuote.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonAddNewQuote.BackColor = System.Drawing.Color.IndianRed;
             this.ButtonAddNewQuote.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.ButtonAddNewQuote.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ButtonAddNewQuote.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAddNewQuote.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAddNewQuote.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ButtonAddNewQuote.Location = new System.Drawing.Point(12, 17);
             this.ButtonAddNewQuote.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonAddNewQuote.Name = "ButtonAddNewQuote";
@@ -54,11 +55,12 @@ namespace MegaDeskAngeles
             // 
             // ButtonViewQuotes
             // 
-            this.ButtonViewQuotes.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonViewQuotes.BackColor = System.Drawing.Color.IndianRed;
             this.ButtonViewQuotes.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.ButtonViewQuotes.FlatAppearance.BorderSize = 3;
             this.ButtonViewQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ButtonViewQuotes.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonViewQuotes.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonViewQuotes.ForeColor = System.Drawing.Color.White;
             this.ButtonViewQuotes.Location = new System.Drawing.Point(12, 121);
             this.ButtonViewQuotes.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonViewQuotes.Name = "ButtonViewQuotes";
@@ -71,10 +73,11 @@ namespace MegaDeskAngeles
             // 
             // ButtonSearch
             // 
-            this.ButtonSearch.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonSearch.BackColor = System.Drawing.Color.IndianRed;
             this.ButtonSearch.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ButtonSearch.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSearch.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.Location = new System.Drawing.Point(12, 178);
             this.ButtonSearch.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonSearch.Name = "ButtonSearch";
@@ -87,11 +90,12 @@ namespace MegaDeskAngeles
             // 
             // ButtonExit
             // 
-            this.ButtonExit.BackColor = System.Drawing.Color.LightSalmon;
+            this.ButtonExit.BackColor = System.Drawing.Color.IndianRed;
             this.ButtonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonExit.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
             this.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ButtonExit.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonExit.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonExit.ForeColor = System.Drawing.Color.White;
             this.ButtonExit.Location = new System.Drawing.Point(12, 373);
             this.ButtonExit.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.ButtonExit.Name = "ButtonExit";
