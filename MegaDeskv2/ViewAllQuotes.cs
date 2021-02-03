@@ -6,12 +6,12 @@ namespace MegaDeskAngeles
 {
     public partial class ViewAllQuotes : Form
     {
-        public List<DeskQuote> AllTheQuotes;
+        public List<DeskQuote> allTheQuotes;
 
-        public ViewAllQuotes(List<DeskQuote> AllTheQuotes)
+        public ViewAllQuotes(List<DeskQuote> allTheQuotes)
         {
+            this.allTheQuotes = allTheQuotes;
             InitializeComponent();
-            this.AllTheQuotes = AllTheQuotes;
 
             /*var list = new BindingList<DeskQuote>(AllTheQuotes);
             dataGridViewAll.DataSource = list;*/
@@ -33,7 +33,25 @@ namespace MegaDeskAngeles
 
         private void ViewAllQuotes_Load(object sender, EventArgs e)
         {
-            dataGridViewAll.DataSource = AllTheQuotes;
+            Quotes quotesFound = new Quotes();
+            List<Quotes> quotes = new List<Quotes>();
+
+            foreach (var item in allTheQuotes)
+            {
+                    quotesFound.CustomerName = item.CustomerName;
+                    quotesFound.QuoteDate = item.QuoteDate;
+                    quotesFound.Width = item.desk.Width;
+                    quotesFound.Depth = item.desk.Depth;
+                    quotesFound.Material = item.desk.Material.ToString();
+                    quotesFound.Drawers = item.desk.Drawers;
+                    quotesFound.RushOption = item.RushOption;
+                    quotesFound.TotalCost = item.TotalCost;
+                    quotesFound.Area = item.desk.CalculateArea();
+                    quotes.Add(quotesFound);
+                
+            }
+            dataGridViewAll.AutoGenerateColumns = true;
+            dataGridViewAll.DataSource = quotes;
         }
     }
 }
