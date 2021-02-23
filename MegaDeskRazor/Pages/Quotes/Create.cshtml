@@ -7,7 +7,7 @@
 
 <h1>Create</h1>
 
-<h4>QuoteForm</h4>
+<h4>New Desk Quote</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -25,18 +25,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="QuoteForm.Width" class="control-label"></label>
-                <input asp-for="QuoteForm.Width" class="form-control" />
+                <input id="width" asp-for="QuoteForm.Width" class="form-control" />
                 <span asp-validation-for="QuoteForm.Width" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="QuoteForm.Depth" class="control-label"></label>
-                <input asp-for="QuoteForm.Depth" class="form-control" />
+                <input asp-for="QuoteForm.Depth" class="form-control" onkeyup="CalculateArea(QuoteForm.Width, QuoteForm.Depth)"/>
                 <span asp-validation-for="QuoteForm.Depth" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="QuoteForm.Area" class="control-label"></label>
-                <input asp-for="QuoteForm.Area" class="form-control" />
-                <span asp-validation-for="QuoteForm.Area" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="QuoteForm.Drawers" class="control-label"></label>
@@ -54,11 +49,6 @@
                 <span asp-validation-for="QuoteForm.RushOption" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="QuoteForm.Total" class="control-label"></label>
-                <input asp-for="QuoteForm.Total" class="form-control" />
-                <span asp-validation-for="QuoteForm.Total" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -72,3 +62,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
