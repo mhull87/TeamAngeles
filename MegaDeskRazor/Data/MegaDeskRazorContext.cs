@@ -15,5 +15,9 @@ namespace MegaDeskRazor.Data
         }
 
         public DbSet<MegaDeskRazor.Models.QuoteForm> QuoteForm { get; set; }
+
+        public DbSet<MegaDeskRazor.Models.SurfaceMaterial> SurfaceMaterial { get; set; }
+
+        public DbSet<MegaDeskRazor.Models.RushTime> RushTime { get; set; }
     }
 }
