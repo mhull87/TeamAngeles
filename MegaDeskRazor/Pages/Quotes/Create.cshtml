@@ -19,8 +19,7 @@
                 <span asp-validation-for="QuoteForm.CustomerName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="QuoteForm.QuoteDate" class="control-label"></label>
-                <input asp-for="QuoteForm.QuoteDate" class="form-control" />
+                <input type="hidden" asp-for="QuoteForm.QuoteDate" class="form-control" value="@DateTime.Now" />
                 <span asp-validation-for="QuoteForm.QuoteDate" class="text-danger"></span>
             </div>
             <div class="form-group">
