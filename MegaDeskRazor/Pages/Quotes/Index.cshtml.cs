@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using MegaDeskRazor.Data;
 using MegaDeskRazor.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MegaDeskRazor.Pages.AddQuote
 {
@@ -21,9 +22,58 @@ namespace MegaDeskRazor.Pages.AddQuote
 
         public IList<QuoteForm> QuoteForm { get;set; }
 
+        // for searching
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+        public SelectList Materials { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public DesktopMaterial SurfaceMaterial { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string Sort { get; set; }
+
         public async Task OnGetAsync()
         {
-            QuoteForm = await _context.QuoteForm.ToListAsync();
+            IQueryable<string> materialQuery = from m in _context.SurfaceMaterial
+                                               orderby m.Material
+                                               select m.Material;
+
+
+            var quotes = from m in _context.QuoteForm
+                             select m;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                Console.WriteLine("Filtering");
+                quotes = quotes.Where(s => s.CustomerName.Contains(SearchString));
+            }
+
+            if (SurfaceMaterial > 0)
+            {
+                quotes = quotes.Where(x => x.Material == SurfaceMaterial);
+
+            }
+
+            if (!string.IsNullOrEmpty(Sort))
+            {
+                switch (Sort)
+                {
+                    case "Customer Name":
+                        quotes = quotes.OrderBy(s => s.CustomerName);
+                        break;
+                    case "Quote Date":
+                        quotes = quotes.OrderBy(s => s.QuoteDate);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            //Scripture = await _context.Scripture.ToListAsync();
+            Materials = new SelectList(await materialQuery.Distinct().ToListAsync());
+
+            //QuoteForm = await _context.QuoteForm.ToListAsync();
+            QuoteForm = await quotes.ToListAsync();
         }
     }
 }

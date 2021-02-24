@@ -10,14 +10,27 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form>
+    <p>
+        <select asp-for="SurfaceMaterial" asp-items="Model.Materials">
+            <option value="">All</option>
+        </select>
+        Note: <input type="text" asp-for="SearchString" />
+        <input class="btn btn-outline-secondary" type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.QuoteForm[0].CustomerName)
+                <a class="text-warning" asp-route-sort="Customer Name">
+                    @Html.DisplayNameFor(model => model.QuoteForm[0].CustomerName)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.QuoteForm[0].QuoteDate)
+                <a class="text-warning" asp-route-sort="Quote Date">
+                    @Html.DisplayNameFor(model => model.QuoteForm[0].QuoteDate)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.QuoteForm[0].Width)
