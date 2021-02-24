@@ -20,6 +20,21 @@
                 @Html.DisplayNameFor(model => model.QuoteForm[0].QuoteDate)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.QuoteForm[0].Width)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuoteForm[0].Depth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuoteForm[0].Drawers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuoteForm[0].Material)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuoteForm[0].RushOption)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.QuoteForm[0].Total)
             </th>
             <th></th>
@@ -35,8 +50,29 @@
                 @Html.DisplayFor(modelItem => item.QuoteDate)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Width)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Depth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Drawers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Material)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RushOption)
+            </td>
+
+            <td>
                 @Html.DisplayFor(modelItem => item.Total)
             </td>
+
+
+
+
+
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

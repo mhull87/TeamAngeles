@@ -225,5 +225,10 @@ namespace MegaDeskAngeles
             MainMenu viewMainMenu = (MainMenu)Tag;
             viewMainMenu.Show();
         }
+
+        private void AddQuote_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
