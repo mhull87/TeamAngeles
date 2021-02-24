@@ -15,9 +15,23 @@ namespace MegaDeskRazor.Pages.AddQuote
     {
         private readonly MegaDeskRazor.Data.MegaDeskRazorContext _context;
 
+        public SelectList Materials { get; set; }
+        public SelectList RushTime { get; set; }
+
         public EditModel(MegaDeskRazor.Data.MegaDeskRazorContext context)
         {
             _context = context;
+
+            // filling options for material and rushoptions
+            IQueryable<string> materialQuery = from m in _context.SurfaceMaterial
+                                               orderby m.Material
+                                               select m.Material;
+            Materials = new SelectList(materialQuery.Distinct().ToList());
+
+            IQueryable<string> rushTimeQuery = from m in _context.RushTime
+                                               orderby m.Days
+                                               select m.Days;
+            RushTime = new SelectList(rushTimeQuery.Distinct().ToList());
         }
 
         [BindProperty]

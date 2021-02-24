@@ -20,8 +20,8 @@ namespace MegaDeskRazor.Models
 
         [Required, RegularExpression(@"^[A-Z]+[a-zA-Z]*$"), Display(Name = "Customer Name")]
         public string CustomerName { get; set; }
-
-        [Required, Display(Name = "Quote Date"), DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:d MMMM yyyy}", ApplyFormatInEditMode = true)]
+        //[Required, Display(Name = "Quote Date"), DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:d MMMM yyyy}", ApplyFormatInEditMode = true)]
+        [Required, Display(Name = "Quote Date"), DataType(DataType.Date)]
         public DateTime QuoteDate { get; set; }
 
         [Required, Range(24, 96)]

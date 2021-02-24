@@ -20,7 +20,8 @@ namespace MegaDeskRazor.Pages.AddQuote
         public CreateModel(MegaDeskRazor.Data.MegaDeskRazorContext context)
         {
             _context = context;
-            
+
+            // filling options for material and rushoptions
             IQueryable<string> materialQuery = from m in _context.SurfaceMaterial
                                                orderby m.Material
                                                select m.Material;
