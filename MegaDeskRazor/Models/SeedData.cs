@@ -14,66 +14,71 @@ namespace MegaDeskRazor.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<MegaDeskRazorContext>>()))
             {
-                // Look for any movies.
+                // Look for any quotes.
                 if (context.QuoteForm.Any())
                 {
                     return;   // DB has been seeded
                 }
 
-                //context.SurfaceMaterial.AddRange(
-                //    new SurfaceMaterial
-                //    {
-                //        Material = "Oak",
-                //        Cost = 200,
-                //        ImagePath = "~/Images/oak.jpg"
-                //    },
+                context.SurfaceMaterial.AddRange(
+                    new SurfaceMaterial
+                    {
+                        Material = "Oak",
+                        Cost = 200,
+                        ImagePath = "~/Images/oak.jpg"
+                    },
 
-                //    new SurfaceMaterial
-                //    {
-                //        Material = "Laminate",
-                //        Cost = 100,
-                //        ImagePath = "~/Images/laminate.jpg"
-                //    },
+                    new SurfaceMaterial
+                    {
+                        Material = "Laminate",
+                        Cost = 100,
+                        ImagePath = "~/Images/laminate.jpg"
+                    },
 
-                //    new SurfaceMaterial
-                //    {
-                //        Material = "Pine",
-                //        Cost = 50,
-                //        ImagePath = "~/Images/pine.jpg"
-                //    },
+                    new SurfaceMaterial
+                    {
+                        Material = "Pine",
+                        Cost = 50,
+                        ImagePath = "~/Images/pine.jpg"
+                    },
 
-                //    new SurfaceMaterial
-                //    {
-                //        Material = "Rosewood",
-                //        Cost = 300,
-                //        ImagePath = "~/Images/rosewood.jpg"
-                //    },
+                    new SurfaceMaterial
+                    {
+                        Material = "Rosewood",
+                        Cost = 300,
+                        ImagePath = "~/Images/rosewood.jpg"
+                    },
 
-                //    new SurfaceMaterial
-                //    {
-                //        Material = "Veneer",
-                //        Cost = 125,
-                //        ImagePath = "~/Images/veneer.jpg"
-                //    }
-                //);
+                    new SurfaceMaterial
+                    {
+                        Material = "Veneer",
+                        Cost = 125,
+                        ImagePath = "~/Images/veneer.jpg"
+                    }
+                );
 
-                //context.RushTime.AddRange(
-                //    new RushTime
-                //    {
-                //        Days = "3"
-                //    },
+                context.RushTime.AddRange(
+                    new RushTime
+                    {
+                        Days = "3"
+                    },
 
-                //    new RushTime
-                //    {
-                //        Days = "5"
-                //    },
+                    new RushTime
+                    {
+                        Days = "5"
+                    },
 
-                //    new RushTime
-                //    {
-                //        Days = "7"
-                //    }
+                    new RushTime
+                    {
+                        Days = "7"
+                    },
 
-                //);
+                    new RushTime
+                    {
+                        Days = "14"
+                    }
+
+                );
 
                 context.QuoteForm.AddRange(
                     new QuoteForm
