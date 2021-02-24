@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace MegaDeskRazor.Models
 {
+    //this class will be deleted, it is for reference only
     public class DeskQuote
     {
+        public int ID { get; set; }
         public string CustomerName { get; set; }
         public string QuoteDate { get; set; }
+
         public Desk desk;
 
         public string RushOption { get; set; }

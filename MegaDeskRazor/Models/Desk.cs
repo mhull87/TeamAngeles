@@ -1,14 +1,15 @@
 ﻿namespace MegaDeskRazor.Models
 {
- //   public enum DesktopMaterial
- //   {
- //       Oak,
- //       Laminate,
- //       Pine,
- //       Rosewood,
- //       Veneer
-//    }
+    //   public enum DesktopMaterial
+    //   {
+    //       Oak,
+    //       Laminate,
+    //       Pine,
+    //       Rosewood,
+    //       Veneer
+    //    }
 
+    //this class will be deleted, it is for reference only
     public class Desk
     {
         public int Width { get; set; }
