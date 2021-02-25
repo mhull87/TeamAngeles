@@ -5,69 +5,70 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Quote Details</h1>
-
 <div>
-    <h4>QuoteForm</h4>
+    <h2 class="h1 padding-top">Quote Details</h2>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.CustomerName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.CustomerName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.QuoteDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.QuoteDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.Width)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.Width)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.Depth)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.Depth)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.Area)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.Area)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.Drawers)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.Drawers)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.Material)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.Material)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.RushOption)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.RushOption)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuoteForm.Total)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuoteForm.Total)
-        </dd>
-    </dl>
+    <div class="padding-2 margin-auto half-width create-form">
+        <dl class="row margin-auto">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.CustomerName)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.CustomerName)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.QuoteDate)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.QuoteDate)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.Width)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.Width)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.Depth)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.Depth)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.Area)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.Area)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.Drawers)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.Drawers)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.Material)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.Material)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.RushOption)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.RushOption)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.QuoteForm.Total)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.QuoteForm.Total)
+            </dd>
+        </dl>
+    </div>
+
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.QuoteForm.ID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a class="btn btn-outline-warning" asp-page="./Edit" asp-route-id="@Model.QuoteForm.ID">Edit</a> |
+    <a class="btn btn-outline-secondary" asp-page="./Index">Back to List</a>
 </div>
