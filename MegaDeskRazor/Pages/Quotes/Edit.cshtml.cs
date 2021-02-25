@@ -62,7 +62,7 @@ namespace MegaDeskRazor.Pages.AddQuote
                 return Page();
             }
 
-            _context.Attach(QuoteForm).State = EntityState.Modified;
+            _context.Attach(new QuoteForm(QuoteForm.ID, QuoteForm.CustomerName, QuoteForm.QuoteDate, QuoteForm.Width, QuoteForm.Depth, QuoteForm.Drawers, QuoteForm.Material, QuoteForm.RushOption)).State = EntityState.Modified;
 
             try
             {

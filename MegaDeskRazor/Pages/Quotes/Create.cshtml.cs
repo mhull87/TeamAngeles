@@ -53,7 +53,10 @@ namespace MegaDeskRazor.Pages.AddQuote
                 return Page();
             }
 
-            _context.QuoteForm.Add(QuoteForm);
+            _context.QuoteForm.Add(
+                new QuoteForm(QuoteForm.CustomerName, QuoteForm.QuoteDate, QuoteForm.Width, QuoteForm.Depth, QuoteForm.Drawers, QuoteForm.Material, QuoteForm.RushOption));
+            //_context.QuoteForm.Add(QuoteForm);
+
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
