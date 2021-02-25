@@ -5,16 +5,14 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>SurfaceMaterial</h4>
+<h2>SurfaceMaterial</h2>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 margin-auto create-form">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="SurfaceMaterial.Material" class="control-label"></label>
+                <label asp-for="SurfaceMaterial.Material" class="control-label padding-top"></label>
                 <input asp-for="SurfaceMaterial.Material" class="form-control" />
                 <span asp-validation-for="SurfaceMaterial.Material" class="text-danger"></span>
             </div>

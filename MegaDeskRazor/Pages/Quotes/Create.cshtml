@@ -5,16 +5,14 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>New Desk Quote</h4>
+<h2 class="h1 padding-top">New Desk Quote</h2>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 margin-auto create-form">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="QuoteForm.CustomerName" class="control-label"></label>
+                <label asp-for="QuoteForm.CustomerName" class="control-label padding-top"></label>
                 <input asp-for="QuoteForm.CustomerName" placeholder="Ex: Bob Jones" class="form-control" />
                 <span asp-validation-for="QuoteForm.CustomerName" class="text-danger"></span>
             </div>
