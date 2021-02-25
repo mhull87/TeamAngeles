@@ -15,7 +15,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Folder Include="wwwroot\lib\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\Images\desk.png" />
+    <None Include="wwwroot\lib\Images\laminate.jpg" />
+    <None Include="wwwroot\lib\Images\oak.jpg" />
+    <None Include="wwwroot\lib\Images\pine.jpg" />
+    <None Include="wwwroot\lib\Images\rosewood.jpg" />
+    <None Include="wwwroot\lib\Images\veneer.jpg" />
   </ItemGroup>
 
 </Project>
