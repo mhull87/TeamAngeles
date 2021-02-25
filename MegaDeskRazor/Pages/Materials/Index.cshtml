@@ -21,8 +21,8 @@
                 @Html.DisplayNameFor(model => model.SurfaceMaterial[0].ImagePath)
             </th>*@
 
-            <th>
-                Image
+            <th class="text-center">
+                Sample Image
             </th>
             <th></th>
         </tr>
@@ -34,17 +34,20 @@
                 @Html.DisplayFor(modelItem => item.Material)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cost)
+                @{
+                    var dollar = "$" + item.Cost;
+                }
+                @Html.DisplayFor(modelItem => dollar)
             </td>
 
             @*<td>
-                @Html.DisplayFor(modelItem => item.ImagePath)
-            </td>*@
+            @Html.DisplayFor(modelItem => item.ImagePath)
+        </td>*@
 
-            <td>
+            <td class="text-center">
                 @{
                     var src = "lib/Images/" + @item.Material + ".jpg";
-                 }
+                }
                 <img class="deskimg" src="@src" width="75" height="75" />
             </td>
         </tr>

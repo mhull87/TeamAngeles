@@ -8,61 +8,77 @@
 <div>
     <h2 class="h1 padding-top">Quote Details</h2>
     <hr />
-    <div class="padding-2 margin-auto half-width create-form">
+    <div class="padding-2 margin-auto half-width create-form marginbottom">
         <dl class="row margin-auto">
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.CustomerName)
             </dt>
-            <dd class="col-sm-8">
+            <dd class="col-sm-6">
                 @Html.DisplayFor(model => model.QuoteForm.CustomerName)
             </dd>
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.QuoteDate)
             </dt>
-            <dd class="col-sm-8">
+            <dd class="col-sm-6">
                 @Html.DisplayFor(model => model.QuoteForm.QuoteDate)
             </dd>
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.Width)
             </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.QuoteForm.Width)
+            <dd class="col-sm-6">
+                @{
+                    var inches = Model.QuoteForm.Width + " in";
+                }
+                @Html.DisplayFor(model => inches)
             </dd>
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.Depth)
             </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.QuoteForm.Depth)
+            <dd class="col-sm-6">
+                @{
+                    var inches2 = Model.QuoteForm.Depth + " in";
+                }
+                @Html.DisplayFor(model => inches2)
             </dd>
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.Area)
             </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.QuoteForm.Area)
+            <dd class="col-sm-6">
+                @{
+                    var insq = Model.QuoteForm.Area + " in";
+                }
+                @Html.DisplayFor(model => insq)&#xB2;
             </dd>
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.Drawers)
+
             </dt>
-            <dd class="col-sm-8">
+            <dd class="col-sm-6">
                 @Html.DisplayFor(model => model.QuoteForm.Drawers)
             </dd>
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.Material)
             </dt>
-            <dd class="col-sm-8">
+            <dd class="col-sm-6">
                 @Html.DisplayFor(model => model.QuoteForm.Material)
             </dd>
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.RushOption)
             </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.QuoteForm.RushOption)
+            <dd class="col-sm-6">
+                @{
+                    var days = Model.QuoteForm.RushOption + " days";
+                }
+                @Html.DisplayFor(model => days)
             </dd>
-            <dt class="col-sm-4">
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.QuoteForm.Total)
             </dt>
-            <dd class="col-sm-8">
-                @Html.DisplayFor(model => model.QuoteForm.Total)
+            <dd class="col-sm-6">
+                @{
+                    var dollar = "$" + Model.QuoteForm.Total;
+                }
+                @Html.DisplayFor(model => dollar)
             </dd>
         </dl>
     </div>
