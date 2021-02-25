@@ -88,8 +88,10 @@ namespace MegaDeskRazor.Models
                         Width = 24,
                         Depth = 12,
                         Drawers = 0,
+                        Area = 288,
                         Material = DesktopMaterial.Laminate,
-                        RushOption = "7"
+                        RushOption = "7",
+                        Total = "330"
                     },
 
                     new QuoteForm
@@ -98,9 +100,11 @@ namespace MegaDeskRazor.Models
                         QuoteDate = DateTime.Parse("2-23-2021"),
                         Width = 96,
                         Depth = 48,
+                        Area = 4608,
                         Drawers = 7,
                         Material = DesktopMaterial.Rosewood,
-                        RushOption = "3"
+                        RushOption = "3",
+                        Total = "4538"
                     },
 
                     new QuoteForm
@@ -109,9 +113,11 @@ namespace MegaDeskRazor.Models
                         QuoteDate = DateTime.Parse("2-23-2021"),
                         Width = 50,
                         Depth = 36,
+                        Area = 1800,
                         Drawers = 4,
                         Material = DesktopMaterial.Oak,
-                        RushOption = "5"
+                        RushOption = "5",
+                        Total = "1450"
                     },
 
                     new QuoteForm
@@ -120,9 +126,11 @@ namespace MegaDeskRazor.Models
                         QuoteDate = DateTime.Parse("2-23-2021"),
                         Width = 34,
                         Depth = 34,
+                        Area = 1156,
                         Drawers = 2,
                         Material = DesktopMaterial.Pine,
-                        RushOption = "7"
+                        RushOption = "7",
+                        Total = "546"
                     }
                 );
                 context.SaveChanges();

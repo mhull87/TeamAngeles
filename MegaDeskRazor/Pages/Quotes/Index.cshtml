@@ -8,16 +8,19 @@
 <h2 class="h1 padding-top">View All Quotes</h2>
 
 
-    <a class="btn btn-outline-secondary mb-n5" asp-page="Create">Create New</a>
-
-<form>
-    <p class="text-right">
+<form class="d-flex justify-content-between">
+    <a class="btn btn-outline-secondary align-self-end marginbottom" asp-page="Create">Create New</a>
+    <fieldset class="fsborder marginbottom">
+        <legend class="nowidth">Search by:</legend>
+        <label asp-for="SurfaceMaterial">Material</label><br />
         <select asp-for="SurfaceMaterial" asp-items="Model.Materials">
             <option value="">All</option>
-        </select>
-        Customer Name: <input type="text" asp-for="SearchString" />
-        <input class="btn btn-outline-secondary" type="submit" value="Filter" />
-    </p>
+        </select><br />
+        <label class="filterlabel" asp-for="SearchString">Customer Name</label><br />
+        <input type="text" asp-for="SearchString" />
+        <input class="btn btn-outline-secondary margin-top" type="submit" value="Filter" />
+    </fieldset>
+
 </form>
 <table class="table table-hover">
     <thead>
@@ -42,28 +45,28 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.QuoteForm) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuoteDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Material)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Total)
-            </td>
+        @foreach (var item in Model.QuoteForm)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuoteDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Material)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total)
+                </td>
 
-
-            <td class="table-secondary text-center">
-                <a class="btn btn-outline-warning" asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a class="btn btn-outline-info" asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a class="btn btn-outline-danger" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+                <td class="table-secondary text-center">
+                    <a class="btn btn-outline-warning btnpadding" asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a class="btn btn-outline-info btnpadding" asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a class="btn btn-outline-danger btnpadding" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
