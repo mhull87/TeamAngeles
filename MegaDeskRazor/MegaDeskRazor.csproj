@@ -19,7 +19,7 @@
     <None Include="wwwroot\lib\Images\laminate.jpg" />
     <None Include="wwwroot\lib\Images\oak.jpg" />
     <None Include="wwwroot\lib\Images\pine.jpg" />
-    <None Include="wwwroot\lib\Images\rossewood.jpg" />
+    <None Include="wwwroot\lib\Images\rosewood.jpg" />
     <None Include="wwwroot\lib\Images\veneer.jpg" />
   </ItemGroup>
 

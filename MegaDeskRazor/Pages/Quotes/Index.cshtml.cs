@@ -28,7 +28,7 @@ namespace MegaDeskRazor.Pages.AddQuote
         public SelectList Materials { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public DesktopMaterial SurfaceMaterial { get; set; }
+        public string SurfaceMaterial { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string Sort { get; set; }
@@ -48,9 +48,9 @@ namespace MegaDeskRazor.Pages.AddQuote
                 quotes = quotes.Where(s => s.CustomerName.Contains(SearchString));
             }
 
-            if (SurfaceMaterial > 0)
+            if (!string.IsNullOrEmpty(SurfaceMaterial))
             {
-                quotes = quotes.Where(x => x.Material == SurfaceMaterial);
+                quotes = quotes.Where(x => x.Material == (DesktopMaterial)Enum.Parse(typeof(DesktopMaterial),SurfaceMaterial));
 
             }
 
