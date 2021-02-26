@@ -58,10 +58,7 @@
                 @Html.DisplayFor(modelItem => item.Material)
             </td>
             <td>
-                @{
-                    var dollar = "$" + item.Total;
-                }
-                @Html.DisplayFor(modelItem => dollar)
+                @Html.DisplayFor(modelItem => item.Total)
             </td>
 
             <td class="table-secondary text-center">

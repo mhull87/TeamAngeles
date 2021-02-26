@@ -123,7 +123,7 @@ namespace MegaDeskRazor.Models
                     break;
             }
 
-            Total = (areaPrice + drawerCost + rushCost + materialCost).ToString();
+            Total = (areaPrice + drawerCost + rushCost + materialCost).ToString("C");
         }
 
         public QuoteForm(int id, string customerName, DateTime date, int width, int depth, int drawers, DesktopMaterial material, string rush)
@@ -231,7 +231,7 @@ namespace MegaDeskRazor.Models
                     break;
             }
 
-            Total = (areaPrice + drawerCost + rushCost + materialCost).ToString();
+            Total = (areaPrice + drawerCost + rushCost + materialCost).ToString("C");
         }
 
         public int ID { get; set; }

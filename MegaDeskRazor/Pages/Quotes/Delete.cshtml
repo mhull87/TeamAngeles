@@ -46,7 +46,7 @@
             </dt>
             <dd class="col-sm-6">
                 @{
-                    var insq = Model.QuoteForm.Area + " in";
+                    var insq = (Model.QuoteForm.Area).ToString("N0") + " in";
                 }
                 @Html.DisplayFor(model => insq)&#xB2;
             </dd>
@@ -76,10 +76,10 @@
                 @Html.DisplayNameFor(model => model.QuoteForm.Total)
             </dt>
             <dd class="col-sm-6">
-                @{
+                @*@{
                     var dollar = "$" + Model.QuoteForm.Total;
-                }
-                @Html.DisplayFor(model => dollar)
+                }*@
+                @Html.DisplayFor(model => Model.QuoteForm.Total)
             </dd>
         </dl>
     </div>
