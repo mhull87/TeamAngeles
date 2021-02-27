@@ -111,7 +111,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 7,
                             Material = DesktopMaterial.Rosewood,
                             RushOption = "3",
-                            Total = "$4058.00"
+                            Total = "$4,058.00"
                         },
 
                         new QuoteForm
@@ -124,7 +124,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 4,
                             Material = DesktopMaterial.Oak,
                             RushOption = "5",
-                            Total = "$1450.00"
+                            Total = "$1,450.00"
                         },
 
                         new QuoteForm
@@ -150,7 +150,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 5,
                             Material = DesktopMaterial.Rosewood,
                             RushOption = "5",
-                            Total = "$2648.00"
+                            Total = "$2,648.00"
                         },
 
                         new QuoteForm
@@ -176,7 +176,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 6,
                             Material = DesktopMaterial.Oak,
                             RushOption = "14",
-                            Total = "$2700.00"
+                            Total = "$2,700.00"
                         },
 
                         new QuoteForm
@@ -189,7 +189,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 7,
                             Material = DesktopMaterial.Veneer,
                             RushOption = "5",
-                            Total = "$2551.00"
+                            Total = "$2,551.00"
                         },
 
                         new QuoteForm
@@ -202,7 +202,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 4,
                             Material = DesktopMaterial.Pine,
                             RushOption = "3",
-                            Total = "$2050.00"
+                            Total = "$2,050.00"
                         },
 
                         new QuoteForm
