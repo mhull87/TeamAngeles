@@ -105,13 +105,13 @@ namespace MegaDeskRazor.Models
                         {
                             CustomerName = "Sierra Ramos",
                             QuoteDate = DateTime.Parse("2021-2-23"),
-                            Width = 96,
+                            Width = 86,
                             Depth = 48,
-                            Area = 4608,
+                            Area = 4128,
                             Drawers = 7,
                             Material = DesktopMaterial.Rosewood,
                             RushOption = "3",
-                            Total = "$4538.00"
+                            Total = "$4058.00"
                         },
 
                         new QuoteForm
@@ -138,6 +138,84 @@ namespace MegaDeskRazor.Models
                             Material = DesktopMaterial.Pine,
                             RushOption = "7",
                             Total = "$546.00"
+                        },
+
+                        new QuoteForm
+                        {
+                            CustomerName = "Mary Lindval",
+                            QuoteDate = DateTime.Parse("2021-2-24"),
+                            Width = 86,
+                            Depth = 33,
+                            Area = 2838,
+                            Drawers = 5,
+                            Material = DesktopMaterial.Rosewood,
+                            RushOption = "5",
+                            Total = "$2648.00"
+                        },
+
+                        new QuoteForm
+                        {
+                            CustomerName = "Jim Brown",
+                            QuoteDate = DateTime.Parse("2021-2-24"),
+                            Width = 40,
+                            Depth = 20,
+                            Area = 800,
+                            Drawers = 1,
+                            Material = DesktopMaterial.Veneer,
+                            RushOption = "5",
+                            Total = "$415.00"
+                        },
+
+                        new QuoteForm
+                        {
+                            CustomerName = "Jorge Ramos",
+                            QuoteDate = DateTime.Parse("2021-2-25"),
+                            Width = 75,
+                            Depth = 40,
+                            Area = 3000,
+                            Drawers = 6,
+                            Material = DesktopMaterial.Oak,
+                            RushOption = "14",
+                            Total = "$2700.00"
+                        },
+
+                        new QuoteForm
+                        {
+                            CustomerName = "Harry McBride",
+                            QuoteDate = DateTime.Parse("2021-2-26"),
+                            Width = 88,
+                            Depth = 32,
+                            Area = 2816,
+                            Drawers = 7,
+                            Material = DesktopMaterial.Veneer,
+                            RushOption = "5",
+                            Total = "$2551.00"
+                        },
+
+                        new QuoteForm
+                        {
+                            CustomerName = "Mary Brown",
+                            QuoteDate = DateTime.Parse("2021-2-26"),
+                            Width = 60,
+                            Depth = 42,
+                            Area = 2520,
+                            Drawers = 4,
+                            Material = DesktopMaterial.Pine,
+                            RushOption = "3",
+                            Total = "$2050.00"
+                        },
+
+                        new QuoteForm
+                        {
+                            CustomerName = "Jim Brown",
+                            QuoteDate = DateTime.Parse("2021-2-27"),
+                            Width = 40,
+                            Depth = 20,
+                            Area = 800,
+                            Drawers = 3,
+                            Material = DesktopMaterial.Pine,
+                            RushOption = "7",
+                            Total = "$430.00"
                         }
                     );
                 }
