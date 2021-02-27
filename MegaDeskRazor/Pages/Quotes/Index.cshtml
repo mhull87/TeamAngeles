@@ -9,7 +9,7 @@
 
 
 <form class="d-flex justify-content-between">
-    <a class="btn btn-outline-secondary align-self-end marginbottom" asp-page="Create">Create New</a>
+    <a class="btn btn-secondary align-self-end marginbottom" asp-page="Create">Create New</a>
     <fieldset class="fsborder marginbottom">
         <legend class="nowidth">Search by:</legend>
         <label asp-for="SurfaceMaterial">Material</label><br />
@@ -47,26 +47,26 @@
     <tbody>
         @foreach (var item in Model.QuoteForm)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CustomerName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.QuoteDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Material)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Total)
-                </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuoteDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Material)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
 
-                <td class="table-secondary text-center">
-                    <a class="btn btn-outline-warning btnpadding" asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a class="btn btn-outline-info btnpadding" asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                    <a class="btn btn-outline-danger btnpadding" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-                </td>
-            </tr>
+            <td class="table-secondary text-center">
+                <a class="btn btn-outline-warning btnpadding" asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a class="btn btn-outline-info btnpadding" asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a class="btn btn-outline-danger btnpadding" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
