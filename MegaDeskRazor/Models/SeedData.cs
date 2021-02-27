@@ -98,7 +98,7 @@ namespace MegaDeskRazor.Models
                             Area = 288,
                             Material = DesktopMaterial.Laminate,
                             RushOption = "7",
-                            Total = "330"
+                            Total = "$330.00"
                         },
 
                         new QuoteForm
@@ -111,7 +111,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 7,
                             Material = DesktopMaterial.Rosewood,
                             RushOption = "3",
-                            Total = "4538"
+                            Total = "$4538.00"
                         },
 
                         new QuoteForm
@@ -124,7 +124,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 4,
                             Material = DesktopMaterial.Oak,
                             RushOption = "5",
-                            Total = "1450"
+                            Total = "$1450.00"
                         },
 
                         new QuoteForm
@@ -137,7 +137,7 @@ namespace MegaDeskRazor.Models
                             Drawers = 2,
                             Material = DesktopMaterial.Pine,
                             RushOption = "7",
-                            Total = "546"
+                            Total = "$546.00"
                         }
                     );
                 }
