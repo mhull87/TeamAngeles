@@ -31,8 +31,6 @@ namespace MegaDeskRazor.Pages.AddQuote
                                                orderby m.Days
                                                select m.Days;
             RushTime = new SelectList(rushTimeQuery.Distinct().ToList());
-
-
         }
 
 
@@ -43,7 +41,6 @@ namespace MegaDeskRazor.Pages.AddQuote
 
         [BindProperty]
         public QuoteForm QuoteForm { get; set; }
-
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
