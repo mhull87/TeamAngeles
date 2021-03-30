@@ -107,7 +107,7 @@ namespace SacramentMeetingPlanner.Models
                         Invocation = "By Invitation",
                         SacramentSong = "#176 'Tis Sweet to Sing the Matchless Love",
                         Speaker = "Wilson Blackburn",
-                        IntermediateSong = "",
+                        IntermediateSong = "I Need Thee Every Hour by the ward choir",
                         ClosingSong = "#263 Go Forth With Faith",
                         Benediction = "By Invitation"
                     },
@@ -159,7 +159,7 @@ namespace SacramentMeetingPlanner.Models
                         Invocation = "By Invitation",
                         SacramentSong = "#175 O God, the Eternal Father",
                         Speaker = "Maria Gonzalez",
-                        IntermediateSong = "",
+                        IntermediateSong = "#86 How Great Thou Art",
                         ClosingSong = "#128 When Faith Endures",
                         Benediction = "By Invitation"
                     },
