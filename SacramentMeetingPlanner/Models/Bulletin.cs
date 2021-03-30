@@ -19,7 +19,7 @@ namespace SacramentMeetingPlanner.Models
         public string Conducting { get; set; }
 
         [Display(Name = "Opening Hymn")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z ,';!?]*$")]
+        [RegularExpression(@"^[A-Z0-9#]+[a-zA-Z0-9 ,';!?#]*$")]
         [Required]
         public string OpeningSong { get; set; } //needs a song #
 
@@ -27,7 +27,7 @@ namespace SacramentMeetingPlanner.Models
         public string Invocation { get; set; }
 
         [Display(Name = "Sacrament Hymn")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z ,';!?]*$")]
+        [RegularExpression(@"^[A-Z0-9#]+[a-zA-Z0-9 ,';!?#]*$")]
         [Required]
         public string SacramentSong { get; set; } //needs a song #
 
@@ -35,11 +35,11 @@ namespace SacramentMeetingPlanner.Models
         public string Speaker { get; set; } //needs a topic, will be shown in display all bulletins view but maybe not in printable bulletin
 
         [Display(Name = "Intermediate Hymn")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z ,';!?]*$")]
+        [RegularExpression(@"^[A-Z0-9#]+[a-zA-Z0-9 ,';!?#]*$")]
         public string IntermediateSong { get; set; } //needs a song # or who is performing
 
         [Display(Name = "Closing Hymn")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z ,';!?]*$")]
+        [RegularExpression(@"^[A-Z0-9#]+[a-zA-Z0-9 ,';!?#]*$")]
         [Required]
         public string ClosingSong { get; set; } //needs a song #
 
