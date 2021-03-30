@@ -46,7 +46,9 @@ namespace SacramentMeetingPlanner.Controllers
         // GET: Bulletins/Create
         public IActionResult Create()
         {
-            return View();
+            //create default values for the prayers
+            var vm = new Bulletin { Invocation = "By Invitation", Benediction = "By Invitation" };
+            return View(vm);
         }
 
         // POST: Bulletins/Create
