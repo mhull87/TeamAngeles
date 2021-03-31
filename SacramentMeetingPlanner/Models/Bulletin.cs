@@ -32,7 +32,7 @@ namespace SacramentMeetingPlanner.Models
         public string SacramentSong { get; set; } //needs a song #
 
         //[RegularExpression(@"^[A-Z]+[a-zA-Z] *$")]
-        public string Speaker { get; set; } //needs a topic, will be shown in display all bulletins view but maybe not in printable bulletin
+        //public string Speaker { get; set; } //needs a topic, will be shown in display all bulletins view but maybe not in printable bulletin
 
         [Display(Name = "Intermediate Hymn")]
         [RegularExpression(@"^[A-Z0-9#]+[a-zA-Z0-9 ,';!?#]*$")]
@@ -45,6 +45,8 @@ namespace SacramentMeetingPlanner.Models
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z ]*$")]
         public string Benediction { get; set; }
+
+        public ICollection<Speaker> Speakers { get; set; }
 
     }
 }
