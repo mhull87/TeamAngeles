@@ -8,62 +8,78 @@
 
 <div>
     <h4>Bulletin</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BulletinDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BulletinDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Conducting)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Conducting)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OpeningSong)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OpeningSong)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Invocation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Invocation)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SacramentSong)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SacramentSong)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Speaker)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Speaker)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IntermediateSong)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IntermediateSong)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ClosingSong)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ClosingSong)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Benediction)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Benediction)
-        </dd>
+    <dl class="border width">
+
+        <div>
+            <dt class="h3 text-center">The Church of Jesus Christ of Latter-day Saints</dt>
+            <dd class="col-sm-12 text-center p-0 h5">
+                @Html.DisplayFor(model => model.BulletinDate)
+            </dd>
+        </div>
+        <div class="dots row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Conducting)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.Conducting)
+            </dd>
+        </div>
+        <div class="dots row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.OpeningSong)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.OpeningSong)
+            </dd>
+        </div>
+        <div class="dots row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Invocation)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.Invocation)
+            </dd>
+        </div>
+        <div class="dots row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.SacramentSong)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.SacramentSong)
+            </dd>
+        </div>
+        <div class="dots row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Speaker)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.Speaker)
+            </dd>
+        </div>
+        <div class="dots row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.IntermediateSong)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.IntermediateSong)
+            </dd>
+        </div>
+        <div class="dots row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.ClosingSong)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.ClosingSong)
+            </dd>
+        </div>
+        <div class="w-80 row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Benediction)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.Benediction)
+            </dd>
+        </div>
     </dl>
 </div>
 <div>
