@@ -12,6 +12,8 @@ namespace SacramentMeetingPlanner.Models
         
         [DataType(DataType.Date)]
         [Display(Name = "Date")]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+
         public DateTime BulletinDate { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z ]*$")]
