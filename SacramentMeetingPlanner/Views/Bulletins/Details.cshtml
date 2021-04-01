@@ -55,10 +55,14 @@
                     @Html.DisplayNameFor(model => model.Speaker)
                 </dt>
                 <dd class="col-sm-8 text-right">
-                    @Html.DisplayFor(model => model.Speaker)
-                </dd>
+                    @Html.DisplayFor(model => model.Speaker) -
+                    @Html.DisplayFor(model => model.Topic)
+                    
+                    </dd>
             </div>
-        }
+            }
+
+        
             @if (Model.IntermediateSong != "" && Model.IntermediateSong != null)
             {
                 <div class="dots row">

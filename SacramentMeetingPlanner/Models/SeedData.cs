@@ -41,6 +41,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#195 How Great the Wisdom and the Love",
                     Speaker = "James Truett",
+                    Topic = "Charity",
                     IntermediateSong = "",
                     ClosingSong = "#18 The Voice of God Again Is Heard",
                     Benediction = "By Invitation"
@@ -54,6 +55,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#194 There Is a Green Hill Far Away",
                     Speaker = "Linda Soper",
+                    Topic = "Faith",
                     IntermediateSong = "",
                     ClosingSong = "#308 Love One Another",
                     Benediction = "By Invitation"
@@ -67,6 +69,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#169 As Now We Take the Sacrament",
                     Speaker = "Peter Pixton",
+                    Topic = "Service",
                     IntermediateSong = "As Sisters In Zion by Emily Windham",
                     ClosingSong = "#85 How Firm a Foundation",
                     Benediction = "By Invitation"
@@ -93,6 +96,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#172 In Humility, Our Savior",
                     Speaker = "Amy Bassett",
+                    Topic = "Love",
                     IntermediateSong = "",
                     ClosingSong = "#20 God of Power, God of Right",
                     Benediction = "By Invitation"
@@ -106,6 +110,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#176 'Tis Sweet to Sing the Matchless Love",
                     Speaker = "Wilson Blackburn",
+                    Topic = "Forgiveness",
                     IntermediateSong = "I Need Thee Every Hour by the ward choir",
                     ClosingSong = "#263 Go Forth With Faith",
                     Benediction = "By Invitation"
@@ -119,6 +124,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#193 I Stand All Amazed",
                     Speaker = "Barbara Clark",
+                    Topic = "Sacrifice",
                     IntermediateSong = "",
                     ClosingSong = "#279 Thy Holy Word",
                     Benediction = "By Invitation"
@@ -145,6 +151,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#174 While of These Emblems We Partake",
                     Speaker = "William Wesley",
+                    Topic = "Humility",
                     IntermediateSong = "",
                     ClosingSong = "#304 Teach Me to Walk in the Light",
                     Benediction = "By Invitation"
@@ -158,6 +165,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#175 O God, the Eternal Father",
                     Speaker = "Maria Gonzalez",
+                    Topic = "Love",
                     IntermediateSong = "#86 How Great Thou Art",
                     ClosingSong = "#128 When Faith Endures",
                     Benediction = "By Invitation"
@@ -171,6 +179,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#181 Jesus of Nazareth, Savior and King",
                     Speaker = "Jonathon Turnbridge",
+                    Topic = "Charity",
                     IntermediateSong = "",
                     ClosingSong = "#6 Redeemer of Israel",
                     Benediction = "By Invitation"

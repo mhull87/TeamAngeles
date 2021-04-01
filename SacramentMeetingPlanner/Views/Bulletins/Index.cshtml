@@ -27,11 +27,11 @@
             <th class="hidden" id="sacsonghead">
                 @Html.DisplayNameFor(model => model.SacramentSong)
             </th>
-            <th class="hidden" id="speakerhead">
+            <th id="speakerhead">
                 @Html.DisplayNameFor(model => model.Speaker)
             </th>
-            <th class="hidden" id="topichead">
-                <!--ADD TOPIC-->
+            <th id="topichead">
+                @Html.DisplayNameFor(model => model.Topic)
             </th>
             <th class="hidden" id="intsonghead">
                 @Html.DisplayNameFor(model => model.IntermediateSong)
@@ -63,11 +63,11 @@
             <td class="hidden" id="sacsong">
                 @Html.DisplayFor(modelItem => item.SacramentSong)
             </td>
-            <td class="hidden" id="speaker">
+            <td id="speaker">
                 @Html.DisplayFor(modelItem => item.Speaker)
             </td>
-            <td class="hidden" id="topic">
-                <!--ADD TOPIC-->
+            <td id="topic">
+                @Html.DisplayFor(modelItem => item.Topic)
             </td>
             <td class="hidden" id="intsong">
                 @Html.DisplayFor(modelItem => item.IntermediateSong)
