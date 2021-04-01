@@ -47,6 +47,6 @@ namespace SacramentMeetingPlanner.Models
         public string Benediction { get; set; }
 
         public ICollection<Speaker> Speakers { get; set; }
-
+        public string Speaker { get; internal set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿@model SacramentMeetingPlanner.Models.Bulletin
-
+@using Microsoft.AspNetCore.Mvc;
 @{
     ViewData["Title"] = "Details";
 }
@@ -48,39 +48,50 @@
                 @Html.DisplayFor(model => model.SacramentSong)
             </dd>
         </div>
-        <div class="dots row">
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Speaker)
-            </dt>
-            <dd class="col-sm-8 text-right">
-                @Html.DisplayFor(model => model.Speaker)
-            </dd>
-        </div>
-        <div class="dots row">
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.IntermediateSong)
-            </dt>
-            <dd class="col-sm-8 text-right">
-                @Html.DisplayFor(model => model.IntermediateSong)
-            </dd>
-        </div>
-        <div class="dots row">
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.ClosingSong)
-            </dt>
-            <dd class="col-sm-8 text-right">
-                @Html.DisplayFor(model => model.ClosingSong)
-            </dd>
-        </div>
-        <div class="w-80 row">
-            <dt class="col-sm-4">
-                @Html.DisplayNameFor(model => model.Benediction)
-            </dt>
-            <dd class="col-sm-8 text-right">
-                @Html.DisplayFor(model => model.Benediction)
-            </dd>
-        </div>
-    </dl>
+        @if (Model.Speaker != "" && Model.Speaker != null)
+        {
+            <div class="dots row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Speaker)
+                </dt>
+                <dd class="col-sm-8 text-right">
+                    @Html.DisplayFor(model => model.Speaker)
+                </dd>
+            </div>
+        }
+            @if (Model.IntermediateSong != "" && Model.IntermediateSong != null)
+            {
+                <div class="dots row">
+
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.IntermediateSong)
+                    </dt>
+                    <dd class="col-sm-8 text-right">
+                        @Html.DisplayFor(model => model.IntermediateSong)
+                    </dd>
+                </div>
+
+            }
+
+
+            <div class="dots row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.ClosingSong)
+                </dt>
+                <dd class="col-sm-8 text-right">
+                    @Html.DisplayFor(model => model.ClosingSong)
+                </dd>
+            </div>
+
+            <div class="w-80 row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Benediction)
+                </dt>
+                <dd class="col-sm-8 text-right">
+                    @Html.DisplayFor(model => model.Benediction)
+                </dd>
+            </div>
+        </dl>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
