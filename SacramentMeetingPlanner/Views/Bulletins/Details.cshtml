@@ -4,10 +4,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="d-print-none">Details</h1>
 
 <div>
-    <h4>Bulletin</h4>
+    <h4 class="d-print-none">Bulletin</h4>
     <dl class="border width">
 
         <div>
@@ -97,8 +97,8 @@
             </div>
         </dl>
 </div>
-<div>
+<div class="d-print-none">
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
-    <button onclick="window.print()">Print</button>
+    <button type="button" class="btn btn-outline-success" onclick="window.print()">Print</button>
 </div>
