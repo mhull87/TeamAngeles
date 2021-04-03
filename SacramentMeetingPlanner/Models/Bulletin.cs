@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -52,5 +53,8 @@ namespace SacramentMeetingPlanner.Models
 
         public ICollection<Speaker> Speakers { get; set; }
         public string Speaker { get; internal set; }
+
+        [NotMapped]
+        public bool CheckSpeaker { get; set; }
     }
 }

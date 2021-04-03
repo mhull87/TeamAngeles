@@ -37,6 +37,18 @@
                 <input asp-for="SacramentSong" class="form-control" />
                 <span asp-validation-for="SacramentSong" class="text-danger"></span>
             </div>
+            @*<div class="form-group">
+                <button id="add" class="btn btn-primary">Add Speaker</button>
+                <table id="submissionTable" class="table">
+                    <thead id="tableHeader" style="display: none">
+                        <tr>
+                            <td>First Name</td>
+                            <td>Last Name</td>
+                            <td>Topic</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>*@
             <div class="form-group">
                 <label asp-for="Speaker" class="control-label"></label>
                 <input asp-for="Speaker" class="form-control" />
@@ -62,6 +74,10 @@
                 <input asp-for="Benediction" class="form-control" />
                 <span asp-validation-for="Benediction" class="text-danger"></span>
             </div>
+            <div class="form-group form-check">
+                <input type="checkbox" asp-for="CheckSpeaker" class="form-check-input" />
+                <label asp-for="CheckSpeaker" class="form-check-label">Add Speaker</label>               
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -75,4 +91,37 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    @*<script type="text/javascript">
+        var counter = 1;
+        $(function () {
+
+            $('#add').click(function () {
+                document.getElementById('tableHeader').style.display = "block";
+                //$('document.getElementById("tableHeader").style.display = "block";')
+                $('<tr id="tablerow' + counter + '"><td>' +
+                    '<input type="text" class="text-box single-line" name="ClientSampleID[' + counter + ']" value="" required="required" />' +
+                    '</td>' +
+                    '<td>' +
+                    '<input type="text" class="text-box single-line" name="AdditionalComments[' + counter + ']" value="" required="required" />' +
+                    '</td>' +
+                    '<td>' +
+                    '<input type="text" class="text-box single-line" name="AcidStables[' + counter + ']" value="" required="required" />' +
+                    '</td>' +
+                    '<td>' +
+                    '<button type="button" class="btn btn-primary" onclick="removeTr(' + counter + ');">Delete</button>' +
+                    '</td>' +
+                    '</tr>').appendTo('#submissionTable');
+                counter++;
+                return false;
+            });
+        });
+        function removeTr(index) {
+            if (counter > 1) {
+                $('#tablerow' + index).remove();
+                counter--;
+            }
+            return false;
+        }
+    </script>*@
 }

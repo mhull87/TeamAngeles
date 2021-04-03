@@ -11,5 +11,7 @@ namespace SacramentMeetingPlanner.Data
         }
 
         public DbSet<Bulletin> Bulletin { get; set; }
+
+        public DbSet<SacramentMeetingPlanner.Models.Speaker> Speaker { get; set; }
     }
 }

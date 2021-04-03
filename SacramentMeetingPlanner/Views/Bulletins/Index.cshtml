@@ -28,7 +28,7 @@
                 @Html.DisplayNameFor(model => model.SacramentSong)
             </th>
             <th id="speakerhead">
-                @Html.DisplayNameFor(model => model.Speaker)
+                @Html.DisplayNameFor(model => model.Speakers)
             </th>
             <th id="topichead">
                 @Html.DisplayNameFor(model => model.Topic)
@@ -64,10 +64,20 @@
                 @Html.DisplayFor(modelItem => item.SacramentSong)
             </td>
             <td id="speaker">
-                @Html.DisplayFor(modelItem => item.Speaker)
+                @{
+                    var sName = item.Speakers.Select(s => s.FullName);
+                    var stringName = String.Join("; ", sName);
+                }
+                    @stringName
+                @*@Html.DisplayFor(modelItem => item.Speakers.Select(s => s.FullName))*@
             </td>
             <td id="topic">
-                @Html.DisplayFor(modelItem => item.Topic)
+                @{
+                    var sTopic = item.Speakers.Select(s => s.Topic);
+                    var stringTopic = String.Join("; ", sTopic);
+                }
+                    @stringTopic
+                @*@Html.DisplayFor(modelItem => item.Speakers.Select(s => s.Topic))*@
             </td>
             <td class="hidden" id="intsong">
                 @Html.DisplayFor(modelItem => item.IntermediateSong)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,16 +15,16 @@ namespace SacramentMeetingPlanner.Models
         [Required]
         [StringLength(50, ErrorMessage = "First name cannot be longer than 50 characters.")]
         [Display(Name = "First Name")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z] *$")]
+        [RegularExpression(@"^[a-zA-Z\s]+$")]
         public string FirstName { get; set; }
 
         [Required]
         [StringLength(50)]
         [Display(Name = "Last Name")]
-        [RegularExpression(@"^[A-Z]+[a-zA-Z] *$")]
+        [RegularExpression(@"^[a-zA-Z\s]+$")]
         public string LastName { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z] *$")]
+        [RegularExpression(@"^[a-zA-Z ]+$")]
         public string Topic { get; set; }
 
         [Display(Name = "Full Name")]
@@ -35,6 +36,9 @@ namespace SacramentMeetingPlanner.Models
             }
         }
 
-        public Bulletin Bulletin { get; set; }
+        [NotMapped]
+        public bool CheckSpeaker { get; set; }
+
+        public bool BeforeHymn { get; set; }
     }
 }

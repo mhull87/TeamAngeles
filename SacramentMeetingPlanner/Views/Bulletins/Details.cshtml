@@ -2,6 +2,7 @@
 @using Microsoft.AspNetCore.Mvc;
 @{
     ViewData["Title"] = "Details";
+    var speakerNumber = 1;
 }
 
 <h1 class="d-print-none">Details</h1>
@@ -48,54 +49,73 @@
                 @Html.DisplayFor(model => model.SacramentSong)
             </dd>
         </div>
-        @if (Model.Speaker != "" && Model.Speaker != null)
+        @if (Model.Speakers.Any(s => s.BeforeHymn))
         {
-            <div class="dots row">
-                <dt class="col-sm-4">
-                    @Html.DisplayNameFor(model => model.Speaker)
-                </dt>
-                <dd class="col-sm-8 text-right">
-                    @Html.DisplayFor(model => model.Speaker) -
-                    @Html.DisplayFor(model => model.Topic)
-                    
-                    </dd>
-            </div>
-            }
-
-        
-            @if (Model.IntermediateSong != "" && Model.IntermediateSong != null)
+            var sBefore = Model.Speakers.Where(s => s.BeforeHymn);
+            foreach (var speaker in sBefore)
             {
                 <div class="dots row">
-
                     <dt class="col-sm-4">
-                        @Html.DisplayNameFor(model => model.IntermediateSong)
-                    </dt>
+                        @($"Speaker {speakerNumber++}")</dt>
                     <dd class="col-sm-8 text-right">
-                        @Html.DisplayFor(model => model.IntermediateSong)
+                        @($"{speaker.FullName} - {speaker.Topic}")
                     </dd>
                 </div>
 
             }
+        }
 
 
+        @if (Model.IntermediateSong != "" && Model.IntermediateSong != null)
+        {
             <div class="dots row">
+
                 <dt class="col-sm-4">
-                    @Html.DisplayNameFor(model => model.ClosingSong)
+                    @Html.DisplayNameFor(model => model.IntermediateSong)
                 </dt>
                 <dd class="col-sm-8 text-right">
-                    @Html.DisplayFor(model => model.ClosingSong)
+                    @Html.DisplayFor(model => model.IntermediateSong)
                 </dd>
             </div>
 
-            <div class="w-80 row">
-                <dt class="col-sm-4">
-                    @Html.DisplayNameFor(model => model.Benediction)
-                </dt>
-                <dd class="col-sm-8 text-right">
-                    @Html.DisplayFor(model => model.Benediction)
-                </dd>
-            </div>
-        </dl>
+        }
+        
+        @if (Model.Speakers.Any(s => !s.BeforeHymn))
+        {
+            var sAfter = Model.Speakers.Where(s => !s.BeforeHymn);
+            foreach (var speaker in sAfter)
+            {
+                <div class="dots row">
+                    <dt class="col-sm-4">
+                        @($"Speaker {speakerNumber++}")
+                    </dt>
+                    <dd class="col-sm-8 text-right">
+                        @($"{speaker.FullName} - {speaker.Topic}")
+                    </dd>
+                </div>
+
+            }
+        }
+
+
+        <div class="dots row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.ClosingSong)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.ClosingSong)
+            </dd>
+        </div>
+
+        <div class="w-80 row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Benediction)
+            </dt>
+            <dd class="col-sm-8 text-right">
+                @Html.DisplayFor(model => model.Benediction)
+            </dd>
+        </div>
+    </dl>
 </div>
 <div class="d-print-none">
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
