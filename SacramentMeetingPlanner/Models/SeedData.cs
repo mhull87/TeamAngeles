@@ -22,7 +22,7 @@ namespace SacramentMeetingPlanner.Models
             context.Bulletin.AddRange(
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("1/3/2021"),
+                    BulletinDate = DateTime.Parse("2021/1/3"),
                     Conducting = "John Dory",
                     OpeningSong = "#217 Come, Let Us Anew",
                     Invocation = "By Invitation",
@@ -35,7 +35,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("1/10/2021"),
+                    BulletinDate = DateTime.Parse("2021/1/10"),
                     Conducting = "John Dory",
                     OpeningSong = "#26 Joseph Smith's First Prayer",
                     Invocation = "By Invitation",
@@ -49,7 +49,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("1/17/2021"),
+                    BulletinDate = DateTime.Parse("2021/1/17"),
                     Conducting = "John Dory",
                     OpeningSong = "#13 An Angel from on High",
                     Invocation = "By Invitation",
@@ -63,7 +63,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("1/24/2021"),
+                    BulletinDate = DateTime.Parse("2021/1/24"),
                     Conducting = "John Dory",
                     OpeningSong = "#270 I'll Go Where You Want Me to Go",
                     Invocation = "By Invitation",
@@ -77,7 +77,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("2/7/2021"),
+                    BulletinDate = DateTime.Parse("2021/2/7"),
                     Conducting = "Pete Graham",
                     OpeningSong = "#143 Let the Holy Spirit Guide",
                     Invocation = "By Invitation",
@@ -90,7 +90,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("2/14/2021"),
+                    BulletinDate = DateTime.Parse("2021/2/14"),
                     Conducting = "Pete Graham",
                     OpeningSong = "#10 Come Sing to the Lord",
                     Invocation = "By Invitation",
@@ -104,7 +104,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("2/21/2021"),
+                    BulletinDate = DateTime.Parse("2021/2/21"),
                     Conducting = "Pete Graham",
                     OpeningSong = "#301 I Am a Child of God",
                     Invocation = "By Invitation",
@@ -118,7 +118,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("2/28/2021"),
+                    BulletinDate = DateTime.Parse("2021/2/28"),
                     Conducting = "Pete Graham",
                     OpeningSong = "#123 Oh, May My Soul Commune With Thee",
                     Invocation = "By Invitation",
@@ -132,7 +132,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("3/7/2021"),
+                    BulletinDate = DateTime.Parse("2021/3/7"),
                     Conducting = "Trent Marshall",
                     OpeningSong = "#28 Saints, Behold How Great Jehovah",
                     Invocation = "By Invitation",
@@ -145,7 +145,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("3/14/2021"),
+                    BulletinDate = DateTime.Parse("2021/3/14"),
                     Conducting = "Trent Marshall",
                     OpeningSong = "#66 Rejoice, the Lord is King!",
                     Invocation = "By Invitation",
@@ -159,7 +159,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("3/21/2021"),
+                    BulletinDate = DateTime.Parse("2021/3/21"),
                     Conducting = "Trent Marshall",
                     OpeningSong = "#21 Come, Listen to a Prophet's Voice",
                     Invocation = "By Invitation",
@@ -173,7 +173,7 @@ namespace SacramentMeetingPlanner.Models
 
                 new Bulletin
                 {
-                    BulletinDate = DateTime.Parse("3/28/2021"),
+                    BulletinDate = DateTime.Parse("2021/3/28"),
                     Conducting = "Trent Marshall",
                     OpeningSong = "#7 Israel, Israel God Is Calling",
                     Invocation = "By Invitation",
