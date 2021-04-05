@@ -14,7 +14,7 @@
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.BulletinDate)
-            </th>            
+            </th>
             <th class="hidden" id="conhead">
                 @Html.DisplayNameFor(model => model.Conducting)
             </th>
@@ -46,52 +46,73 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BulletinDate)
-            </td>
-            <td class="hidden" id="con">
-                @Html.DisplayFor(modelItem => item.Conducting)
-            </td>
-            <td class="hidden" id="osong">
-                @Html.DisplayFor(modelItem => item.OpeningSong)
-            </td>
-            <td class="hidden" id="invo">
-                @Html.DisplayFor(modelItem => item.Invocation)
-            </td>
-            <td class="hidden" id="sacsong">
-                @Html.DisplayFor(modelItem => item.SacramentSong)
-            </td>
-            <td id="speaker">
-                @{
-                    var sName = item.Speakers.Select(s => s.FullName);
-                    var stringName = String.Join(", ", sName);
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BulletinDate)
+                </td>
+                <td class="hidden" id="con">
+                    @Html.DisplayFor(modelItem => item.Conducting)
+                </td>
+                <td class="hidden" id="osong">
+                    @Html.DisplayFor(modelItem => item.OpeningSong)
+                </td>
+                <td class="hidden" id="invo">
+                    @Html.DisplayFor(modelItem => item.Invocation)
+                </td>
+                <td class="hidden" id="sacsong">
+                    @Html.DisplayFor(modelItem => item.SacramentSong)
+                </td>
+                @if (item.Speaker != null && item.Speaker != "")
+                {
+                    <td id="speaker">
+                        @Html.DisplayFor(modelItem => item.Speaker)
+                    </td>
                 }
-                    @stringName
-            </td>
-            <td id="topic">
-                @{
-                    var sTopic = item.Speakers.Select(s => s.Topic);
-                    var stringTopic = String.Join(", ", sTopic);
+                else
+                {
+                    <td id="speaker">
+                        @{
+                            var sName = item.Speakers.Select(s => s.FullName);
+                            var stringName = String.Join(", ", sName);
+                        }
+                        @stringName
+                    </td>
                 }
-                    @stringTopic
-            </td>
-            <td class="hidden" id="intsong">
-                @Html.DisplayFor(modelItem => item.IntermediateSong)
-            </td>
-            <td class="hidden" id="csong">
-                @Html.DisplayFor(modelItem => item.ClosingSong)
-            </td>
-            <td class="hidden" id="bene">
-                @Html.DisplayFor(modelItem => item.Benediction)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+
+                @if (item.Topic != null && item.Topic != "")
+                {
+                    <td id="topic">
+                        @Html.DisplayFor(modelItem => item.Topic)
+                    </td>
+                }
+                else
+                {
+                    <td id="topic">
+                        @{
+                            var sTopic = item.Speakers.Select(s => s.Topic);
+                            var stringTopic = String.Join(", ", sTopic);
+                        }
+                        @stringTopic
+                    </td>
+                }
+
+                <td class="hidden" id="intsong">
+                    @Html.DisplayFor(modelItem => item.IntermediateSong)
+                </td>
+                <td class="hidden" id="csong">
+                    @Html.DisplayFor(modelItem => item.ClosingSong)
+                </td>
+                <td class="hidden" id="bene">
+                    @Html.DisplayFor(modelItem => item.Benediction)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
