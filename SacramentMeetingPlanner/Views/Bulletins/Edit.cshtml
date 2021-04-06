@@ -38,6 +38,21 @@
                 <input asp-for="SacramentSong" class="form-control" />
                 <span asp-validation-for="SacramentSong" class="text-danger"></span>
             </div>
+            @if(Model.Speaker != null && Model.Speaker != "") { 
+            <div class="form-group">
+                <label asp-for="Speaker" class="control-label"></label>
+                <input asp-for="Speaker" class="form-control" />
+                <span asp-validation-for="Speaker" class="text-danger"></span>
+            </div>            
+            <div class="form-group">
+                <label asp-for="Topic" class="control-label"></label>
+                <input asp-for="Topic" class="form-control" />
+                <span asp-validation-for="Topic" class="text-danger"></span>
+            </div>
+            } else
+            {
+              
+            }
             <div class="form-group">
                 <label asp-for="IntermediateSong" class="control-label"></label>
                 <input asp-for="IntermediateSong" class="form-control" />
