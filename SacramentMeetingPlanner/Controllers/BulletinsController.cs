@@ -20,8 +20,9 @@ namespace SacramentMeetingPlanner.Controllers
         }
 
         // GET: Bulletins
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString, string sortOrder)
         {
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
             var bulletin = from m in _context.Bulletin.Include(s =>s.Speakers)
                          select m;
             if (!String.IsNullOrEmpty(searchString))
@@ -29,6 +30,16 @@ namespace SacramentMeetingPlanner.Controllers
                 bulletin = _context.Bulletin
                     .Include(x => x.Speakers)
                     .Where(x => x.Speakers.Any(x => x.Topic.Contains(searchString)));
+            }
+
+            switch (sortOrder)
+            {
+                case "Date":
+                    bulletin = bulletin.OrderBy(s => s.BulletinDate);
+                    break;
+                case "date_desc":
+                    bulletin = bulletin.OrderByDescending(s => s.BulletinDate);
+                    break;
             }
 
             return View(await bulletin
