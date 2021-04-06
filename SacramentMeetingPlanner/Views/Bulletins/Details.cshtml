@@ -56,7 +56,8 @@
             {
                 <div class="dots row">
                     <dt class="col-sm-4">
-                        @($"Speaker {speakerNumber++}")</dt>
+                        @($"Speaker {speakerNumber++}")
+                    </dt>
                     <dd class="col-sm-8 text-right">
                         @($"{speaker.FullName} - {speaker.Topic}")
                     </dd>
@@ -64,7 +65,6 @@
 
             }
         }
-
 
         @if (Model.IntermediateSong != "" && Model.IntermediateSong != null)
         {
@@ -79,25 +79,37 @@
             </div>
 
         }
-        
-        @if (Model.Speakers.Any(s => !s.BeforeHymn))
+        @if (Model.Speaker != null && Model.Speaker != "")
         {
-            var sAfter = Model.Speakers.Where(s => !s.BeforeHymn);
-            foreach (var speaker in sAfter)
-            {
-                <div class="dots row">
-                    <dt class="col-sm-4">
-                        @($"Speaker {speakerNumber++}")
-                    </dt>
-                    <dd class="col-sm-8 text-right">
-                        @($"{speaker.FullName} - {speaker.Topic}")
-                    </dd>
-                </div>
+            <div class="dots row">
 
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Speaker)
+                </dt>
+                <dd class="col-sm-8 text-right">
+                    @Html.DisplayFor(model => model.Speaker) - @Html.DisplayFor(model => model.Topic)
+                </dd>
+            </div>
+        }
+        else
+        {
+            @if (Model.Speakers.Any(s => !s.BeforeHymn))
+            {
+                var sAfter = Model.Speakers.Where(s => !s.BeforeHymn);
+                foreach (var speaker in sAfter)
+                {
+                    <div class="dots row">
+                        <dt class="col-sm-4">
+                            @($"Speaker {speakerNumber++}")
+                        </dt>
+                        <dd class="col-sm-8 text-right">
+                            @($"{speaker.FullName} - {speaker.Topic}")
+                        </dd>
+                    </div>
+
+                }
             }
         }
-
-
         <div class="dots row">
             <dt class="col-sm-4">
                 @Html.DisplayNameFor(model => model.ClosingSong)
@@ -116,7 +128,8 @@
             </dd>
         </div>
     </dl>
-</div><br />
+</div>
+<br />
 <div class="d-print-none">
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a><br /><br />

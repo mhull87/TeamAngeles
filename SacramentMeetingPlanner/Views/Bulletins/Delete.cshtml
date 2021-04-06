@@ -41,6 +41,18 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.SacramentSong)
         </dd>
+        @if (Model.Speaker != null && Model.Speaker != "")
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Speaker)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Speaker) - @Html.DisplayFor(model => model.Topic)
+            </dd>
+        } else
+            {
+
+            }
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.IntermediateSong)
         </dt>
