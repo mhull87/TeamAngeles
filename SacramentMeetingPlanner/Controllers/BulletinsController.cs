@@ -20,11 +20,23 @@ namespace SacramentMeetingPlanner.Controllers
         }
 
         // GET: Bulletins
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Bulletin
+            var bulletin = from m in _context.Bulletin.Include(s =>s.Speakers)
+                         select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                bulletin = _context.Bulletin
+                    .Include(x => x.Speakers)
+                    .Where(x => x.Speakers.Any(x => x.Topic.Contains(searchString)));
+            }
+
+            return View(await bulletin
                 .Include(s => s.Speakers)
-                .ToListAsync()); ;
+                .ToListAsync());
+            //return View(await _context.Bulletin
+            //    .Include(s => s.Speakers)
+            //    .ToListAsync());
         }
 
         // GET: Bulletins/Details/5
