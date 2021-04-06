@@ -13,13 +13,15 @@ namespace SacramentMeetingPlanner.Models
             using var context = new SacramentMeetingPlannerContext(
                 serviceProvider.GetRequiredService<
                     DbContextOptions<SacramentMeetingPlannerContext>>());
-            // Look for any movies.
+
+            // Look for any bulletins.
             if (context.Bulletin.Any())
             {
                 return;   // DB has been seeded
             }
 
-            context.Bulletin.AddRange(
+            var bulletin = new Bulletin[]
+                {
                 new Bulletin
                 {
                     BulletinDate = DateTime.Parse("2021/1/3"),
@@ -184,7 +186,95 @@ namespace SacramentMeetingPlanner.Models
                     ClosingSong = "#6 Redeemer of Israel",
                     Benediction = "By Invitation"
                 }
-            );
+            };
+
+            foreach (Bulletin b in bulletin)
+            {
+                context.Bulletin.Add(b);
+            }
+
+            context.SaveChanges();
+
+            var speaker = new Speaker[]
+            {
+                new Speaker
+                {
+                FirstName = "James",
+                LastName = "Truett",
+                Topic = "Charity",
+                BulletinID = bulletin.Single(b => b.Speaker == "James Truett").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Linda",
+                    LastName = "Soper",
+                    Topic = "Faith",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Linda Soper").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Peter",
+                    LastName = "Pixton",
+                    Topic = "Service",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Peter Pixton").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Amy",
+                    LastName = "Bassett",
+                    Topic = "Love",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Amy Bassett").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Wilson",
+                    LastName = "Blackburn",
+                    Topic = "Forgiveness",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Wilson Blackburn").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Barbara",
+                    LastName = "Clark",
+                    Topic = "Sacrifice",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Barbara Clark").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "William",
+                    LastName = "Wesley",
+                    Topic = "Humility",
+                    BulletinID = bulletin.Single(b => b.Speaker == "William Wesley").Id
+                },
+
+                new Speaker
+                { 
+                    FirstName = "Maria",
+                    LastName = "Gonzalez",
+                    Topic = "Love",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Maria Gonzalez").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Jonathon",
+                    LastName = "Turnbridge",
+                    Topic = "Charity",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Jonathon Turnbridge").Id
+                }
+            };
+
+            foreach (Speaker s in speaker)
+            {
+                context.Speaker.Add(s);
+            }
+
             context.SaveChanges();
         }
     }
