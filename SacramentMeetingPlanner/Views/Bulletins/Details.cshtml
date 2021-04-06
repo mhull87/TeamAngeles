@@ -79,20 +79,6 @@
             </div>
 
         }
-        @if (Model.Speaker != null && Model.Speaker != "")
-        {
-            <div class="dots row">
-
-                <dt class="col-sm-4">
-                    @Html.DisplayNameFor(model => model.Speaker)
-                </dt>
-                <dd class="col-sm-8 text-right">
-                    @Html.DisplayFor(model => model.Speaker) - @Html.DisplayFor(model => model.Topic)
-                </dd>
-            </div>
-        }
-        else
-        {
             @if (Model.Speakers.Any(s => !s.BeforeHymn))
             {
                 var sAfter = Model.Speakers.Where(s => !s.BeforeHymn);
@@ -109,7 +95,7 @@
 
                 }
             }
-        }
+        
         <div class="dots row">
             <dt class="col-sm-4">
                 @Html.DisplayNameFor(model => model.ClosingSong)

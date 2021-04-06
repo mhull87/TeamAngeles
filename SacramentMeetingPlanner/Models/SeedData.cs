@@ -30,6 +30,7 @@ namespace SacramentMeetingPlanner.Models
                     Invocation = "By Invitation",
                     SacramentSong = "#190 In Memory of the Crucified",
                     Speaker = "",
+                    Topic = "",
                     IntermediateSong = "",
                     ClosingSong = "#216 We Are Sowing",
                     Benediction = "By Invitation"
@@ -42,9 +43,9 @@ namespace SacramentMeetingPlanner.Models
                     OpeningSong = "#26 Joseph Smith's First Prayer",
                     Invocation = "By Invitation",
                     SacramentSong = "#195 How Great the Wisdom and the Love",
-                    Speaker = "James Truett",
-                    Topic = "Charity",
-                    IntermediateSong = "",
+                    Speaker = "James Truett, Sara White, Collin Oaks",
+                    Topic = "Charity, Christ, Obedience",
+                    IntermediateSong = "As Sisters In Zion by Emily Windham",
                     ClosingSong = "#18 The Voice of God Again Is Heard",
                     Benediction = "By Invitation"
                 },
@@ -70,9 +71,9 @@ namespace SacramentMeetingPlanner.Models
                     OpeningSong = "#270 I'll Go Where You Want Me to Go",
                     Invocation = "By Invitation",
                     SacramentSong = "#169 As Now We Take the Sacrament",
-                    Speaker = "Peter Pixton",
-                    Topic = "Service",
-                    IntermediateSong = "As Sisters In Zion by Emily Windham",
+                    Speaker = "Peter Pixton, Alex Xi",
+                    Topic = "Service, Kindness",
+                    IntermediateSong = "",
                     ClosingSong = "#85 How Firm a Foundation",
                     Benediction = "By Invitation"
                 },
@@ -111,8 +112,8 @@ namespace SacramentMeetingPlanner.Models
                     OpeningSong = "#301 I Am a Child of God",
                     Invocation = "By Invitation",
                     SacramentSong = "#176 'Tis Sweet to Sing the Matchless Love",
-                    Speaker = "Wilson Blackburn",
-                    Topic = "Forgiveness",
+                    Speaker = "Wilson Blackburn, Thomas Young",
+                    Topic = "Forgiveness, Charity",
                     IntermediateSong = "I Need Thee Every Hour by the ward choir",
                     ClosingSong = "#263 Go Forth With Faith",
                     Benediction = "By Invitation"
@@ -125,8 +126,8 @@ namespace SacramentMeetingPlanner.Models
                     OpeningSong = "#123 Oh, May My Soul Commune With Thee",
                     Invocation = "By Invitation",
                     SacramentSong = "#193 I Stand All Amazed",
-                    Speaker = "Barbara Clark",
-                    Topic = "Sacrifice",
+                    Speaker = "Barbara Clark, Sara Jones",
+                    Topic = "Sacrifice, Joy",
                     IntermediateSong = "",
                     ClosingSong = "#279 Thy Holy Word",
                     Benediction = "By Invitation"
@@ -180,8 +181,8 @@ namespace SacramentMeetingPlanner.Models
                     OpeningSong = "#7 Israel, Israel God Is Calling",
                     Invocation = "By Invitation",
                     SacramentSong = "#181 Jesus of Nazareth, Savior and King",
-                    Speaker = "Jonathon Turnbridge",
-                    Topic = "Charity",
+                    Speaker = "Jonathon Turnbridge, Ana Hull",
+                    Topic = "Charity, Christ",
                     IntermediateSong = "",
                     ClosingSong = "#6 Redeemer of Israel",
                     Benediction = "By Invitation"
@@ -199,10 +200,27 @@ namespace SacramentMeetingPlanner.Models
             {
                 new Speaker
                 {
-                FirstName = "James",
-                LastName = "Truett",
-                Topic = "Charity",
-                BulletinID = bulletin.Single(b => b.Speaker == "James Truett").Id
+                    FirstName = "James",
+                    LastName = "Truett",
+                    Topic = "Charity",
+                    BulletinID = bulletin.Single(b => b.Speaker == "James Truett, Sara White, Collin Oaks").Id,
+                    BeforeHymn = true
+                },
+
+                new Speaker
+                {
+                    FirstName = "Sara",
+                    LastName = "White",
+                    Topic = "Christ",
+                    BulletinID = bulletin.Single(b => b.Speaker == "James Truett, Sara White, Collin Oaks").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Collin",
+                    LastName = "Oaks",
+                    Topic = "Obedience",
+                    BulletinID = bulletin.Single(b => b.Speaker == "James Truett, Sara White, Collin Oaks").Id
                 },
 
                 new Speaker
@@ -218,7 +236,15 @@ namespace SacramentMeetingPlanner.Models
                     FirstName = "Peter",
                     LastName = "Pixton",
                     Topic = "Service",
-                    BulletinID = bulletin.Single(b => b.Speaker == "Peter Pixton").Id
+                    BulletinID = bulletin.Single(b => b.Speaker == "Peter Pixton, Alex Xi").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Alex",
+                    LastName = "Xi",
+                    Topic = "Kindness",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Peter Pixton, Alex Xi").Id
                 },
 
                 new Speaker
@@ -234,7 +260,16 @@ namespace SacramentMeetingPlanner.Models
                     FirstName = "Wilson",
                     LastName = "Blackburn",
                     Topic = "Forgiveness",
-                    BulletinID = bulletin.Single(b => b.Speaker == "Wilson Blackburn").Id
+                    BulletinID = bulletin.Single(b => b.Speaker == "Wilson Blackburn, Thomas Young").Id,
+                    BeforeHymn = true
+                },
+
+                new Speaker
+                {
+                    FirstName = "Thomas",
+                    LastName = "Young",
+                    Topic = "Charity",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Wilson Blackburn, Thomas Young").Id
                 },
 
                 new Speaker
@@ -242,7 +277,15 @@ namespace SacramentMeetingPlanner.Models
                     FirstName = "Barbara",
                     LastName = "Clark",
                     Topic = "Sacrifice",
-                    BulletinID = bulletin.Single(b => b.Speaker == "Barbara Clark").Id
+                    BulletinID = bulletin.Single(b => b.Speaker == "Barbara Clark, Sara Jones").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Sara",
+                    LastName = "Jones",
+                    Topic = "Joy",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Barbara Clark, Sara Jones").Id
                 },
 
                 new Speaker
@@ -266,7 +309,15 @@ namespace SacramentMeetingPlanner.Models
                     FirstName = "Jonathon",
                     LastName = "Turnbridge",
                     Topic = "Charity",
-                    BulletinID = bulletin.Single(b => b.Speaker == "Jonathon Turnbridge").Id
+                    BulletinID = bulletin.Single(b => b.Speaker == "Jonathon Turnbridge, Ana Hull").Id
+                },
+
+                new Speaker
+                {
+                    FirstName = "Ana",
+                    LastName = "Hull",
+                    Topic = "Christ",
+                    BulletinID = bulletin.Single(b => b.Speaker == "Jonathon Turnbridge, Ana Hull").Id
                 }
             };
 

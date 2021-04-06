@@ -86,7 +86,7 @@ namespace SacramentMeetingPlanner.Controllers
             {
                 return NotFound();
             }
-            ViewData["BulletinID"] = new SelectList(_context.Bulletin, "Id", "ClosingSong", speaker.BulletinID);
+            ViewData["BulletinID"] = new SelectList(_context.Bulletin, "Id", "Id", speaker.BulletinID);
             return View(speaker);
         }
 
@@ -122,7 +122,7 @@ namespace SacramentMeetingPlanner.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BulletinID"] = new SelectList(_context.Bulletin, "Id", "ClosingSong", speaker.BulletinID);
+            ViewData["BulletinID"] = new SelectList(_context.Bulletin, "Id", "Id", speaker.BulletinID);
             return View(speaker);
         }
 
