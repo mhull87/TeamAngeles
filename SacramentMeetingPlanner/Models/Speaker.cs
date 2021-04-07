@@ -10,6 +10,7 @@ namespace SacramentMeetingPlanner.Models
     public class Speaker
     {
         public int SpeakerID { get; set; }
+        [Display(Name = "Bulletin #")]
         public int BulletinID { get; set; }
 
         [Required]
