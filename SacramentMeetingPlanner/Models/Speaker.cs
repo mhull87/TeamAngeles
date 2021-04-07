@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SacramentMeetingPlanner.Models
 {
     public class Speaker
     {
         public int SpeakerID { get; set; }
+
         [Display(Name = "Bulletin #")]
         public int BulletinID { get; set; }
 

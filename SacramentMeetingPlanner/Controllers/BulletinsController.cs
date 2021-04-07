@@ -127,13 +127,12 @@ namespace SacramentMeetingPlanner.Controllers
             }
 
             if (ModelState.IsValid)
-            {                    
-
+            {
                 try
                 {
                     _context.Update(bulletin);
                     await _context.SaveChangesAsync();
-                if (bulletin.CheckSpeaker)
+                    if (bulletin.CheckSpeaker)
                     {
                         return RedirectToAction("Create", "Speakers", new { BulletinID = bulletin.Id });
                     }
@@ -149,7 +148,6 @@ namespace SacramentMeetingPlanner.Controllers
                         throw;
                     }
                 }
-
                 return RedirectToAction(nameof(Index));
             }
             return View(bulletin);
@@ -164,6 +162,7 @@ namespace SacramentMeetingPlanner.Controllers
             }
 
             var bulletin = await _context.Bulletin
+                .Include(s => s.Speakers)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (bulletin == null)
             {

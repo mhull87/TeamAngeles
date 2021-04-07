@@ -1,5 +1,3 @@
-using System;
-
 namespace SacramentMeetingPlanner.Models
 {
     public class ErrorViewModel

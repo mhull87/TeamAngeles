@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SacramentMeetingPlanner.Models
 {
     public class Bulletin
     {
-        [Display(Name =" Bulletin #")]
+        [Display(Name = " Bulletin #")]
         public int Id { get; set; }
-        
+
         [DataType(DataType.Date)]
         [Display(Name = "Date")]
         [Required]

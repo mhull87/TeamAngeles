@@ -14,17 +14,12 @@
     <p class="text-right">
         Topic: <input type="text" name="SearchString" />
         <input class="btn btn-primary" type="submit" value="Filter" /> | <a asp-action="Index">Back to List</a>
-
     </p>
 </form>
-
 
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
             <th>
                 <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">@Html.DisplayNameFor(model => model.BulletinDate)</a>
                 @*@Html.DisplayNameFor(model => model.BulletinDate)*@
@@ -133,4 +128,3 @@
         }
     </tbody>
 </table>
-

@@ -297,7 +297,7 @@ namespace SacramentMeetingPlanner.Models
                 },
 
                 new Speaker
-                { 
+                {
                     FirstName = "Maria",
                     LastName = "Gonzalez",
                     Topic = "Love",

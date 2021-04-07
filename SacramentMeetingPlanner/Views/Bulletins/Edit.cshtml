@@ -39,7 +39,7 @@
                 <span asp-validation-for="SacramentSong" class="text-danger"></span>
             </div>
             @{
-                var sName = Model.Speakers.Select(s => new { s.FullName, s.Topic, s.SpeakerID });
+                var sName = Model.Speakers.Select(s => new { s.FullName, s.Topic, s.SpeakerID, s.BulletinID });
             }
 
             @foreach (var speaker in sName)

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SacramentMeetingPlanner.Data;
 using SacramentMeetingPlanner.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SacramentMeetingPlanner.Controllers
 {
@@ -49,7 +47,7 @@ namespace SacramentMeetingPlanner.Controllers
         public IActionResult Create(int bulletinID)
         {
             /*ViewData["BulletinID"] = new SelectList(_context.Bulletin, "Id", "ClosingSong");*/
-            return View(new Speaker { BulletinID = bulletinID});
+            return View(new Speaker { BulletinID = bulletinID });
         }
 
         // POST: Speakers/Create
@@ -65,7 +63,7 @@ namespace SacramentMeetingPlanner.Controllers
                 await _context.SaveChangesAsync();
                 if (speaker.CheckSpeaker)
                 {
-                    return RedirectToAction("Create", "Speakers", new { BulletinID = speaker.BulletinID });
+                    return RedirectToAction("Create", "Speakers", new { speaker.BulletinID });
                 }
                 return RedirectToAction("Index", "Bulletins");
             }
@@ -120,7 +118,7 @@ namespace SacramentMeetingPlanner.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Edit", "Bulletins", new { Id = speaker.BulletinID });
             }
             ViewData["BulletinID"] = new SelectList(_context.Bulletin, "Id", "Id", speaker.BulletinID);
             return View(speaker);

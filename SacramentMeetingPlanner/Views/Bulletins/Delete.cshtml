@@ -1,7 +1,7 @@
 ﻿@model SacramentMeetingPlanner.Models.Bulletin
-
 @{
     ViewData["Title"] = "Delete";
+    var speakerNumber = 1;
 }
 
 <h1>Delete</h1>
@@ -41,24 +41,43 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.SacramentSong)
         </dd>
-        @if (Model.Speaker != null && Model.Speaker != "")
+
+        @if (Model.Speakers.Any(s => s.BeforeHymn))
+        {
+            var sBefore = Model.Speakers.Where(s => s.BeforeHymn);
+            foreach (var speaker in sBefore)
+            {
+                <dt class="col-sm-2">
+                    @($"Speaker {speakerNumber++}")
+                </dt>
+                <dd class="col-sm-10">
+                    @($"{speaker.FullName} - {speaker.Topic}")
+                </dd>
+            }
+        }
+
+        @if (Model.IntermediateSong != "" && Model.IntermediateSong != null)
         {
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Speaker)
+                @Html.DisplayNameFor(model => model.IntermediateSong)
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Speaker) - @Html.DisplayFor(model => model.Topic)
+                @Html.DisplayFor(model => model.IntermediateSong)
             </dd>
-        } else
+        }
+        @if (Model.Speakers.Any(s => !s.BeforeHymn))
+        {
+            var sAfter = Model.Speakers.Where(s => !s.BeforeHymn);
+            foreach (var speaker in sAfter)
             {
-
+                <dt class="col-sm-2">
+                    @($"Speaker {speakerNumber++}")
+                </dt>
+                <dd class="col-sm-10">
+                    @($"{speaker.FullName} - {speaker.Topic}")
+                </dd>
             }
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.IntermediateSong)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IntermediateSong)
-        </dd>
+        }
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ClosingSong)
         </dt>
@@ -72,7 +91,7 @@
             @Html.DisplayFor(model => model.Benediction)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
