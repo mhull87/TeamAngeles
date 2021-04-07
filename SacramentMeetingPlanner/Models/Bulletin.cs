@@ -9,6 +9,7 @@ namespace SacramentMeetingPlanner.Models
 {
     public class Bulletin
     {
+        [Display(Name =" Bulletin #")]
         public int Id { get; set; }
         
         [DataType(DataType.Date)]
