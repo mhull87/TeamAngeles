@@ -2,6 +2,10 @@
     display: none;
 }
 
+.margintop {
+    margin-top: -.5%;
+}
+
 .dots {
     border-bottom: black dotted 1px;
     margin: auto;

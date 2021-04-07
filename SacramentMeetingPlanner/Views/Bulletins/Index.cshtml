@@ -4,12 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index of Meetings</h1><br />
+<h1>Index of Meetings</h1>
+<br />
 
-<p>
+<p class="float-left margintop">
     <a class="btn btn-primary" asp-action="Create">Create New</a>
 </p>
-
 <form asp-controller="Bulletins" asp-action="Index">
     <p class="text-right">
         Topic: <input type="text" name="SearchString" />
@@ -17,6 +17,8 @@
 
     </p>
 </form>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -123,8 +125,8 @@
                     @Html.DisplayFor(modelItem => item.Benediction)
                 </td>
                 <td>
-                    <a class="btn btn-outline-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
-                    <a class="btn btn-outline-warning" asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                    <a class="btn btn-outline-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-outline-warning" asp-action="Details" asp-route-id="@item.Id">Details</a>
                     <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
