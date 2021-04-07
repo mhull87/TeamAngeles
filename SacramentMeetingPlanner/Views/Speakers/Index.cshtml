@@ -6,6 +6,12 @@
 
 <h1>Speaker Index</h1><br />
 
+<<<<<<< HEAD
+=======
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+>>>>>>> 3510dba3bb04ad93510eb2bdffb6d03028a58357
 <table class="table">
     <thead>
         <tr>
@@ -45,11 +51,11 @@
             @*<td>
                 @Html.DisplayFor(modelItem => item.Bulletin.ClosingSong)
             </td>*@
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.SpeakerID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SpeakerID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.SpeakerID">Delete</a>
-            </td>
+        <td>
+            <a class="btn btn-outline-info" asp-action="Edit" asp-route-id="@item.SpeakerID">Edit</a> 
+            <a class="btn btn-outline-warning" asp-action="Details" asp-route-id="@item.SpeakerID">Details</a> 
+            <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.SpeakerID">Delete</a>
+        </td>
         </tr>
 }
     </tbody>
