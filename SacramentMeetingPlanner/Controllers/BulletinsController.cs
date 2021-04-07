@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SacramentMeetingPlanner.Data;
 using SacramentMeetingPlanner.Models;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SacramentMeetingPlanner.Controllers
 {
@@ -23,8 +21,8 @@ namespace SacramentMeetingPlanner.Controllers
         public async Task<IActionResult> Index(string searchString, string sortOrder)
         {
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
-            var bulletin = from m in _context.Bulletin.Include(s =>s.Speakers)
-                         select m;
+            var bulletin = from m in _context.Bulletin.Include(s => s.Speakers)
+                           select m;
             if (!String.IsNullOrEmpty(searchString))
             {
                 bulletin = _context.Bulletin
@@ -37,6 +35,7 @@ namespace SacramentMeetingPlanner.Controllers
                 case "Date":
                     bulletin = bulletin.OrderBy(s => s.BulletinDate);
                     break;
+
                 case "date_desc":
                     bulletin = bulletin.OrderByDescending(s => s.BulletinDate);
                     break;
@@ -104,8 +103,10 @@ namespace SacramentMeetingPlanner.Controllers
             {
                 return NotFound();
             }
+            var bulletin = await _context.Bulletin
+            .Include(s => s.Speakers)
+            .FirstOrDefaultAsync(m => m.Id == id);
 
-            var bulletin = await _context.Bulletin.FindAsync(id);
             if (bulletin == null)
             {
                 return NotFound();
@@ -118,7 +119,7 @@ namespace SacramentMeetingPlanner.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,BulletinDate,Conducting,OpeningSong,Invocation,SacramentSong,Speaker,IntermediateSong,ClosingSong,Benediction")] Bulletin bulletin)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,BulletinDate,Conducting,OpeningSong,Invocation,SacramentSong,Speaker,IntermediateSong,ClosingSong,Benediction,CheckSpeaker")] Bulletin bulletin)
         {
             if (id != bulletin.Id)
             {
@@ -126,11 +127,16 @@ namespace SacramentMeetingPlanner.Controllers
             }
 
             if (ModelState.IsValid)
-            {
+            {                    
+
                 try
                 {
                     _context.Update(bulletin);
                     await _context.SaveChangesAsync();
+                if (bulletin.CheckSpeaker)
+                    {
+                        return RedirectToAction("Create", "Speakers", new { BulletinID = bulletin.Id });
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -143,6 +149,7 @@ namespace SacramentMeetingPlanner.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
             return View(bulletin);
