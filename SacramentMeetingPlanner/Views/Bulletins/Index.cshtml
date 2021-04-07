@@ -40,10 +40,10 @@
                 @Html.DisplayNameFor(model => model.SacramentSong)
             </th>
             <th id="speakerhead">
-                Speaker(s)
+                Speakers
             </th>
             <th id="topichead">
-                Topic(s)
+                Topics
             </th>
             <th class="hidden" id="intsonghead">
                 @Html.DisplayNameFor(model => model.IntermediateSong)
@@ -61,9 +61,6 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.BulletinDate)
                 </td>

@@ -1,8 +1,7 @@
 ﻿@model SacramentMeetingPlanner.Models.Bulletin
 
-@{
-    ViewData["Title"] = "Edit";
-}
+@{ ViewData["Title"] = "Edit";
+    var speakerNumber = 1; }
 
 <h1>Edit</h1>
 
@@ -38,32 +37,45 @@
                 <input asp-for="SacramentSong" class="form-control" />
                 <span asp-validation-for="SacramentSong" class="text-danger"></span>
             </div>
-            @{
-                var sName = Model.Speakers.Select(s => new { s.FullName, s.Topic, s.SpeakerID, s.BulletinID });
-            }
 
-            @foreach (var speaker in sName)
+            @if (Model.Speakers.Any(s => s.BeforeHymn))
             {
-                var sString = speaker.FullName + " - " + speaker.Topic;
+                var sBefore = Model.Speakers.Where(s => s.BeforeHymn);
+                foreach (var speaker in sBefore)
+                {
+                    var sString = speaker.FullName + " - " + speaker.Topic;
 
-                <div class="form-group">
-                    <label asp-for="Speakers" class="control-label"></label>
-                    <input asp-for="@sString" class="form-control" readonly />
-                    <span asp-validation-for="Speakers" class="text-danger"></span>
+<div class="form-group">
+    <label asp-for="Speakers" class="control-label">@($"Speaker {speakerNumber++}")</label>
+    <input asp-for="@sString" class="form-control" readonly />
+    <span asp-validation-for="Speakers" class="text-danger"></span>
 
-                    <a class="btn btn-outline-info" asp-controller="Speakers" asp-action="Edit" asp-route-id="@speaker.SpeakerID">Edit</a>
-                    <a class="btn btn-outline-danger" asp-controller="Speakers" asp-action="Delete" asp-route-id="@speaker.SpeakerID">Delete</a>
-                </div>
-            }
-            <div class="form-group form-check">
-                <input type="checkbox" asp-for="CheckSpeaker" class="form-check-input" />
-                <label asp-for="CheckSpeaker" class="form-check-label">Add Speaker</label>
-            </div>
+    <a class="btn btn-outline-info" asp-controller="Speakers" asp-action="Edit" asp-route-id="@speaker.SpeakerID">Edit</a>
+    <a class="btn btn-outline-danger" asp-controller="Speakers" asp-action="Delete" asp-route-id="@speaker.SpeakerID">Delete</a>
+</div>          }
+}
+
             <div class="form-group">
                 <label asp-for="IntermediateSong" class="control-label"></label>
                 <input asp-for="IntermediateSong" class="form-control" />
                 <span asp-validation-for="IntermediateSong" class="text-danger"></span>
             </div>
+            @if (Model.Speakers.Any(s => !s.BeforeHymn))
+            {
+                var sAfter = Model.Speakers.Where(s => !s.BeforeHymn);
+                foreach (var speaker in sAfter)
+                {
+                    var sAfterString = speaker.FullName + " - " + speaker.Topic;
+
+<div class="form-group">
+    <label asp-for="Speakers" class="control-label">@($"Speaker {speakerNumber++}")</label>
+    <input asp-for="@sAfterString" class="form-control" readonly />
+    <span asp-validation-for="Speakers" class="text-danger"></span>
+
+    <a class="btn btn-outline-info" asp-controller="Speakers" asp-action="Edit" asp-route-id="@speaker.SpeakerID">Edit</a>
+    <a class="btn btn-outline-danger" asp-controller="Speakers" asp-action="Delete" asp-route-id="@speaker.SpeakerID">Delete</a>
+</div>          }
+}
             <div class="form-group">
                 <label asp-for="ClosingSong" class="control-label"></label>
                 <input asp-for="ClosingSong" class="form-control" />
@@ -73,6 +85,10 @@
                 <label asp-for="Benediction" class="control-label"></label>
                 <input asp-for="Benediction" class="form-control" />
                 <span asp-validation-for="Benediction" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" asp-for="CheckSpeaker" class="form-check-input" />
+                <label asp-for="CheckSpeaker" class="form-check-label">Add Speaker</label>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
