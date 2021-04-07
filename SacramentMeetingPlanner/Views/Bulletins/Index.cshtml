@@ -13,12 +13,16 @@
 <form asp-controller="Bulletins" asp-action="Index">
     <p>
         Topic: <input type="text" name="SearchString" />
-        <input type="submit" value="Filter" />
+        <input type="submit" value="Filter" /> | <a asp-action="Index">Back to List</a>
+
     </p>
 </form>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
             <th>
                 <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">@Html.DisplayNameFor(model => model.BulletinDate)</a>
                 @*@Html.DisplayNameFor(model => model.BulletinDate)*@
@@ -57,6 +61,9 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.BulletinDate)
                 </td>
